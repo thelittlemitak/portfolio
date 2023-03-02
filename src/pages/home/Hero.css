@@ -1,0 +1,138 @@
+.hero {
+  margin-top: 19rem;
+  margin-bottom: 9rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.graphics-pic {
+  max-width: 67rem;
+  max-height: 36rem;
+  
+  object-fit: contain;
+  margin-top: 4rem;
+  translate: 2rem 1rem;
+}
+
+.hero-right-box {
+  max-width: 50rem;
+
+  font-size: 5.2rem;
+  
+  background-color: #a1f7d3;
+  
+  line-height: 7rem;
+  padding: 2rem 0rem 2rem 5rem;
+  margin-left: 1.1rem;
+  border: 0.3rem solid;
+  box-shadow: 0.7rem 0.7rem;
+
+  transition: all 0.3s;
+}
+
+.hero-below-section {
+  height: 33rem;
+  position: relative;
+
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-below-section::after {
+  content: "...or create new goals!";
+
+  right: 1%;
+  position: absolute;
+  transform: rotate(12deg);
+
+  background-color:rgb(247, 247, 89);
+  
+  font-size: 4rem;
+  
+  padding: 0rem 1rem;
+  
+  border: 0.3rem solid;
+}
+
+.square {
+  width: 8px;
+  height: 8px;
+  
+  background-color: #212529;
+}
+
+.hero-right-box:hover {
+  transform: translateY(-1rem);
+  
+  box-shadow: 1.3rem 1.3rem rgba(0, 0, 0, 0.705);
+}
+
+.hero-below-table {
+  width: 100%;
+
+  font-size: 3rem;
+
+  background-color: #fac5db;
+
+  margin-right: 5rem;
+  padding-bottom: 2rem;
+  margin-left: 4rem;
+
+  border: 0.4rem solid;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+  
+  transition: all 0.3s;
+}
+
+.hero-below-table-title {
+  font-size: 6.2rem;
+  font-weight: 500;
+  
+  margin-bottom: 2rem;
+  
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.table-item {
+  translate: -1rem;
+  
+  padding: -1rem 1rem;
+  
+  display: flex;
+  align-items: center;
+}
+
+.table-item-a {
+  transition: all 0.1s;
+}
+
+.table-item-a:hover {
+  rotate: 3grad;
+}
+
+.table-item-b {
+  transition: all 0.1s;
+}
+
+.table-item-b:hover {
+  rotate: -3grad;
+}
+
+.icon {
+  height: 4rem;
+  width: 4rem;
+  
+  flex-shrink: 0;
+}

@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  
+  font-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: 1.3px solid black;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  
+  font-family: "work sans", verdana;
+
+  color: #212529;
+  background-color: #e9fdf5;
+
+  border-bottom: 0.5rem solid #7df4c2;
+}
+
+.hide-overflow-y {
+  overflow-y: hidden;
+}
+
+h4 {
+  font-size: 5.2rem;
+}
+
+button {
+  color: #212529;
+  
+  cursor: pointer;
+  
+  transition: all 0.3s;
+}
+
+a {
+  text-decoration: none;
+  
+  color: #212529;
+  
+  transition: all 0.3s;
+}
+
+footer {
+  font-size: 2.4rem;
+  
+  color: #343a40;
+  
+  padding-top: 8rem;
+  padding-left: 5rem;
+  margin-bottom: 2rem;
+  
+  border-top: 1px solid #343a405b;;
+}
+
+input {
+  font-family: inherit;
+}
+
+address {
+  font-style: normal;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main {
+  position: relative;
+}
+
+.no-flexbox-gap .hero-below-table-title div:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.no-flexbox-gap .how-to-lists-section-container div:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.no-flexbox-gap .how-to-lists-container div:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .list-lines-container div svg:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.no-flexbox-gap .how-to-lists-container h4 {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .carousel-dots-container div:not(:last-child) {
+  margin-right: 0.5rem;
+}

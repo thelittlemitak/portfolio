@@ -1,0 +1,28 @@
+.carousel-dots-container {
+  margin-bottom: 6.4rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  
+  background-color: #f7a1c5;
+  
+  border: 0.3rem solid;
+  
+  cursor: pointer;
+}
+
+.selected-dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  
+  background-color: #22ec98;
+
+  /* transition: all 0.1s; */
+}

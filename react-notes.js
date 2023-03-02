@@ -13,6 +13,8 @@
 // 33. Complex JSX: You cannot add more than one element (so one next to each other). You can put all inside a div though and put all inside () to format it
 // 34. CSS: You have to use className and not class (this is because class is a keyword in js)!
 // 35. Dynamic data. You put curly braces inside the element {} and you basically will have js. This means you can add operations, vars etc.
-// 36. You can think about props just being an object which keys are the JSX atts
-// 38. Component trees
-// 39. How to create wrapper/container components
+// 36. You can think about props just being an object which keys are the JSX atts // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
+// 38. Component trees // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
+// 39. How to create wrapper/container components // ! NOT USED IN THE PROJECT YET; maybe for the mains
+
+//266. Multipage intro

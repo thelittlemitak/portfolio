@@ -1,0 +1,36 @@
+.footer-test-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  
+  margin-bottom: 3.5rem;
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin-bottom: 1.5rem;
+}
+
+.copyright-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-media-container {
+  font-size: 4rem;
+  list-style: none;
+  
+  margin-right: 1rem;
+  margin-bottom: 3.7rem;
+  
+  display: flex;
+  justify-content: space-between;
+}
