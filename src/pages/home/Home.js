@@ -11,11 +11,16 @@ import Hero from "./Hero";
 import Header from "../../components/Header";
 import MainWrapper from "./MainWrapper";
 import "./HomeQueries.css";
+import AboutButton from "../../components/AboutButton";
+import ContactButton from "../../components/ContactButton";
 
 function Home() {
+  const aboutBtn = AboutButton;
+  const contactBtn = ContactButton;
+
   return (
     <div>
-      <Header></Header>
+      <Header altBtn={aboutBtn}></Header>
       <MainWrapper>
         <Hero></Hero>
         <HeroBelowSection></HeroBelowSection>

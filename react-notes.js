@@ -16,5 +16,20 @@
 // 36. You can think about props just being an object which keys are the JSX atts // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
 // 38. Component trees // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
 // 39. How to create wrapper/container components // ! NOT USED IN THE PROJECT YET; maybe for the mains
+// 41. JSX behind the scenes. PS: You will see this from old code in every component -> import React from "react";
+// 43. The use of arrow functions
+// 46. How to add event listeners to JSX elements: using on + the HTML att and adding a function between {} to tell what's executed if the event happens
+// A good practice is to put Handler at the end of the function to specify that that f is actually waiting for the user ('handling' the event/response)
+// 47. How functions deploy each other under the hood and why there are no changes on click events (there are but the component is not rerendered again)
+// 48. Intro to state and useState f (this basically does the component to render again after a change). Every instance has an independent state
+// Always use const
 
+// ! I saw it explained on 64
+// PROPS SCHEME
+// 1. DATA (obj) 2. ATT inside COMPONENT REFERENCE that has DATA (from data or any value)
+// 3. New obj is created inside the component (called PROPS, used as ARGUMENT to be used inside the function)
+// and the keys of PROPS are the ATTs, and the value of they keys the DATA inserted
+// EXAMPLE 1. x = abc; 2. <Y att=x></Y> 3. function Y (props) => {props.att = abc (this is true)}
+// The ATT value is the value you want to use in your component and the key, the reference. So:
+// ATT = props.ATT; ATT value = props.ATT value. ATTs could be easily called ref1 ref2 ref3
 //266. Multipage intro

@@ -1,0 +1,23 @@
+.about-button:link,
+.about-button:visited {
+  height: 3.4rem;
+  translate: 0rem 4.7rem;
+
+  font-weight: 700;
+  
+  background-color: #fde9f1;
+
+  padding: 0rem 1rem 1rem 1rem;
+
+  border: 0.3rem solid;
+  box-shadow: 0.7rem 0.7rem;
+
+  cursor: pointer;
+}
+
+.about-button:hover,
+.about-button:active {
+  background-color: #22ec98;
+
+  transition: 0.3s;
+}

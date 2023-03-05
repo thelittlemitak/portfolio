@@ -1,6 +1,10 @@
 import "./Header.css";
+import AboutButton from "./AboutButton";
+import ContactButton from "./ContactButton";
 
-function Header() {
+// I removed props as an argument
+function Header(props) {
+
   return (
     <header className="main-header sticky">
       <a className="logo-box logo-box--index" href="/">
@@ -14,9 +18,7 @@ function Header() {
         <button className="main-header-buttons" id="sign-up-button">
           <strong>SIGN UP</strong>
         </button>
-        <a className="about-button" href="about">
-          ...about
-        </a>
+        <props.altBtn></props.altBtn>
       </div>
     </header>
   );

@@ -1,35 +1,20 @@
 import "./style-about.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import MainWrapper from "./MainWrapper";
+import Hero from "./Hero";
+import AboutButton from "../../components/AboutButton";
+import ContactButton from "../../components/ContactButton";
 
 function About() {
+  const aboutBtn = AboutButton;
+  const contactBtn = ContactButton;
+
   return (
     <div>
-      <Header></Header>
-      <main className="about-main">
-        <div className="about-hero">
-          <picture>
-            <source
-              srcSet={require("../../img/about-salute.webp")}
-              type="image/webp"
-            />
-            <source
-              srcSet={"../../img/backup-pngs/about-salute.png"}
-              type="image/png"
-            />
-            <img
-              src="../../img/backup-pngs/about-salute.png"
-              alt="a picture of a beautiful man sitting with a computer next to flowers"
-              className="about-hero-left-img"
-            ></img>
-          </picture>
-          <div className="about-hero-right">
-            <p>
-              My name is <strong>Jose Riera Tur</strong> and I welcome you to my
-              <strong>portfolio!</strong>
-            </p>
-          </div>
-        </div>
+      <Header altBtn={contactBtn}></Header>
+      <MainWrapper>
+        <Hero></Hero>
         <div className="about-not-hero">
           <div className="faq-question-container">
             <div className="faq-number">1</div>
@@ -363,7 +348,7 @@ function About() {
             <div>Xxxxxxxxxxxxxx.</div>
           </div>
         </div>
-      </main>
+      </MainWrapper>
       <Footer></Footer>
     </div>
   );

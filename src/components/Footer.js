@@ -4,7 +4,7 @@ function Footer() {
   let currentYear = new Date().getFullYear();
   
   return (
-    <footer className="footer-test">
+    <footer className="footer-test" id="footer">
       <div className="footer-test-container">
         <div>
           <p className="footer-title">MoreMoreMe</p>
