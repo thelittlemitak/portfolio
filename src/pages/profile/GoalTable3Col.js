@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 
 function GoalTable3Col(props) {
-
   return (
-    <tbody id="tgtb">
+    <tbody>
       <tr>
-        <th class="table-goal">{props.goal}</th>
-        <td>{props.actionPndg}</td>
-        <td>
-          <div class="checkbox-container">
-            <input
-              type="checkbox"
-              class="table-checkbox"
-              data-test="the 0 one"
-              onChange={props.addF}
-            />
-          </div>
-        </td>
+        <th class="table-goal">{props.goalTunnel}</th>
+        <td>{props.actionPndgTunnel}</td>
+          <td
+            class="remove-goal-minus-button"
+            onClick={props.btnFTunnel}
+            id={props.idTunnel}
+          >
+            -
+          </td>
       </tr>
     </tbody>
   );
 }
+
+// I removed data-test="the 0 one" from last input (class="table-checkbox")
+// I removed id="tgtb" from tbody
 
 export default GoalTable3Col;

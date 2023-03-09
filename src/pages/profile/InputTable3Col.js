@@ -1,27 +1,6 @@
 import React, { useState } from "react";
 
 function InputTable3Col(props) {
-
-  const [inputGoal, setInputGoal] = useState("");
-  const [inputAction, setInputAction] = useState("");
-
-  
-  function goalListener(e) {
-    let inputGoal = e.target.value;
-    setInputGoal(inputGoal);
-  }
-
-  function actionListener(e) {
-    let inputAction = e.target.value;
-    setInputAction(inputAction);
-  }
-
-  function addGoal() {
-    console.log("this doesn't work yet");
-    console.log(inputGoal);
-    console.log(inputAction);
-  }
-
   return (
     <tbody>
       <tr>
@@ -30,7 +9,8 @@ function InputTable3Col(props) {
             type="text"
             placeholder="New Goal"
             class="profile-input profile-input-goal"
-            onChange={goalListener}
+            value={props.goalDefaultTunnel}
+            onChange={props.goalLiFTunnel}
           />
         </td>
         <td class="dummy-goal-row">
@@ -38,15 +18,18 @@ function InputTable3Col(props) {
             type="text"
             placeholder="What has to happen to accomplish it?"
             class="profile-input profile-input-text"
-            onChange={actionListener}
+            value={props.actionDefaultTunnel}
+            onChange={props.actionLiFTunnel}
           />
         </td>
-        <td class="add-goal-plus-button" id="tgAdd" onClick={addGoal}>
+        <td class="add-goal-plus-button" onClick={props.btnFTunnel}>
           +
         </td>
       </tr>
     </tbody>
   );
 }
+
+// I removed id="tgAdd" from last td (the checker)
 
 export default InputTable3Col;

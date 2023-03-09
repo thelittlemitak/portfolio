@@ -9,29 +9,103 @@ import DoubtIcon from "../../components/DoubtIcon";
 import GoalTable3Col from "./GoalTable3Col";
 import AddTable3Col from "./AddTable3Col";
 import InputTable3Col from "./InputTable3Col";
+import HeaderTable3Col from "./HeaderTable3Col";
+import HeaderTable4Col from "./HeaderTable4Col";
 
 function Profile() {
   const aboutBtn = AboutButton;
   const contactBtn = ContactButton;
 
-  
-  const data = [
-    { goal: "Goal", actionPndg: "Action" },
-    { goal: "Goal2", actionPndg: "Action2" },
-    { goal: "Goal3", actionPndg: "Action3" },
+  const userData = [
+    { goal: "goal1", action: "from userData", id: 0.7419944699444685 },
+    { goal: "goal2", action: "from userData", id: 0.2944508500185419 },
+    { goal: "goal3", action: "from userData", id: 0.2119945356444685 },
+    { goal: "goal4", action: "from userData", id: 0.0744508500185419 },
   ];
 
-  const [oldGoal, setGoal] = useState("Old goal");
-  
-  const removeF = function () {
-    console.log("clicked!");
+  const [goals, setGoals] = useState(userData);
+
+  let newNumber = Math.random();
+
+  const [inputGoal, setInputGoal] = useState("");
+  const [inputAction, setInputAction] = useState("");
+
+  function goalListener(e) {
+    let inputGoal = e.target.value;
+    setInputGoal(inputGoal);
+  }
+
+  function actionListener(e) {
+    let inputAction = e.target.value;
+    setInputAction(inputAction);
+  }
+
+  const Pusher = function () {
+    setGoals([
+      ...goals,
+      { goal: inputGoal, action: inputAction, id: newNumber },
+    ]);
+    setInputGoal("");
+    setInputAction("");
   };
-  
-  const addF = function () {
-    setGoal("New goal");
+
+  const removeF = function (e) {
+    let idOfCheckboxPressed = e.target.id;
+    let indexOfCheckboxPressed = goals.findIndex(
+      (x) => x.id == idOfCheckboxPressed
+    );
+    goals.splice(indexOfCheckboxPressed, 1);
+    setGoals([...goals]);
   };
-  
-  
+
+  const goalTitle = "Goal";
+  const addRemoveTitle = "Add/Remove";
+  const howOftenTitle = "How often?";
+  const titles3col = [
+    {
+      type: "temporary goals",
+      col1: goalTitle,
+      col2: "What has to happen to accomplish it?",
+      col3: addRemoveTitle,
+    },
+    {
+      type: "forbidden activities",
+      col1: goalTitle,
+      col2: "Until when?",
+      col3: addRemoveTitle,
+    },
+  ];
+  const titles4col = [
+    {
+      type: "cont. goals (time dependent)",
+      col1: goalTitle,
+      col2: howOftenTitle,
+      col3: "For how long?",
+      col4: addRemoveTitle,
+    },
+    {
+      type: "cont. goals (action dependent)",
+      col1: goalTitle,
+      col2: howOftenTitle,
+      col3: "Which action?",
+      col4: addRemoveTitle,
+    },
+    {
+      type: "limited activities",
+      col1: "Activity",
+      col2: howOftenTitle,
+      col3: "Daily time allowed",
+      col4: addRemoveTitle,
+    },
+    {
+      type: "social gatherings",
+      col1: "Event",
+      col2: "Date",
+      col3: "Notes",
+      col4: addRemoveTitle,
+    },
+  ];
+
   return (
     <div>
       <Header altBtn={aboutBtn}></Header>
@@ -46,33 +120,26 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Goal</th>
-            <th class="table-top">What has to happen to accomplish it?</th>
-            <th class="table-top">Remove?</th>
-          </thead>
-          <GoalTable3Col
-            goal={data[0].goal}
-            actionPndg={data[0].actionPndg}
-            removeF={removeF}
-          ></GoalTable3Col>
-          <GoalTable3Col
-            goal={data[1].goal}
-            actionPndg={data[1].actionPndg}
-            removeF={removeF}
-          ></GoalTable3Col>
-          <GoalTable3Col
-            goal={data[2].goal}
-            actionPndg={data[2].actionPndg}
-            removeF={removeF}
-          ></GoalTable3Col>
-          <GoalTable3Col
-            goal={oldGoal}
-            actionPndg={data[2].actionPndg}
-            removeF={removeF}
-          ></GoalTable3Col>
-          <AddTable3Col addF={addF}></AddTable3Col>
-          <InputTable3Col></InputTable3Col>
+          <HeaderTable3Col
+            col1Tunnel={titles3col[0].col1}
+            col2Tunnel={titles3col[0].col2}
+            col3Tunnel={titles3col[0].col3}
+          ></HeaderTable3Col>
+          {goals.map((x) => (
+            <GoalTable3Col
+              goalTunnel={x.goal}
+              actionPndgTunnel={x.action}
+              idTunnel={x.id}
+              btnFTunnel={removeF}
+            ></GoalTable3Col>
+          ))}
+          <InputTable3Col
+            btnFTunnel={Pusher}
+            goalLiFTunnel={goalListener}
+            actionLiFTunnel={actionListener}
+            goalDefaultTunnel={inputGoal}
+            actionDefaultTunnel={inputAction}
+          ></InputTable3Col>
         </table>
 
         <h3 class="h3-profile">
@@ -86,12 +153,12 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Goal</th>
-            <th class="table-top">How often?</th>
-            <th class="table-top">For how long?</th>
-            <th class="table-top">Remove?</th>
-          </thead>
+          <HeaderTable4Col
+            col1Tunnel={titles4col[0].col1}
+            col2Tunnel={titles4col[0].col2}
+            col3Tunnel={titles4col[0].col3}
+            col4Tunnel={titles4col[0].col4}
+          ></HeaderTable4Col>
           <tbody id="cgttb">
             <tr>
               <th class="table-goal">Exercise</th>
@@ -141,12 +208,12 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Goal</th>
-            <th class="table-top">How often?</th>
-            <th class="table-top">Which action?</th>
-            <th class="table-top">Remove?</th>
-          </thead>
+          <HeaderTable4Col
+            col1Tunnel={titles4col[1].col1}
+            col2Tunnel={titles4col[1].col2}
+            col3Tunnel={titles4col[1].col3}
+            col4Tunnel={titles4col[1].col4}
+          ></HeaderTable4Col>
           <tbody id="cgatb">
             <tr>
               <th class="table-goal">Order</th>
@@ -191,12 +258,12 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Activity</th>
-            <th class="table-top">How often?</th>
-            <th class="table-top">Daily time allowed</th>
-            <th class="table-top">Remove?</th>
-          </thead>
+          <HeaderTable4Col
+            col1Tunnel={titles4col[2].col1}
+            col2Tunnel={titles4col[2].col2}
+            col3Tunnel={titles4col[2].col3}
+            col4Tunnel={titles4col[2].col4}
+          ></HeaderTable4Col>
           <tbody id="latb">
             <tr>
               <th class="table-goal">Facebook</th>
@@ -242,11 +309,11 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Activity</th>
-            <th class="table-top">Until when?</th>
-            <th class="table-top">Remove?</th>
-          </thead>
+          <HeaderTable3Col
+            col1Tunnel={titles3col[1].col1}
+            col2Tunnel={titles3col[1].col2}
+            col3Tunnel={titles3col[1].col3}
+          ></HeaderTable3Col>
           <tbody id="fatb">
             <tr>
               <th class="table-goal">Instagram</th>
@@ -280,12 +347,12 @@ function Profile() {
           </div>
         </h3>
         <table class="profile-table">
-          <thead>
-            <th class="table-top">Event</th>
-            <th class="table-top">Date</th>
-            <th class="table-top">Notes</th>
-            <th class="table-top">Remove?</th>
-          </thead>
+          <HeaderTable4Col
+            col1Tunnel={titles4col[3].col1}
+            col2Tunnel={titles4col[3].col2}
+            col3Tunnel={titles4col[3].col3}
+            col4Tunnel={titles4col[3].col4}
+          ></HeaderTable4Col>
           <tbody id="sgtb">
             <tr>
               <th class="table-goal">Linda's birthday</th>

@@ -1,37 +1,3 @@
-/* &&&&&&&&&&&&&&&&&&&&&&&&& HEADER */
-
-.profile-header {
-  padding-bottom: 4rem;
-}
-
-.id-salute {
-  display: flex;
-  font-size: 3.6rem;
-  align-self: flex-end;
-}
-
-#id-profile {
-  font-weight: 700;
-}
-
-.guide-button {
-  font-size: 2.4rem;
-  font-family: Verdana, sans-serif;
-
-  padding: 1rem;
-  border: 0.3rem solid;
-  box-shadow: 1rem 1rem;
-
-  background-color: #e3fafc;
-  background-color: #f47dae;
-  transition: 0.2s;
-}
-
-.guide-button:hover {
-  background-color: #22ec98;
-  cursor: pointer;
-}
-
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
 
 .main-profile-container {
@@ -58,7 +24,7 @@
   padding: 1rem 2rem 2rem 2rem;
   z-index: 1;
   text-align: left;
-  border: 0.3rem solid;
+  /* border: 0.3rem solid; */
   box-shadow: 1rem 1rem;
   opacity: 0%;
   visibility: hidden;
@@ -91,7 +57,7 @@
   width: 110rem;
   background-color: #d7fcec;
   margin: 0rem auto 8rem auto;
-  border: 0.2rem solid;
+  /* border: 0.2rem solid; */
   border-collapse: collapse;
 }
 
@@ -101,9 +67,17 @@ tbody tr:nth-child(even) {
 
 th,
 td {
-  border: 0.2rem solid;
+  /* border: 0.2rem solid; */
   text-align: center;
   padding: 1rem 1rem 1rem 1rem;
+}
+
+th {
+  border: 0.2rem solid;
+}
+
+td {
+  border: 0.2rem solid;
 }
 
 th {
@@ -116,6 +90,17 @@ th {
 
 .table-goal {
   text-align: left;
+}
+
+.remove-goal-minus-button {
+  padding: 0rem;
+
+  cursor: pointer;
+}
+
+.remove-goal-minus-button:hover {
+  background-color: #f47dae;
+  transition: 0.2s;
 }
 
 .add-goal-plus-button {
@@ -153,13 +138,6 @@ th {
   /* background-color: #f47dae; */
   padding: 0;
   transition: 0.1s;
-}
-
-.checkbox-container {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  border: none;
 }
 
 .table-checkbox {

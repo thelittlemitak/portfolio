@@ -22,9 +22,20 @@
 // A good practice is to put Handler at the end of the function to specify that that f is actually waiting for the user ('handling' the event/response)
 // 47. How functions deploy each other under the hood and why there are no changes on click events (there are but the component is not rerendered again)
 // 48. Intro to state and useState f (this basically does the component to render again after a change). Every instance has an independent state
-// Always use const
+// 52. Listening to user input from the e argument and passing it through target.value
+// 53. Using more than one useState. Nothing new
+// 54. How to have a object as a useState argument in order to use the f only once for more data
+// 55. Updating a state that depends on the previous state. Not relevant at the moment
+// 56. Work with form submission
+// 57. Supertrick to clear the input fields
+// 58. Sending data up (props backwards) with callback functions (the info from e will go where the f is, not necessarely where is executed)
+// ! There's actually no need to bring data up if nothing needs it
+// 59. Lifting the state up. More about 58
+// 60. Controlled vs Uncontrolled Components & Stateless vs Stateful Components
+// ! List rendering. Important to remember this to reference what you do in Profile
 
 // ! I saw it explained on 64
+
 // PROPS SCHEME
 // 1. DATA (obj) 2. ATT inside COMPONENT REFERENCE that has DATA (from data or any value)
 // 3. New obj is created inside the component (called PROPS, used as ARGUMENT to be used inside the function)
