@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 function GoalTable3Col(props) {
   return (
     <tbody>

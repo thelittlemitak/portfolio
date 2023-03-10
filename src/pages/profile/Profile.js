@@ -11,53 +11,130 @@ import AddTable3Col from "./AddTable3Col";
 import InputTable3Col from "./InputTable3Col";
 import HeaderTable3Col from "./HeaderTable3Col";
 import HeaderTable4Col from "./HeaderTable4Col";
+import GoalTable4Col from "./GoalTable4Col";
+import InputTable4Col from "./InputTable4Col";
 
 function Profile() {
   const aboutBtn = AboutButton;
   const contactBtn = ContactButton;
 
-  const userData = [
-    { goal: "goal1", action: "from userData", id: 0.7419944699444685 },
-    { goal: "goal2", action: "from userData", id: 0.2944508500185419 },
-    { goal: "goal3", action: "from userData", id: 0.2119945356444685 },
-    { goal: "goal4", action: "from userData", id: 0.0744508500185419 },
+  //! TEMPO GOALS
+  const tempoGoalsData = [
+    { goal: "goal1", action: "from tempoGoals", id: 0.7419944699444685 },
+    { goal: "goal2", action: "from tempoGoals", id: 0.2944508500185419 },
+    { goal: "goal3", action: "from tempoGoals", id: 0.2119945356444685 },
+    { goal: "goal4", action: "from tempoGoals", id: 0.0744508500185419 },
   ];
 
-  const [goals, setGoals] = useState(userData);
+  const [tempoGoals, setTempoGoals] = useState(tempoGoalsData);
 
   let newNumber = Math.random();
 
-  const [inputGoal, setInputGoal] = useState("");
-  const [inputAction, setInputAction] = useState("");
+  const [inputTempoGoal, setInputTempoGoal] = useState("");
+  const [inputTempoAction, setInputTempoAction] = useState("");
 
-  function goalListener(e) {
-    let inputGoal = e.target.value;
-    setInputGoal(inputGoal);
+  function tempoGoalListener(e) {
+    let inputTempoGoal = e.target.value;
+    setInputTempoGoal(inputTempoGoal);
   }
 
-  function actionListener(e) {
-    let inputAction = e.target.value;
-    setInputAction(inputAction);
+  function tempoActionListener(e) {
+    let inputTempoAction = e.target.value;
+    setInputTempoAction(inputTempoAction);
   }
 
   const Pusher = function () {
-    setGoals([
-      ...goals,
-      { goal: inputGoal, action: inputAction, id: newNumber },
+    setTempoGoals([
+      ...tempoGoals,
+      { goal: inputTempoGoal, action: inputTempoAction, id: newNumber },
     ]);
-    setInputGoal("");
-    setInputAction("");
+    setInputTempoGoal("");
+    setInputTempoAction("");
   };
 
   const removeF = function (e) {
     let idOfCheckboxPressed = e.target.id;
-    let indexOfCheckboxPressed = goals.findIndex(
+    let indexOfCheckboxPressed = tempoGoals.findIndex(
       (x) => x.id == idOfCheckboxPressed
     );
-    goals.splice(indexOfCheckboxPressed, 1);
-    setGoals([...goals]);
+    tempoGoals.splice(indexOfCheckboxPressed, 1);
+    setTempoGoals([...tempoGoals]);
   };
 
+  //! CONT GOALS (TIME DEPENDENT)
+  const contGoalsTDData = [
+    {
+      goal: "goal1",
+      freq: "Daily",
+      length_: "1 month",
+      id: 0.0919944699284685,
+    },
+    {
+      goal: "goal2",
+      freq: "Monthly",
+      length_: "1 month",
+      id: 0.1019943847444685,
+    },
+    {
+      goal: "goal3",
+      freq: "Daily",
+      length_: "1 month",
+      id: 0.1132244699444685,
+    },
+    {
+      goal: "goal4",
+      freq: "Daily",
+      length_: "1 month",
+      id: 0.1219944694949685,
+    },
+  ];
+
+  const [contGoalsTD, setContGoalsTD] = useState(contGoalsTDData);
+
+  const [inputContGoalsTD, setInputContGoalsTD] = useState("");
+  const [inputFreqContGoalsTD, setInputFreqContGoalsTD] = useState("");
+  const [inputLengthContGoalsTD, setInputLengthContGoalsTD] = useState("");
+
+  function contGoalTDListener(e) {
+    let inputContGoalsTD = e.target.value;
+    setInputContGoalsTD(inputContGoalsTD);
+  }
+
+  function freqContGoalTDListener(e) {
+    let inputFreqContGoalsTD = e.target.value;
+    setInputFreqContGoalsTD(inputFreqContGoalsTD);
+  }
+
+  function lengthContGoalTDListener(e) {
+    let inputLengthContGoalsTD = e.target.value;
+    setInputLengthContGoalsTD(inputLengthContGoalsTD);
+  }
+
+  const Pusher2 = function () {
+    setContGoalsTD([
+      ...contGoalsTD,
+      {
+        goal: inputContGoalsTD,
+        freq: inputFreqContGoalsTD,
+        length: inputLengthContGoalsTD,
+        id: newNumber,
+      },
+    ]);
+    setInputContGoalsTD("");
+    setInputFreqContGoalsTD("");
+    setInputLengthContGoalsTD("");
+  };
+
+  const removeF2 = function (e) {
+    let idOfCheckboxPressed = e.target.id;
+    let indexOfCheckboxPressed = contGoalsTD.findIndex(
+      (x) => x.id == idOfCheckboxPressed
+    );
+    contGoalsTD.splice(indexOfCheckboxPressed, 1);
+    setContGoalsTD([...contGoalsTD]);
+  };
+
+  //! TITLES
   const goalTitle = "Goal";
   const addRemoveTitle = "Add/Remove";
   const howOftenTitle = "How often?";
@@ -75,6 +152,7 @@ function Profile() {
       col3: addRemoveTitle,
     },
   ];
+
   const titles4col = [
     {
       type: "cont. goals (time dependent)",
@@ -125,7 +203,7 @@ function Profile() {
             col2Tunnel={titles3col[0].col2}
             col3Tunnel={titles3col[0].col3}
           ></HeaderTable3Col>
-          {goals.map((x) => (
+          {tempoGoals.map((x) => (
             <GoalTable3Col
               goalTunnel={x.goal}
               actionPndgTunnel={x.action}
@@ -135,10 +213,10 @@ function Profile() {
           ))}
           <InputTable3Col
             btnFTunnel={Pusher}
-            goalLiFTunnel={goalListener}
-            actionLiFTunnel={actionListener}
-            goalDefaultTunnel={inputGoal}
-            actionDefaultTunnel={inputAction}
+            goalLiFTunnel={tempoGoalListener}
+            actionLiFTunnel={tempoActionListener}
+            goalDefaultTunnel={inputTempoGoal}
+            actionDefaultTunnel={inputTempoAction}
           ></InputTable3Col>
         </table>
 
@@ -159,42 +237,24 @@ function Profile() {
             col3Tunnel={titles4col[0].col3}
             col4Tunnel={titles4col[0].col4}
           ></HeaderTable4Col>
-          <tbody id="cgttb">
-            <tr>
-              <th class="table-goal">Exercise</th>
-              <td>Daily</td>
-              <td>30 min</td>
-              <td>
-                <div class="checkbox-container">
-                  <input
-                    type="checkbox"
-                    class="table-checkbox"
-                    data-test="exercise"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th class="table-goal">Meditate</th>
-              <td>Daily</td>
-              <td>15 min</td>
-              <td>
-                <div class="checkbox-container">
-                  <input type="checkbox" class="table-checkbox" />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td class="add-goal-plus-button" id="cgtAdd">
-                +
-              </td>
-              <td class="dummy-goal-row"></td>
-              <td class="dummy-goal-row"></td>
-              <td class="dummy-goal-row"></td>
-            </tr>
-          </tbody>
+          {contGoalsTDData.map((x) => (
+            <GoalTable4Col
+              goalTunnel={x.goal}
+              actionPndgTunnel={x.freq}
+              lengthTunnel={x.length_}
+              idTunnel={x.id}
+              btnFTunnel={removeF2}
+            ></GoalTable4Col>
+          ))}
+          <InputTable4Col
+            btnFTunnel={Pusher2}
+            goalLiFTunnel={contGoalTDListener}
+            freqLiFTunnel={freqContGoalTDListener}
+            lengthLiFTunnel={lengthContGoalTDListener}
+            goalDefaultTunnel={inputContGoalsTD}
+            freqDefaultTunnel={inputFreqContGoalsTD}
+            lengthDefaultTunnel={inputLengthContGoalsTD}
+          ></InputTable4Col>
         </table>
 
         <h3 class="h3-profile">
