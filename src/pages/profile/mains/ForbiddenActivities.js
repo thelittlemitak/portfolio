@@ -65,6 +65,7 @@ function ForbiddenActivities(props) {
             actionPndgTunnel={x.action}
             idTunnel={x.id}
             btnFTunnel={removeF}
+            key={x.id}
           ></GoalTable3Col>
         ))}
         <InputTable3Col

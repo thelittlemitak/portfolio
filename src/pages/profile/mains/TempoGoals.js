@@ -28,6 +28,7 @@ function TempoGoals(props) {
       ...tempoGoals,
       { goal: inputTempoGoal, action: inputTempoAction, id: newNumber },
     ]);
+    console.log(tempoGoals)
     setInputTempoGoal("");
     setInputTempoAction("");
   };
@@ -63,6 +64,7 @@ function TempoGoals(props) {
             goalTunnel={x.goal}
             actionPndgTunnel={x.action}
             idTunnel={x.id}
+            key={x.id}
             btnFTunnel={removeF}
           ></GoalTable3Col>
         ))}

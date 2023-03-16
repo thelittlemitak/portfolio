@@ -1,0 +1,89 @@
+h2 {
+  margin-top: 15rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.topic-header {
+  font-size: 2.5rem;
+
+  background-color: #f7a1c5;
+  border: 0.3rem solid;
+  box-shadow: 1rem 1rem;
+
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 3fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.topic-header:hover {
+  cursor: pointer;
+}
+
+.topic-header-goal {
+  font-size: 3rem;
+}
+
+.thread-wrapper {
+  transform: translateX(2%);
+  box-shadow: 0.5rem 0.5rem;
+}
+
+.user-line-wrapper {
+  font-size: 2.5rem;
+
+  background-color: #d7fcec;
+  border: 0.3rem solid;
+
+  padding: 1rem 1rem 0rem 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+}
+
+.chat-line {
+  margin-bottom: 1rem;
+
+  display: flex;
+}
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.forum-input {
+  width: 100%;
+
+  font-size: 2rem;
+
+  background-color: white;
+
+  padding: 1rem 0rem 1rem 3rem;
+}
+
+.test-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.test-wrapper:hover {
+  cursor: pointer;
+}
+
+.test {
+  font-size: 4rem;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+}

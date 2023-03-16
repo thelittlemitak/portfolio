@@ -78,6 +78,7 @@ function SocialGatherings(props) {
             actionPndgTunnel={x.freq}
             lengthTunnel={x.length_}
             idTunnel={x.id}
+            key={x.id}
             btnFTunnel={removeF}
           ></GoalTable4Col>
         ))}

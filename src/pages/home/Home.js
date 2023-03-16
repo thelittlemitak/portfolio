@@ -1,7 +1,7 @@
 import Footer from "../../components/Footer";
 import ReadyButton from "../../components/ReadyButton";
-import CarouselDots from "../../components/CarouselDots";
-import Carousel from "./Carousel";
+import CarouselDots from "./Carousel/CarouselDots";
+import Carousel from "./Carousel/Carousel";
 import HowToLists from "./HowToLists";
 import ArrowDown from "../../components/ArrowDown";
 import PostHeroTitle from "./PostHeroTitle";
@@ -29,7 +29,6 @@ function Home() {
         <ArrowDown></ArrowDown>
         <HowToLists></HowToLists>
         <Carousel></Carousel>
-        <CarouselDots></CarouselDots>
         <ReadyButton></ReadyButton>
         <Footer></Footer>
       </MainWrapper>

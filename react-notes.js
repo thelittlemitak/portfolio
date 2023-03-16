@@ -13,9 +13,9 @@
 // 33. Complex JSX: You cannot add more than one element (so one next to each other). You can put all inside a div though and put all inside () to format it
 // 34. CSS: You have to use className and not class (this is because class is a keyword in js)!
 // 35. Dynamic data. You put curly braces inside the element {} and you basically will have js. This means you can add operations, vars etc.
-// 36. You can think about props just being an object which keys are the JSX atts // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
-// 38. Component trees // ! NOT USED IN THE PROJECT YET but maybe it's useful for data input
-// 39. How to create wrapper/container components // ! NOT USED IN THE PROJECT YET; maybe for the mains
+// 36. You can think about props just being an object which keys are the JSX atts
+// 38. Component trees
+// 39. How to create wrapper/container components
 // 41. JSX behind the scenes. PS: You will see this from old code in every component -> import React from "react";
 // 43. The use of arrow functions
 // 46. How to add event listeners to JSX elements: using on + the HTML att and adding a function between {} to tell what's executed if the event happens
@@ -29,10 +29,11 @@
 // 56. Work with form submission
 // 57. Supertrick to clear the input fields
 // 58. Sending data up (props backwards) with callback functions (the info from e will go where the f is, not necessarely where is executed)
-// ! There's actually no need to bring data up if nothing needs it
+// ! we have to check this out since what we are doing in profile and forum is changing a copy of the user data
 // 59. Lifting the state up. More about 58
 // 60. Controlled vs Uncontrolled Components & Stateless vs Stateful Components
-// ! List rendering. Important to remember this to reference what you do in Profile
+// 66/67. Outputting Conditional Content (not needed for now)
+// 74. Styles with if statements // ! not used yet
 
 // ! I saw it explained on 64
 
@@ -44,3 +45,71 @@
 // The ATT value is the value you want to use in your component and the key, the reference. So:
 // ATT = props.ATT; ATT value = props.ATT value. ATTs could be easily called ref1 ref2 ref3
 //266. Multipage intro
+
+// content:
+
+// width:
+// height:
+// top:
+// right:
+// position:
+// z-index:
+// object-fit:
+// transform:
+// translate:
+// rotate:
+// visibility:
+
+// font-family:
+// font-size:
+// font-weight:
+// text-decoration:
+// list-style:
+
+// color:
+// background-color:
+// opacity:
+// visibility:
+// border:
+// border-collapse:
+// box-shadow:
+
+// line-height:
+// text-align:
+// padding:
+// margin:
+
+// grid-column:
+// display:
+// flex-direction:
+// grid-template-columns:
+// justify-content:
+// justify-items:
+// align-items:
+// gap:
+
+// cursor:
+
+// transition:
+
+// HEIGHT
+// WIDTH
+
+
+// COLOR
+
+// PADDING
+// MARGIN
+// border
+// boxshadow
+
+// DISPLAY
+// display
+// align
+// justify
+// gpa
+
+// TRANSLATE
+// TRANSITION
+
+// MUTES

@@ -5,13 +5,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import AboutButton from "../../components/AboutButton";
 import ContactButton from "../../components/ContactButton";
-import DoubtIcon from "../../components/DoubtIcon";
-
-import HeaderTable3Col from "./components/HeaderTable3Col";
-
-import HeaderTable4Col from "./components/HeaderTable4Col";
-import GoalTable4Col from "./components/GoalTable4Col";
-import InputTable4Col from "./components/InputTable4Col";
 import TempoGoals from "./mains/TempoGoals";
 import ContGoalsTD from "./mains/ContGoalsTD";
 import ContGoalsAD from "./mains/ContGoalsAD";

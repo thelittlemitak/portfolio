@@ -5,12 +5,26 @@ function TestPage() {
 
   const [el, setValue] = useState(<div>holi</div>);
 
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  
+  let formatedDate = day + "." + month + "." + year;
+
   function change() {
     setValue("new var");
-    console.log(setValue)
+    console.log(setValue);
   }
 
-  return <button onClick={change}>{el}</button>;
+  return (
+    <div>
+      <button onClick={change}>{el}</button>
+      <div>{minutes}</div>
+    </div>
+  );
 }
 
 export default TestPage;

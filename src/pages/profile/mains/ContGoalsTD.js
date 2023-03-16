@@ -79,6 +79,7 @@ function ContGoalsTD(props) {
             lengthTunnel={x.length_}
             idTunnel={x.id}
             btnFTunnel={removeF}
+            key={x.id}
           ></GoalTable4Col>
         ))}
         <InputTable4Col
