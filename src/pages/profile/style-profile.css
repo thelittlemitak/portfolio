@@ -1,7 +1,7 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
 
 .main-profile-container {
-  margin-top: 19rem;
+  margin-top: 7rem;
   font-size: 3rem;
 }
 
@@ -152,4 +152,8 @@ th {
   text-align: center;
   width: 100%;
   height: 30px;
+}
+
+.empty-input {
+  background-color: red;
 }

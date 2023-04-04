@@ -1,0 +1,83 @@
+.modal-wrapper {
+  margin: 0px auto;
+  padding: 4rem 2rem 2rem 2rem;
+  width: 30rem;
+  font-size: 3rem;
+  background-color: #f7a1c5;
+  box-shadow: 1.3rem 1.3rem rgba(0, 0, 0, 0.869);
+  border: 0.4rem solid;
+}
+
+.modal-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* text-align: center; */
+}
+
+.modal-wrapper form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-wrapper form div input {
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: #a1f7d3;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.modal-wrapper form div label {
+  text-align: center;
+}
+
+.modal-wrapper form button {
+  width: 9rem;
+  height: 3rem;
+  font-size: 2rem;
+
+  margin: 0px auto;
+  background-color: #a1f7d3;
+}
+
+.alert-title {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.alert-title button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+  font-weight: 900;
+  font-size: 2rem;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.alert-title button:hover {
+  background-color: #a1f7d391;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 5px #a1f7d3;
+}
+
+#modal1 {
+  position: fixed;
+  z-index: 779799778;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modal2 {
+  position: fixed;
+  z-index: 8978979789787;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

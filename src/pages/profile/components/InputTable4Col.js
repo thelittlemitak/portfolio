@@ -5,8 +5,8 @@ function InputTable4Col(props) {
         <td class="dummy-goal-row">
           <input
             type="text"
-            placeholder="New Goal"
-            class="profile-input profile-input-goal"
+            placeholder={props.placeHolder1Tunnel}
+            className={props.classTunnel1}
             value={props.goalDefaultTunnel}
             onChange={props.goalLiFTunnel}
           />
@@ -14,8 +14,8 @@ function InputTable4Col(props) {
         <td class="dummy-goal-row">
           <input
             type="text"
-            placeholder="What has to happen to accomplish it?"
-            class="profile-input profile-input-text"
+            placeholder={props.placeHolder2Tunnel}
+            className={props.classTunnel2}
             value={props.freqDefaultTunnel}
             onChange={props.freqLiFTunnel}
           />
@@ -23,8 +23,8 @@ function InputTable4Col(props) {
         <td class="dummy-goal-row">
           <input
             type="text"
-            placeholder="What has to happen to accomplish it?"
-            class="profile-input profile-input-text"
+            placeholder={props.placeHolder3Tunnel}
+            className={props.classTunnel3}
             value={props.lengthDefaultTunnel}
             onChange={props.lengthLiFTunnel}
           />

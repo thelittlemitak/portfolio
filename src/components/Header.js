@@ -1,8 +1,9 @@
 import "./Header.css";
-import AboutButton from "./AboutButton";
-import ContactButton from "./ContactButton";
+import AboutButton from "./btns/AboutButton";
+import ContactButton from "./btns/ContactButton";
+import SignUpBtn from "./btns/SignUpBtn";
+import LoginBtn from "./btns/LoginBtn";
 
-// I removed props as an argument
 function Header(props) {
 
   return (
@@ -12,13 +13,10 @@ function Header(props) {
         <div id="logo-c">e</div>
       </a>
       <div className="button-area">
-        <button className="main-header-buttons" id="login-button">
-          <strong>LOGIN</strong>
-        </button>
-        <button className="main-header-buttons" id="sign-up-button">
-          <strong>SIGN UP</strong>
-        </button>
-        <props.altBtn></props.altBtn>
+        <props.altBtn1 openedTunnel1={props.openedTunnel1}></props.altBtn1>
+        <props.altBtn2 openedTunnel2={props.openedTunnel2}></props.altBtn2>
+        <props.altBtn3></props.altBtn3>
+        <props.altBtn4></props.altBtn4>
       </div>
     </header>
   );

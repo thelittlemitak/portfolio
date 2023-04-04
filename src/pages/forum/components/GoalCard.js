@@ -33,6 +33,7 @@ function GoalCard(props) {
   }
 
   const Pusher = function () {
+    
     setMessage([
       ...message,
       {

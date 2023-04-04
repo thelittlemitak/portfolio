@@ -2,14 +2,15 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MainWrapper from "./components/MainWrapper";
 import GoalCard from "./components/GoalCard";
-import AboutButton from "../../components/AboutButton";
-import ContactButton from "../../components/ContactButton";
+import AboutButton from "../../components/btns/AboutButton";
+import ContactButton from "../../components/btns/ContactButton";
+import SignUpBtn from "../../components/btns/SignUpBtn";
+import LoginBtn from "../../components/btns/LoginBtn";
+import TodoBtn from "../../components/btns/TodoBtn";
+import MotivatorBtn from "../../components/btns/MotivatorBtn";
+import WarmerBtn from "../../components/btns/WarmerBtn";
 
 function Forum() {
-  const aboutBtn = AboutButton;
-  const contactBtn = ContactButton;
-
-
   const forumData = [
     {
       goal: "Meditate",
@@ -52,8 +53,13 @@ function Forum() {
 
   return (
     <div>
-      <Header altBtn={aboutBtn}></Header>
-      <h2>Welcome to the forum!</h2>
+      <Header
+        altBtn1={TodoBtn}
+        altBtn2={MotivatorBtn}
+        altBtn3={WarmerBtn}
+        altBtn4={AboutButton}
+      ></Header>
+      <h2>Welcome to the FORUM</h2>
       <h3>A thread for each goal that you share with others</h3>
       <MainWrapper class="forum-container">
         {forumData.map((x) => (

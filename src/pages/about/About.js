@@ -3,16 +3,21 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MainWrapper from "./MainWrapper";
 import Hero from "./Hero";
-import AboutButton from "../../components/AboutButton";
-import ContactButton from "../../components/ContactButton";
+import AboutButton from "../../components/btns/AboutButton";
+import ContactButton from "../../components/btns/ContactButton";
+import SignUpBtn from "../../components/btns/SignUpBtn";
+import LoginBtn from "../../components/btns/LoginBtn";
+import DummyBtn from "../../components/btns/DummyBtn";
 
 function About() {
-  const aboutBtn = AboutButton;
-  const contactBtn = ContactButton;
-
   return (
     <div>
-      <Header altBtn={contactBtn}></Header>
+      <Header
+        altBtn1={LoginBtn}
+        altBtn2={SignUpBtn}
+        altBtn3={DummyBtn}
+        altBtn4={ContactButton}
+      ></Header>
       <MainWrapper>
         <Hero></Hero>
         <div className="about-not-hero">

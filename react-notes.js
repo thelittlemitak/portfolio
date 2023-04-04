@@ -1,6 +1,6 @@
-('use strict');
+("use strict");
 //npm start
-//http://localhost:3000/
+//localhost:3000/
 // !!!! HERE PARAMETERS ARE ARGUMENTS !!!!
 
 // 19. Reference and Primitive Types Refresher: objects and arrays point to the same reference in memory. Primitive values do copies instead
@@ -33,7 +33,27 @@
 // 59. Lifting the state up. More about 58
 // 60. Controlled vs Uncontrolled Components & Stateless vs Stateful Components
 // 66/67. Outputting Conditional Content (not needed for now)
-// 74. Styles with if statements // ! not used yet
+// 74. Dynamic styles and styles with if statements (you won't use it since they are inline)
+// 75. Dynamic classes
+// ? 76. Scoping classes is important if you work in a team (never thought about this). Let's leave this for the end since it's not 100% necessary now
+// ? 77. Passing props to the style
+// ? 78. Media query
+// ? 79. CSS Modules (in case you want to use more than one class, check the teacher assistant post in the comments. But that's also explained in 80)
+// ! 80. Check this before 79 since there's an issue with some class names
+// ! Above is not used yet
+// 80. to 87. Debugging (incl. Breakpoints, which I never use)
+// 88. to 98. Project
+// ! 97. Conditionally render a JSX element with short-circuiting. This is super key!!!!
+// 101. The wrapper trick (cool but only use it from now on to not mess the CSS or the media queries that refer to those lefit divs)
+// The reason the above was a mess is because you were using the GenericWrapper with classes. Those classes were list since the GenericWrapper is nothing
+// 102. The <> and the React.Fragment trick
+// ! Fragment is the key!!!! Use it from now on. GenericWrapper was a mess...
+// 103. Overview of Portals
+// 104. Portals. How to put the component in a specific place on the index.html, no matter where it is on the component tree
+// From Google: the reason this is handy it's because you can move the component without braking the props chain
+// 105. Refs. Not sure why using this. Not clear in the course...
+// 106. Controlled vs Uncontrolled Components
+// 109. 110. useEffect
 
 // ! I saw it explained on 64
 
@@ -45,6 +65,13 @@
 // The ATT value is the value you want to use in your component and the key, the reference. So:
 // ATT = props.ATT; ATT value = props.ATT value. ATTs could be easily called ref1 ref2 ref3
 //266. Multipage intro
+
+function sum(a, b) {
+  return a + b;
+}
+const sum2 = (a, b) => a + b; // if there was only one parameter, you can remove the () (this explains callback functions that only accept e)
+// Also callback functions without arguments are called like this: () => {}
+// Explanation about how this works in each https://www.youtube.com/watch?v=h33Srr5J9nY
 
 // content:
 
@@ -95,7 +122,6 @@
 // HEIGHT
 // WIDTH
 
-
 // COLOR
 
 // PADDING
@@ -113,3 +139,38 @@
 // TRANSITION
 
 // MUTES
+
+// * TINTS OF THE GREEN - https://www.colorhexa.com/c5fae4
+// BACKGROUND
+// #e9fdf5
+// SUPER LIGHT
+// #d7fcec
+// LIGHT
+// #c5fae4
+// MEDIUM-LIGHT
+// #b3f8dc
+// MEDIUM
+// #a1f7d3
+// HARD
+// #7df4c2
+// TOP HARD
+// #59f1b2
+// DEATH STRONG
+// #22ec98
+
+// * TINTS OF THE PINK - https://www.colorhexa.com/fac5db
+// BACKGROUND
+// SUPER LIGHT
+// #fde9f1
+// LIGHT
+// #fcd7e6
+// MEDIUM-LIGHT
+// #fac5db
+// MEDIUM
+// #f7a1c5
+// X
+// #f58fb9
+// HARD
+// #f47dae
+// TOP HARD
+// DEATH STRONG

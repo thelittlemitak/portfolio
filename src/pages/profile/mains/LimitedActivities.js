@@ -1,35 +1,68 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import HeaderTable4Col from "../components/HeaderTable4Col";
 import DoubtIcon from "../../../components/DoubtIcon";
 import GoalTable4Col from "../components/GoalTable4Col";
 import InputTable4Col from "../components/InputTable4Col";
+import GenericWrapper from "../../../components/GenericWrapper";
 
 function LimitedActivities(props) {
   const [contGoalsTD, setContGoalsTD] = useState(props.dataTunnel);
+
+  let newNumber = Math.random();
 
   const [inputContGoalsTD, setInputContGoalsTD] = useState("");
   const [inputFreqContGoalsTD, setInputFreqContGoalsTD] = useState("");
   const [inputLengthContGoalsTD, setInputLengthContGoalsTD] = useState("");
 
-  let newNumber = Math.random();
+  let [classer1, setclasser1] = useState("");
+  let [classer2, setclasser2] = useState("");
+  let [classer3, setclasser3] = useState("");
 
   function contGoalTDListener(e) {
     let inputContGoalsTD = e.target.value;
     setInputContGoalsTD(inputContGoalsTD);
+    if (inputContGoalsTD.length != 0) {
+      setclasser1("");
+      return classer1;
+    }
   }
 
   function freqContGoalTDListener(e) {
     let inputFreqContGoalsTD = e.target.value;
     setInputFreqContGoalsTD(inputFreqContGoalsTD);
+    if (inputFreqContGoalsTD.length != 0) {
+      setclasser2("");
+      return classer2;
+    }
   }
 
   function lengthContGoalTDListener(e) {
     let inputLengthContGoalsTD = e.target.value;
     setInputLengthContGoalsTD(inputLengthContGoalsTD);
+    if (inputLengthContGoalsTD.length != 0) {
+      setclasser3("");
+      return classer3;
+    }
   }
 
   const Pusher = function () {
+    if (
+      inputContGoalsTD.length === 0 ||
+      inputFreqContGoalsTD.length === 0 ||
+      inputLengthContGoalsTD.length === 0
+    ) {
+      if (inputContGoalsTD.length === 0) {
+        setclasser1("empty-input");
+      }
+      if (inputFreqContGoalsTD.length === 0) {
+        setclasser2("empty-input");
+      }
+      if (inputLengthContGoalsTD.length === 0) {
+        setclasser3("empty-input");
+      }
+      return;
+    }
     setContGoalsTD([
       ...contGoalsTD,
       {
@@ -39,6 +72,9 @@ function LimitedActivities(props) {
         id: newNumber,
       },
     ]);
+    setclasser1("");
+    setclasser2("");
+    setclasser3("");
     setInputContGoalsTD("");
     setInputFreqContGoalsTD("");
     setInputLengthContGoalsTD("");
@@ -54,16 +90,16 @@ function LimitedActivities(props) {
   };
 
   return (
-    <div>
+    <Fragment>
       <h3 class="h3-profile">
-          Limited activities
-          <DoubtIcon></DoubtIcon>
-          <div class="info-box info-box--hidden">
-            Less is more. Spending less time doing some activities can give you
-            more room and peace of mind for your goals. But never forget to take
-            some time for you to rest and relax. We are not robots!
-          </div>
-        </h3>
+        Limited activities
+        <DoubtIcon></DoubtIcon>
+        <div class="info-box info-box--hidden">
+          Less is more. Spending less time doing some activities can give you
+          more room and peace of mind for your goals. But never forget to take
+          some time for you to rest and relax. We are not robots!
+        </div>
+      </h3>
       <table class="profile-table">
         <HeaderTable4Col
           col1Tunnel={props.titlesTunnel[2].col1}
@@ -89,9 +125,15 @@ function LimitedActivities(props) {
           goalDefaultTunnel={inputContGoalsTD}
           freqDefaultTunnel={inputFreqContGoalsTD}
           lengthDefaultTunnel={inputLengthContGoalsTD}
+          placeHolder1Tunnel={"Activity"}
+          placeHolder2Tunnel={"Frequency"}
+          placeHolder3Tunnel={"Time in minutes/hours"}
+          classTunnel1={`profile-input profile-input-goal ${classer1}`}
+          classTunnel2={`profile-input profile-input-goal ${classer2}`}
+          classTunnel3={`profile-input profile-input-goal ${classer3}`}
         ></InputTable4Col>
       </table>
-    </div>
+    </Fragment>
   );
 }
 

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import HeaderTable3Col from "../components/HeaderTable3Col";
 import DoubtIcon from "../../../components/DoubtIcon";
 import GoalTable3Col from "../components/GoalTable3Col";
 import InputTable3Col from "../components/InputTable3Col";
+import GenericWrapper from "../../../components/GenericWrapper";
 
 function TempoGoals(props) {
   const [tempoGoals, setTempoGoals] = useState(props.dataTunnel);
@@ -13,22 +14,44 @@ function TempoGoals(props) {
   const [inputTempoGoal, setInputTempoGoal] = useState("");
   const [inputTempoAction, setInputTempoAction] = useState("");
 
+  let [classer1, setclasser1] = useState("");
+  let [classer2, setclasser2] = useState("");
+
   function tempoGoalListener(e) {
     let inputTempoGoal = e.target.value;
     setInputTempoGoal(inputTempoGoal);
+    if (inputTempoGoal.length != 0) {
+      setclasser1("");
+      return classer1;
+    }
   }
 
   function tempoActionListener(e) {
     let inputTempoAction = e.target.value;
     setInputTempoAction(inputTempoAction);
+    if (inputTempoAction.length != 0) {
+      setclasser2("");
+      return classer2;
+    }
   }
 
   const Pusher = function () {
+    if (inputTempoGoal.length === 0 || inputTempoAction.length === 0) {
+      if (inputTempoGoal.length === 0) {
+        setclasser1("empty-input");
+      }
+      if (inputTempoAction.length === 0) {
+        setclasser2("empty-input");
+      }
+      return;
+    }
+
     setTempoGoals([
       ...tempoGoals,
       { goal: inputTempoGoal, action: inputTempoAction, id: newNumber },
     ]);
-    console.log(tempoGoals)
+    setclasser1("");
+    setclasser2("");
     setInputTempoGoal("");
     setInputTempoAction("");
   };
@@ -43,7 +66,7 @@ function TempoGoals(props) {
   };
 
   return (
-    <div>
+    <Fragment>
       <h3 class="h3-profile">
         Temporary goals
         <DoubtIcon></DoubtIcon>
@@ -68,16 +91,19 @@ function TempoGoals(props) {
             btnFTunnel={removeF}
           ></GoalTable3Col>
         ))}
-
         <InputTable3Col
           btnFTunnel={Pusher}
           goalLiFTunnel={tempoGoalListener}
           actionLiFTunnel={tempoActionListener}
           goalDefaultTunnel={inputTempoGoal}
           actionDefaultTunnel={inputTempoAction}
+          placeHolder1Tunnel={"Goal summary"}
+          placeHolder2Tunnel={"Deconstruction"}
+          classTunnel1={`profile-input profile-input-goal ${classer1}`}
+          classTunnel2={`profile-input profile-input-goal ${classer2}`}
         ></InputTable3Col>
       </table>
-    </div>
+    </Fragment>
   );
 }
 

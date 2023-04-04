@@ -3,36 +3,89 @@ import React, { useState } from "react";
 import "./style-profile.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import AboutButton from "../../components/AboutButton";
-import ContactButton from "../../components/ContactButton";
+import AboutButton from "../../components/btns/AboutButton";
+import ContactButton from "../../components/btns/ContactButton";
 import TempoGoals from "./mains/TempoGoals";
 import ContGoalsTD from "./mains/ContGoalsTD";
 import ContGoalsAD from "./mains/ContGoalsAD";
 import LimitedActivities from "./mains/LimitedActivities";
 import ForbiddenActivities from "./mains/ForbiddenActivities";
 import SocialGatherings from "./mains/SocialGatherings";
+import SignUpBtn from "../../components/btns/SignUpBtn";
+import LoginBtn from "../../components/btns/LoginBtn";
+import ForumBtn from "../../components/btns/ForumBtn";
+import Ideas from "./mains/Ideas";
+import GenericWrapper from "../../components/GenericWrapper";
+import Hobbies from "./mains/Hobbies";
+import MotivatorBtn from "../../components/btns/MotivatorBtn";
+import WarmerBtn from "../../components/btns/WarmerBtn"
 
 function Profile() {
-  const aboutBtn = AboutButton;
-  const contactBtn = ContactButton;
-
   const tempoGoalsData = [
-    { goal: "Change career path", action: "Study and get a coding job", id: 0.7419944699444685 },
+    {
+      goal: "Change career path",
+      action: "Study and get a coding job",
+      id: 0.7419944699444685,
+    },
+    {
+      goal: "Linda's present",
+      action: "Check a concert to go",
+      id: 0.7419944699232888,
+    },
+    {
+      goal: "Belen bills",
+      action: "Pay 4 of them at the end of the month",
+      id: 0.7419576879444222,
+    },
+    {
+      goal: "Bea email",
+      action: "Mirar lo del Kaution ",
+      id: 0.7419228888844222,
+    },
+    {
+      goal: "Cita DNI",
+      action: "Cuando vayas a ibz. Caduca el 22 del 11",
+      id: 0.7412343328844222,
+    },
   ];
   const contGoalsTDData = [
     {
-      goal: "Exercise",
+      goal: "Meditate",
       freq: "Daily",
-      length_: "30 minutes",
+      length_: "15 minutes",
       id: 0.0919944699284685,
     },
   ];
   const contGoalsADData = [
     {
-      goal: "Order",
-      freq: "Daily",
-      length_: "Clean room",
+      goal: "MT schedule",
+      freq: "Weekly (Fri)",
+      length_: "Book next week MT",
       id: 0.2219945439284685,
+    },
+    {
+      goal: "Rewe order",
+      freq: "Weekly (Fri)",
+      length_: "Book next week Rewe for Monday morning",
+      id: 0.2219945439284685,
+    },
+    {
+      goal: "A/D videos",
+      freq: "Every 2 weeks",
+      length_: "After/before body videos",
+      id: 0.2219945439284685,
+    },
+    {
+      goal: "Fruit/water supply",
+      freq: "Daily (2h before MT)",
+      length_: "Drink a lot and eat fruits before training",
+      id: 0.2219945439284685,
+    },
+    {
+      goal: "Youtube vlog",
+      freq: "Every Saturday",
+      length_: "You know the drill",
+      id: 0.2219945333284685,
     },
   ];
   const limitedActivitiesData = [
@@ -42,16 +95,72 @@ function Profile() {
       length_: "One second",
       id: 0.2215648439284685,
     },
+    {
+      goal: "Facebook",
+      freq: "Daily",
+      length_: "One second",
+      id: 0.2215648555284685,
+    },
   ];
   const forbiddenActivitiesData = [
-    { goal: "Facebook", action: "Until June", id: 0.7419944699444685 },
+    { goal: "Youtube", action: "Post MT", id: 0.7419944699444684 },
+    { goal: "Phone", action: "Post MT", id: 0.7419576869444683 },
+    { goal: "More than 1 beer", action: "Always", id: 0.7419576869444682 },
+    { goal: "Coffee", action: "Always", id: 0.7419576869444681 },
   ];
   const socialGatheringsData = [
     {
-      goal: "Linda's",
-      freq: "Tomorrow",
-      length_: "Bring wine",
+      goal: "Tim Hecker's gig",
+      freq: "18.04.2023",
+      length_: "With Javilondon",
       id: 0.2215648439284685,
+    },
+    {
+      goal: "Belu",
+      freq: "Every Monday 15:00",
+      length_: "None",
+      id: 0.7419221219444444,
+    },
+    {
+      goal: "Aphex Twin",
+      freq: "08.06.2023",
+      length_: "Sweeden",
+      id: 0.2215648439284685,
+    },
+    {
+      goal: "Hybral/Lesser Of",
+      freq: "28.04.2023",
+      length_: "Zaski",
+      id: 0.2285855439284685,
+    },
+  ];
+  const ideasData = [
+    {
+      goal: "Guitar",
+      action: "Try shoegaze effects",
+      id: 0.7415556799444685,
+    },
+    {
+      goal: "Renoise",
+      action: "Try renoise plugin",
+      id: 0.7415551112344685,
+    },
+    {
+      goal: "App para entrenar blockieren",
+      action: "Try renoise plugin",
+      id: 0.7415123212344685,
+    },
+    {
+      goal: "Piano",
+      action: "Ya tu sabe",
+      id: 0.7415199912344685,
+    },
+  ];
+  const hobbiesData = [
+    {
+      goal: "Video games",
+      action: "Cities: Skylines",
+      id: 0.7415551232144685,
     },
   ];
 
@@ -67,6 +176,18 @@ function Profile() {
       type: "forbidden activities",
       col1: repTitles[0],
       col2: "Until when?",
+      col3: repTitles[1],
+    },
+    {
+      type: "ideas",
+      col1: "Idea",
+      col2: "Comments",
+      col3: repTitles[1],
+    },
+    {
+      type: "ideas",
+      col1: "Hobby",
+      col2: "Comments",
       col3: repTitles[1],
     },
   ];
@@ -108,8 +229,15 @@ function Profile() {
   ];
 
   return (
-    <div>
-      <Header altBtn={aboutBtn}></Header>
+    <GenericWrapper>
+      <Header
+        altBtn1={ForumBtn}
+        altBtn2={MotivatorBtn}
+        altBtn3={WarmerBtn}
+        altBtn4={AboutButton}
+      ></Header>
+      <h2>Welcome to the TO-DO</h2>
+      <h3>A structured set of sections to remind you what you have to do</h3>
       <main className="main-profile-container">
         <TempoGoals
           dataTunnel={tempoGoalsData}
@@ -135,9 +263,11 @@ function Profile() {
           dataTunnel={socialGatheringsData}
           titlesTunnel={titles4col}
         ></SocialGatherings>
+        <Ideas dataTunnel={ideasData} titlesTunnel={titles3col}></Ideas>
+        <Hobbies dataTunnel={hobbiesData} titlesTunnel={titles3col}></Hobbies>
       </main>
       <Footer></Footer>
-    </div>
+    </GenericWrapper>
   );
 }
 

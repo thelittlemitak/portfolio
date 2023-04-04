@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import HeaderTable3Col from "../components/HeaderTable3Col";
 import DoubtIcon from "../../../components/DoubtIcon";
 import GoalTable3Col from "../components/GoalTable3Col";
 import InputTable3Col from "../components/InputTable3Col";
+import GenericWrapper from "../../../components/GenericWrapper";
 
 function ForbiddenActivities(props) {
   const [tempoGoals, setTempoGoals] = useState(props.dataTunnel);
@@ -13,23 +14,46 @@ function ForbiddenActivities(props) {
   const [inputTempoGoal, setInputTempoGoal] = useState("");
   const [inputTempoAction, setInputTempoAction] = useState("");
 
+  let [classer1, setclasser1] = useState("");
+  let [classer2, setclasser2] = useState("");
+
   function tempoGoalListener(e) {
     let inputTempoGoal = e.target.value;
     setInputTempoGoal(inputTempoGoal);
+    if (inputTempoGoal.length != 0) {
+      setclasser1("");
+      return classer1;
+    }
   }
 
   function tempoActionListener(e) {
     let inputTempoAction = e.target.value;
     setInputTempoAction(inputTempoAction);
+    if (inputTempoAction.length != 0) {
+      setclasser2("");
+      return classer2;
+    }
   }
 
   const Pusher = function () {
+    if (inputTempoGoal.length === 0 || inputTempoAction.length === 0) {
+      if (inputTempoGoal.length === 0) {
+        setclasser1("empty-input");
+      }
+      if (inputTempoAction.length === 0) {
+        setclasser2("empty-input");
+      }
+      return;
+    }
     setTempoGoals([
       ...tempoGoals,
       { goal: inputTempoGoal, action: inputTempoAction, id: newNumber },
     ]);
+    setclasser1("");
+    setclasser2("");
     setInputTempoGoal("");
     setInputTempoAction("");
+    return test;
   };
 
   const removeF = function (e) {
@@ -42,7 +66,7 @@ function ForbiddenActivities(props) {
   };
 
   return (
-    <div>
+    <Fragment>
       <h3 class="h3-profile">
         Forbidden activities
         <DoubtIcon></DoubtIcon>
@@ -74,9 +98,13 @@ function ForbiddenActivities(props) {
           actionLiFTunnel={tempoActionListener}
           goalDefaultTunnel={inputTempoGoal}
           actionDefaultTunnel={inputTempoAction}
+          placeHolder1Tunnel={"Activity to be avoided"}
+          placeHolder2Tunnel={"Until end of December"}
+          classTunnel1={`profile-input profile-input-goal ${classer1}`}
+          classTunnel2={`profile-input profile-input-goal ${classer2}`}
         ></InputTable3Col>
       </table>
-    </div>
+    </Fragment>
   );
 }
 

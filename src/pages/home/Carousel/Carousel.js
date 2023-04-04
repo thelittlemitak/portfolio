@@ -17,13 +17,7 @@ function Carousel() {
   const pic3 = <Picture3></Picture3>;
   const pic4 = <Picture4></Picture4>;
 
-  
-  const pictures = [
-    pic1,
-    pic2,
-    pic3,
-    pic4,
-  ];
+  const pictures = [pic1, pic2, pic3, pic4];
 
   const arrayEl2 = [
     <BlockQuote1></BlockQuote1>,
@@ -54,16 +48,21 @@ function Carousel() {
     setCurrentPos(currentPos - 1);
   };
 
+  let [leftBtnStatus, setLeftBtnStatus] = useState("hide-btn");
+  let [rightBtnStatus, setRightBtnStatus] = useState("");
+
   const rightBtnPlus = function () {
     if (currentPos === 0) {
       adder();
       setDots(dotChances[1]);
+      setLeftBtnStatus("");
     } else if (currentPos === 1) {
       adder();
       setDots(dotChances[2]);
     } else if (currentPos === 2) {
       adder();
       setDots(dotChances[3]);
+      setRightBtnStatus("hide-btn");
     }
   };
 
@@ -71,12 +70,14 @@ function Carousel() {
     if (currentPos === 3) {
       subtractor();
       setDots(dotChances[2]);
+      setRightBtnStatus("");
     } else if (currentPos === 2) {
       subtractor();
       setDots(dotChances[1]);
     } else if (currentPos === 1) {
       subtractor();
       setDots(dotChances[0]);
+      setLeftBtnStatus("hide-btn");
     }
   };
 
@@ -90,7 +91,8 @@ function Carousel() {
         {pictures[currentPos]}
         {arrayEl2[currentPos]}
         <button
-          className="carousel-button carousel-button-left"
+          // className="carousel-button carousel-button-left"
+          className={`carousel-button carousel-button-left ${leftBtnStatus}`}
           aria-label="previous testimonal"
           onClick={leftBtnMinus}
         >
@@ -109,7 +111,7 @@ function Carousel() {
           </svg>
         </button>
         <button
-          className="carousel-button carousel-button-right"
+          className={`carousel-button carousel-button-right ${rightBtnStatus}`}
           aria-label="next testimonal"
           onClick={rightBtnPlus}
         >

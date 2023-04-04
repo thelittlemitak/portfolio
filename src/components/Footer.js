@@ -45,7 +45,7 @@ function Footer() {
           <p className="footer-title">Resources</p>
           <ul className="footer-nav">
             <li>
-              <a href="about.html">About MoreMoreMe</a>
+              <a href="about">About MoreMoreMe</a>
             </li>
             <li>
               <a href="#">Privacy & terms</a>
