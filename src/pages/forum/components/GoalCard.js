@@ -26,14 +26,32 @@ function GoalCard(props) {
   let formattedDate = `${hours}:${minutes}h, ${day}.${month}.${year}`;
 
   const [inputMessage, setInputMessage] = useState("");
+  const [inputStyle, setInputStyle] = useState("forum-input");
+  const [placeHolder, setPlaceHolder] = useState(
+    "Insert your message to the community."
+  );
+  const [addBtnStyle, setAddBtnStyle] = useState("add-btn");
 
   function messageListener(e) {
     let inputMessage = e.target.value;
     setInputMessage(inputMessage);
+    setPlaceHolder("Insert your message to the community.");
+    if (inputMessage.length > 0) {
+      setInputStyle("forum-input");
+      setAddBtnStyle("add-btn valid")
+    }
+    if (inputMessage.length < 1) {
+      setAddBtnStyle("add-btn")
+    }
   }
 
   const Pusher = function () {
-    
+    if (inputMessage.length == 0) {
+      setInputStyle("forum-input input-error");
+      setPlaceHolder("You cannot send an empty message!");
+      setAddBtnStyle("add-btn")
+      return;
+    }
     setMessage([
       ...message,
       {
@@ -43,8 +61,29 @@ function GoalCard(props) {
         id: newNumber,
       },
     ]);
-    console.log(message);
     setInputMessage("");
+    setAddBtnStyle("add-btn")
+  };
+
+  const Remover = function (e) {
+    let idOfCheckboxPressed = e.target.id;
+    let indexOfCheckboxPressed = message.findIndex(
+      (x) => x.id == idOfCheckboxPressed
+    );
+    message.splice(indexOfCheckboxPressed, 1);
+    setMessage([...message]);
+  };
+
+  let defaultBtnClass = "button-wrapper";
+  let hiddenBtnClass = "hidden";
+
+  const removeHidder = function () {};
+
+  const keyPusher = function (e) {
+    if (e.code == "Enter") {
+      console.log("enter has been pressed");
+      Pusher();
+    }
   };
 
   return (
@@ -68,19 +107,30 @@ function GoalCard(props) {
                 <div class="chat-line">{x.user}</div>
                 <div class="chat-line">{x.time}</div>
                 <div class="chat-line">{x.message}</div>
+                <div
+                  class={
+                    x.user == "new user" ? defaultBtnClass : hiddenBtnClass
+                  }
+                >
+                  <button onClick={Remover} id={x.id}>
+                    Remove
+                  </button>
+                </div>
               </div>
             ))}
             <div class="input-container">
               <input
                 type="text"
-                placeholder="Insert your message to the community."
-                class="forum-input"
+                placeholder={placeHolder}
+                class={inputStyle}
                 value={inputMessage}
                 onChange={messageListener}
+                onKeyDown={keyPusher}
+                required
               />
             </div>
-            <div className="test-wrapper" onClick={Pusher}>
-              <div className="test">i am a button</div>
+            <div className="add-btn-wrapper" onClick={Pusher}>
+              <button className={addBtnStyle}>Post</button>
             </div>
           </div>
         </div>

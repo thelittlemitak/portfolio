@@ -9,6 +9,7 @@ function InputTable4Col(props) {
             className={props.classTunnel1}
             value={props.goalDefaultTunnel}
             onChange={props.goalLiFTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </td>
         <td class="dummy-goal-row">
@@ -18,6 +19,7 @@ function InputTable4Col(props) {
             className={props.classTunnel2}
             value={props.freqDefaultTunnel}
             onChange={props.freqLiFTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </td>
         <td class="dummy-goal-row">
@@ -27,6 +29,7 @@ function InputTable4Col(props) {
             className={props.classTunnel3}
             value={props.lengthDefaultTunnel}
             onChange={props.lengthLiFTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </td>
         <td class="add-goal-plus-button" onClick={props.btnFTunnel}>

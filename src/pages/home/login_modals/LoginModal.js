@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import ReactDom from "react-dom";
 import "./Modal.css";
 
@@ -15,9 +15,12 @@ function LoginModal(props) {
             <b>Username</b>
           </label>
           <input
+            style={props.userDefaultStyleTunnel}
             type="text"
-            placeholder="Enter Username"
+            placeholder=""
             name="uname"
+            onChange={props.userLiTunnel}
+            autocomplete="off"
             required
           />
         </div>
@@ -26,13 +29,21 @@ function LoginModal(props) {
             <b>Password</b>
           </label>
           <input
+            style={props.pwDefaultStyleTunnel}
             type="password"
-            placeholder="Enter Password"
+            placeholder=""
             name="psw"
+            onChange={props.pwLiTunnel}
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button
+          type="submit"
+          onClick={props.clickerTunnel}
+          className={props.btnStyleTunnel}
+        >
+          Login
+        </button>
       </form>
       <div className="alert-title">
         You don't have an account yet? Let's{" "}

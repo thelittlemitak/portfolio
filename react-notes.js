@@ -53,7 +53,7 @@
 // From Google: the reason this is handy it's because you can move the component without braking the props chain
 // 105. Refs. Not sure why using this. Not clear in the course...
 // 106. Controlled vs Uncontrolled Components
-// 109. 110. useEffect
+// 109. 110. useEffect (to have stuff only rendered when a value changes)
 
 // ! I saw it explained on 64
 
@@ -65,6 +65,9 @@
 // The ATT value is the value you want to use in your component and the key, the reference. So:
 // ATT = props.ATT; ATT value = props.ATT value. ATTs could be easily called ref1 ref2 ref3
 //266. Multipage intro
+
+//310. Authentication
+
 
 function sum(a, b) {
   return a + b;

@@ -18,7 +18,7 @@ import Ideas from "./mains/Ideas";
 import GenericWrapper from "../../components/GenericWrapper";
 import Hobbies from "./mains/Hobbies";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
-import WarmerBtn from "../../components/btns/WarmerBtn"
+import WarmerBtn from "../../components/btns/WarmerBtn";
 
 function Profile() {
   const tempoGoalsData = [
@@ -44,7 +44,7 @@ function Profile() {
     },
     {
       goal: "Cita DNI",
-      action: "Cuando vayas a ibz. Caduca el 22 del 11",
+      action: "Necesito esperar para que me salgan fechas cuando estoy",
       id: 0.7412343328844222,
     },
   ];
@@ -105,8 +105,6 @@ function Profile() {
   const forbiddenActivitiesData = [
     { goal: "Youtube", action: "Post MT", id: 0.7419944699444684 },
     { goal: "Phone", action: "Post MT", id: 0.7419576869444683 },
-    { goal: "More than 1 beer", action: "Always", id: 0.7419576869444682 },
-    { goal: "Coffee", action: "Always", id: 0.7419576869444681 },
   ];
   const socialGatheringsData = [
     {
@@ -132,6 +130,12 @@ function Profile() {
       freq: "28.04.2023",
       length_: "Zaski",
       id: 0.2285855439284685,
+    },
+    {
+      goal: "Cita Jobcenter",
+      freq: "26.04.2023",
+      length_: "Zaski",
+      id: 0.2285855436666685,
     },
   ];
   const ideasData = [

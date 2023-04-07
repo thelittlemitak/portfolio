@@ -32,28 +32,98 @@ function Home() {
 
   const opener1 = function () {
     setOpenedModal1(true);
+    setEmailInserted("");
+    setPwInserted("");
+    setUserDefaultStyle({});
+    setPwDefaultState({});
+    setBtnStyle("submit-btn")
   };
 
   const opener2 = function () {
     setOpenedModal2(true);
+    setEmailInserted("");
+    setPwInserted("");
+    setBtnStyle("submit-btn")
   };
 
   const closer = function () {
     setOpenedModal1(false);
     setOpenedModal2(false);
+    setEmailInserted("");
+    setPwInserted("");
   };
 
   const changerToLogin = function () {
-    console.log("this works")
     setOpenedModal1(true);
     setOpenedModal2(false);
-  }
+    setEmailInserted("");
+    setPwInserted("");
+    setUserDefaultStyle({});
+    setPwDefaultState({});
+    setBtnStyle("submit-btn")
+  };
 
   const changerToSignUp = function () {
-    console.log("this works")
     setOpenedModal1(false);
     setOpenedModal2(true);
-  }
+    setEmailInserted("");
+    setPwInserted("");
+    setUserDefaultStyle({});
+    setPwDefaultState({});
+    setBtnStyle("submit-btn")
+  };
+
+  const [userDefaultStyle, setUserDefaultStyle] = useState({});
+  const [pwDefaultStyle, setPwDefaultState] = useState({});
+
+  const [emailInserted, setEmailInserted] = useState("");
+  const [pwInserted, setPwInserted] = useState("");
+
+  const [btnStyle, setBtnStyle] = useState("submit-btn");
+
+  let userListener = function (e) {
+    setEmailInserted(e.target.value);
+    if (emailInserted.length == 0) {
+      setUserDefaultStyle({});
+    }
+    if (emailInserted.length == 1) {
+      setBtnStyle("submit-btn")
+    }
+    if (emailInserted.length > 1 && pwInserted.length > 1) {
+      setBtnStyle("submit-btn valid-btn")
+    }
+  };
+
+  let pwListener = function (e) {
+    setPwInserted(e.target.value);
+    console.log(pwInserted)
+    if (pwInserted.length == 0) {
+      setPwDefaultState({});
+      setBtnStyle("submit-btn")
+    }
+    if (pwInserted.length == 1) {
+      setBtnStyle("submit-btn")
+    }
+    if (emailInserted.length > 1 && pwInserted.length > 1) {
+      setBtnStyle("submit-btn valid-btn")
+    }
+  };
+
+  const modalClicker = function () {
+    console.log(emailInserted);
+    console.log(pwInserted);
+    if (emailInserted.length == 0 && pwInserted.length == 0) {
+      setUserDefaultStyle({ background: "#a1f7d3" });
+      setPwDefaultState({ background: "#a1f7d3" });
+      setBtnStyle("submit-btn")
+    }
+    if (emailInserted.length == 0) {
+      setUserDefaultStyle({ background: "#a1f7d3" });
+    }
+    if (pwInserted.length == 0) {
+      setPwDefaultState({ background: "#a1f7d3" });
+    }
+  };
 
   return (
     <div>
@@ -80,8 +150,26 @@ function Home() {
         <Carousel></Carousel>
         <ReadyButton openedTunnel={opener2}></ReadyButton>
         <Footer></Footer>
-        <LoginModal statusTunnel={openedModal1} changerTunnel={changerToSignUp}></LoginModal>
-        <SignUpModal statusTunnel={openedModal2} changerTunnel={changerToLogin}></SignUpModal>
+        <LoginModal
+          statusTunnel={openedModal1}
+          changerTunnel={changerToSignUp}
+          clickerTunnel={modalClicker}
+          userLiTunnel={userListener}
+          pwLiTunnel={pwListener}
+          userDefaultStyleTunnel={userDefaultStyle}
+          pwDefaultStyleTunnel={pwDefaultStyle}
+          btnStyleTunnel={btnStyle}
+        ></LoginModal>
+        <SignUpModal
+          statusTunnel={openedModal2}
+          changerTunnel={changerToLogin}
+          clickerTunnel={modalClicker}
+          userLiTunnel={userListener}
+          pwLiTunnel={pwListener}
+          userDefaultStyleTunnel={userDefaultStyle}
+          pwDefaultStyleTunnel={pwDefaultStyle}
+          btnStyleTunnel={btnStyle}
+        ></SignUpModal>
       </MainWrapper>
     </div>
   );

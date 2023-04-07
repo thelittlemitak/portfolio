@@ -81,7 +81,6 @@ function Warmer() {
           titlesTunnel={titles3col[1]}
           explanationsTunnel={explanations[1]}
           mainTitleTunnel={titles3col[1].type}
-
         ></WarmerTable>
       </main>
       <Footer></Footer>

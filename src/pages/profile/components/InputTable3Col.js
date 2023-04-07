@@ -12,6 +12,7 @@ function InputTable3Col(props) {
             className={props.classTunnel1}
             value={props.goalDefaultTunnel}
             onChange={props.goalLiFTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </td>
         <td class="dummy-goal-row">
@@ -21,6 +22,7 @@ function InputTable3Col(props) {
             className={props.classTunnel2}
             value={props.actionDefaultTunnel}
             onChange={props.actionLiFTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </td>
         <td class="add-goal-plus-button" onClick={props.btnFTunnel}>

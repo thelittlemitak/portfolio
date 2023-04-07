@@ -65,6 +65,13 @@ function TempoGoals(props) {
     setTempoGoals([...tempoGoals]);
   };
 
+  const keyPusher = function (e) {
+    if (e.code == "Enter") {
+      console.log("enter has been pressed");
+      Pusher();
+    }
+  };
+
   return (
     <Fragment>
       <h3 class="h3-profile">
@@ -96,6 +103,7 @@ function TempoGoals(props) {
           placeHolder2Tunnel={"Deconstruction"}
           classTunnel1={`profile-input profile-input-goal ${classer1}`}
           classTunnel2={`profile-input profile-input-goal ${classer2}`}
+          keyPusherTunnel={keyPusher}
         ></InputTable3Col>
       </table>
     </Fragment>
