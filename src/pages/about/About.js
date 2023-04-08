@@ -1,3 +1,5 @@
+import React, { useState, useRef, useEffect } from "react";
+
 import "./style-about.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -10,6 +12,23 @@ import LoginBtn from "../../components/btns/LoginBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
 
 function About() {
+  let h2Ref = useRef();
+  const [h2StyleRight, setH2StyleRight] = useState("h2-about-right")
+  const [h2StyleLeft, setH2StyleLeft] = useState("h2-about-left")
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        console.log("it is intersecting");
+        setH2StyleRight("h2-about-right appearance")
+        setH2StyleLeft("h2-about-left appearance")
+      }
+    });
+    observer.observe(h2Ref.current);
+  }, []);
+
   return (
     <div>
       <Header
@@ -20,6 +39,12 @@ function About() {
       ></Header>
       <MainWrapper>
         <Hero></Hero>
+        <div style={{textAlign: "center", marginBottom: "6rem"}}>Scroll down</div>
+        <h2 className={h2StyleRight} ref={h2Ref}>
+          Hola
+        </h2>
+        <h2 className={h2StyleLeft}>Hola</h2>
+        <h2 className="h2-about">Hola</h2>
         <div className="about-not-hero">
           <div className="faq-question-container">
             <div className="faq-number">1</div>
@@ -361,71 +386,26 @@ function About() {
 
 export default About;
 
-/*
-    <div class="signup-form-cont">
-      <form class="signup-form" action="#">
-        <div>
-          <div class="form-section">
-            <label for="full-name">Alias</label>
-            <input id="full-name" type="text" placeholder="myalias" required />
-          </div>
-          <div class="form-section">
-            <label for="email">Email address</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="my@email.com"
-              required
-            />
-          </div>
-          <div class="form-section">
-            <label for="password">Password</label>
-            <input
-              id="password"
-              type="email"
-              placeholder="************"
-              required
-            />
-          </div>
-        </div>
-        <div class="form-section">
-          <div>Goals</div>
-          <div class="form-goals-grid">
-            <div>Network</div>
-            <div>Health</div>
-            <div>Creativity</div>
-            <div>Money</div>
-            <div>Languages</div>
-            <div>Music</div>
-            <div>Free time</div>
-            <div>Exercice</div>
-            <div>Learning</div>
-            <div class="new-goal-cell">Add new</div>
-          </div>
-        </div>
-        <div>
-          <div class="form-section">
-            <label for="new-goal">Add new goal</label>
-            <input id="new-goal" type="string" placeholder="Goal" />
-          </div>
-          <div class="form-section">Goals total: </div>
-        </div>
-      </form>
-    </div>
-    <div class="login-form-cont">
-      <form class="login-form" action="#">
-        <div class="form-section">
-          <label for="full-name">Alias</label>
-          <input id="full-name" type="text" placeholder="myalias" required />
-        </div>
-        <div class="form-section">
-          <label for="email">Email address</label>
-          <input id="email" type="email" placeholder="my@email.com" required />
-        </div>
-        <button class="form-button">Log in</button>
-      </form>
-      <div class="alert-container">
-        <div class="form-alert">Not yet a memeber?</div>
-        <button class="form-button form-signup-btn">Sign up</button>
-      </div>
-    </div> */
+// let h2Ref = useRef();
+// let x = 1;
+// setInterval(() => {
+//   x++;
+// }, 1000);
+
+// const options = {};
+
+// const observer = new IntersectionObserver(function (entries, observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// }, options);
+
+// useEffect(() => {
+//   console.log(h2Ref.current);
+//   const observer = new IntersectionObserver(function (entries, observer) {
+//     entries.forEach((entry) => {
+//       console.log(entry);
+//     });
+//     observer.observe(h2Ref.current);
+//   }, options);
+// }, [x]);

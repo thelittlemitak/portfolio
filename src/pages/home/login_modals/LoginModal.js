@@ -22,6 +22,7 @@ function LoginModal(props) {
             onChange={props.userLiTunnel}
             autocomplete="off"
             required
+            ref={props.userInputRefTunnel}
           />
         </div>
         <div>
@@ -35,6 +36,7 @@ function LoginModal(props) {
             name="psw"
             onChange={props.pwLiTunnel}
             required
+            ref={props.pwInputRefTunnel}
           />
         </div>
         <button

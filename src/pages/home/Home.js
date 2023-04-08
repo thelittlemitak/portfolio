@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import Footer from "../../components/Footer";
 import ReadyButton from "../../components/btns/ReadyButton";
@@ -30,25 +30,40 @@ function Home() {
   const [openedModal1, setOpenedModal1] = useState(false);
   const [openedModal2, setOpenedModal2] = useState(false);
 
+  const [userDefaultStyle, setUserDefaultStyle] = useState({});
+  const [pwDefaultStyle, setPwDefaultState] = useState({});
+
+  const [emailInserted, setEmailInserted] = useState("");
+  const [pwInserted, setPwInserted] = useState("");
+
+  const [btnStyle, setBtnStyle] = useState("submit-btn");
+
+  const userInputRef = useRef();
+  const pwInputRef = useRef();
+
   const opener1 = function () {
     setOpenedModal1(true);
     setEmailInserted("");
     setPwInserted("");
     setUserDefaultStyle({});
     setPwDefaultState({});
-    setBtnStyle("submit-btn")
+    setBtnStyle("submit-btn");
   };
 
   const opener2 = function () {
     setOpenedModal2(true);
     setEmailInserted("");
     setPwInserted("");
-    setBtnStyle("submit-btn")
+    setUserDefaultStyle({});
+    setPwDefaultState({});
+    setBtnStyle("submit-btn");
   };
 
   const closer = function () {
     setOpenedModal1(false);
     setOpenedModal2(false);
+    setUserDefaultStyle({});
+    setPwDefaultState({});
     setEmailInserted("");
     setPwInserted("");
   };
@@ -60,7 +75,7 @@ function Home() {
     setPwInserted("");
     setUserDefaultStyle({});
     setPwDefaultState({});
-    setBtnStyle("submit-btn")
+    setBtnStyle("submit-btn");
   };
 
   const changerToSignUp = function () {
@@ -70,16 +85,8 @@ function Home() {
     setPwInserted("");
     setUserDefaultStyle({});
     setPwDefaultState({});
-    setBtnStyle("submit-btn")
+    setBtnStyle("submit-btn");
   };
-
-  const [userDefaultStyle, setUserDefaultStyle] = useState({});
-  const [pwDefaultStyle, setPwDefaultState] = useState({});
-
-  const [emailInserted, setEmailInserted] = useState("");
-  const [pwInserted, setPwInserted] = useState("");
-
-  const [btnStyle, setBtnStyle] = useState("submit-btn");
 
   let userListener = function (e) {
     setEmailInserted(e.target.value);
@@ -87,35 +94,35 @@ function Home() {
       setUserDefaultStyle({});
     }
     if (emailInserted.length == 1) {
-      setBtnStyle("submit-btn")
+      setBtnStyle("submit-btn");
     }
     if (emailInserted.length > 1 && pwInserted.length > 1) {
-      setBtnStyle("submit-btn valid-btn")
+      setBtnStyle("submit-btn valid-btn");
     }
   };
 
   let pwListener = function (e) {
     setPwInserted(e.target.value);
-    console.log(pwInserted)
     if (pwInserted.length == 0) {
       setPwDefaultState({});
-      setBtnStyle("submit-btn")
+      setBtnStyle("submit-btn");
     }
     if (pwInserted.length == 1) {
-      setBtnStyle("submit-btn")
+      setBtnStyle("submit-btn");
     }
     if (emailInserted.length > 1 && pwInserted.length > 1) {
-      setBtnStyle("submit-btn valid-btn")
+      setBtnStyle("submit-btn valid-btn");
     }
   };
 
-  const modalClicker = function () {
-    console.log(emailInserted);
-    console.log(pwInserted);
+  const [userEntered, setUserEntered] = useState();
+  const [pwEntered, setPwEntered] = useState();
+
+  const submitHandler = function () {
     if (emailInserted.length == 0 && pwInserted.length == 0) {
       setUserDefaultStyle({ background: "#a1f7d3" });
       setPwDefaultState({ background: "#a1f7d3" });
-      setBtnStyle("submit-btn")
+      setBtnStyle("submit-btn");
     }
     if (emailInserted.length == 0) {
       setUserDefaultStyle({ background: "#a1f7d3" });
@@ -123,7 +130,12 @@ function Home() {
     if (pwInserted.length == 0) {
       setPwDefaultState({ background: "#a1f7d3" });
     }
+    setUserEntered(userInputRef.current.value);
+    setPwEntered(pwInputRef.current.value);
   };
+
+  console.log(userEntered);
+  console.log(pwEntered);
 
   return (
     <div>
@@ -153,17 +165,20 @@ function Home() {
         <LoginModal
           statusTunnel={openedModal1}
           changerTunnel={changerToSignUp}
-          clickerTunnel={modalClicker}
+          clickerTunnel={submitHandler}
           userLiTunnel={userListener}
           pwLiTunnel={pwListener}
           userDefaultStyleTunnel={userDefaultStyle}
           pwDefaultStyleTunnel={pwDefaultStyle}
           btnStyleTunnel={btnStyle}
+          userInputRefTunnel={userInputRef}
+          pwInputRefTunnel={pwInputRef}
+          submissionTunnel={submitHandler}
         ></LoginModal>
         <SignUpModal
           statusTunnel={openedModal2}
           changerTunnel={changerToLogin}
-          clickerTunnel={modalClicker}
+          clickerTunnel={submitHandler}
           userLiTunnel={userListener}
           pwLiTunnel={pwListener}
           userDefaultStyleTunnel={userDefaultStyle}

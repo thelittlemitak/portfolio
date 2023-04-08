@@ -8,7 +8,7 @@
 
   font-size: 2.5rem;
   font-weight: 700;
-  
+
   background-color: #fde9f1;
 
   padding: 0.2rem 1rem 3.2rem 1rem;
@@ -29,16 +29,16 @@
   left: -3rem;
   position: absolute;
   transform: rotate(-10deg);
-  
+
   background-color: yellow;
   border: 0.3rem solid #212529;
-  
+
   padding: 0.1rem 1rem;
 }
 
 .faq-number {
   font-size: 3.8rem;
-  
+
   margin-left: 3.5rem;
   margin-right: 2rem;
 }
@@ -59,54 +59,70 @@
 
 .faq-icon {
   height: 3.6rem;
-  
+
   justify-self: flex-end;
-  
+
   margin-right: 10.6rem;
 }
 
 .faq-answer {
   height: 0px;
-  
+
   font-size: 2.4rem;
-  
+
   opacity: 0%;
   visibility: hidden;
-  
+
   background-color: #fac5db;
   box-shadow: 1rem 1rem;
-  
+
   padding: 0rem 0rem;
   margin-left: 14rem;
   margin-right: 9rem;
-  
+
   transition: all 0.3s ease-in;
 }
 
 .visible {
   height: 100%;
   z-index: 20;
-  
+
   opacity: 100%;
   visibility: visible;
   border: 0.3rem solid #212529;
-  
+
   padding: 1rem 5rem 2rem 3rem;
 }
 
 .faq-question-container {
   max-width: 120rem;
   height: 9rem;
-  
+
   background-color: #fde9f1;
   border: 0.3rem solid;
   box-shadow: 0rem 0rem;
-  
+
   margin-left: 10rem;
-  
+
   display: grid;
   grid-template-columns: 10rem 65rem 1fr;
   align-items: center;
 
   transition: all 0.3s;
+}
+
+.h2-about-right {
+  margin: 0;
+  transform: translate(1000px, 1px);
+  transition: all 1s;
+}
+
+.h2-about-left {
+  margin: 0;
+  transform: translate(-1000px, 1px);
+  transition: all 1s;
+}
+
+.appearance {
+  transform: translate(0px, 0px);
 }

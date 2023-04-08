@@ -101,6 +101,12 @@ function Profile() {
       length_: "One second",
       id: 0.2215648555284685,
     },
+    {
+      goal: "What's app",
+      freq: "Daily",
+      length_: "30 min",
+      id: 0.2215648555284685,
+    },
   ];
   const forbiddenActivitiesData = [
     { goal: "Youtube", action: "Post MT", id: 0.7419944699444684 },
@@ -151,7 +157,7 @@ function Profile() {
     },
     {
       goal: "App para entrenar blockieren",
-      action: "Try renoise plugin",
+      action: " ",
       id: 0.7415123212344685,
     },
     {

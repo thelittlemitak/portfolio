@@ -51,7 +51,7 @@
 // 103. Overview of Portals
 // 104. Portals. How to put the component in a specific place on the index.html, no matter where it is on the component tree
 // From Google: the reason this is handy it's because you can move the component without braking the props chain
-// 105. Refs. Not sure why using this. Not clear in the course...
+// 105. Refs. Do not use it to manipulate the DOM, but to get info from DOM nodes
 // 106. Controlled vs Uncontrolled Components
 // 109. 110. useEffect (to have stuff only rendered when a value changes)
 
@@ -177,3 +177,9 @@ const sum2 = (a, b) => a + b; // if there was only one parameter, you can remove
 // #f47dae
 // TOP HARD
 // DEATH STRONG
+
+// Good videos
+// https://www.youtube.com/watch?v=2VPC1gI9KME
+
+// SUper easy explanation of constructors and the new keyword
+// https://www.youtube.com/watch?v=Uhp9xPCILno
