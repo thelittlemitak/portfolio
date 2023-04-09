@@ -19,6 +19,7 @@ import GenericWrapper from "../../components/GenericWrapper";
 import Hobbies from "./mains/Hobbies";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerBtn from "../../components/btns/WarmerBtn";
+import DummyBtn from "../../components/btns/DummyBtn";
 
 function Profile() {
   const tempoGoalsData = [
@@ -245,6 +246,7 @@ function Profile() {
         altBtn2={MotivatorBtn}
         altBtn3={WarmerBtn}
         altBtn4={AboutButton}
+        altBtn5={DummyBtn}
       ></Header>
       <h2>Welcome to the TO-DO</h2>
       <h3>A structured set of sections to remind you what you have to do</h3>

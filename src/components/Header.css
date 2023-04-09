@@ -94,3 +94,39 @@
   position: fixed;
   z-index: 999;
 }
+
+.salute {
+  font-size: 2.77rem;
+  font-weight: 500;
+}
+
+.user-name {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.salute-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateX(7rem);
+}
+
+.profile-btn {
+background-color: #f58fb9;
+}
+
+.main-header-about {
+  font-size: 2.4rem;
+
+  background-color: #d7fcec;
+
+  padding-top: 1.3rem;
+  padding-bottom: 7.65rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}

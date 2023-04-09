@@ -58,6 +58,8 @@ function Footer() {
         <div>
           <p className="footer-title">Contact</p>
           <address>
+          <p>Jose Riera Tur</p>
+
             <p>Kreutzigerstr. 10</p>
             <p>10247 Berlin, Germany</p>
             <p>

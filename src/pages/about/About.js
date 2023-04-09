@@ -10,20 +10,20 @@ import ContactButton from "../../components/btns/ContactButton";
 import SignUpBtn from "../../components/btns/SignUpBtn";
 import LoginBtn from "../../components/btns/LoginBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
+import HeaderAbout from "../../components/HeaderAbout";
 
 function About() {
   let h2Ref = useRef();
-  const [h2StyleRight, setH2StyleRight] = useState("h2-about-right")
-  const [h2StyleLeft, setH2StyleLeft] = useState("h2-about-left")
-
+  const [h2StyleRight, setH2StyleRight] = useState("h2-about-right");
+  const [h2StyleLeft, setH2StyleLeft] = useState("h2-about-left");
 
   useEffect(() => {
     const observer = new IntersectionObserver(function (entries) {
       const entry = entries[0];
       if (entry.isIntersecting) {
         console.log("it is intersecting");
-        setH2StyleRight("h2-about-right appearance")
-        setH2StyleLeft("h2-about-left appearance")
+        setH2StyleRight("h2-about-right appearance");
+        setH2StyleLeft("h2-about-left appearance");
       }
     });
     observer.observe(h2Ref.current);
@@ -31,15 +31,12 @@ function About() {
 
   return (
     <div>
-      <Header
-        altBtn1={LoginBtn}
-        altBtn2={SignUpBtn}
-        altBtn3={DummyBtn}
-        altBtn4={ContactButton}
-      ></Header>
+      <HeaderAbout altBtn4={ContactButton}></HeaderAbout>
       <MainWrapper>
         <Hero></Hero>
-        <div style={{textAlign: "center", marginBottom: "6rem"}}>Scroll down</div>
+        <div style={{ textAlign: "center", marginBottom: "6rem" }}>
+          Scroll down
+        </div>
         <h2 className={h2StyleRight} ref={h2Ref}>
           Hola
         </h2>

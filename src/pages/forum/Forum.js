@@ -9,6 +9,8 @@ import LoginBtn from "../../components/btns/LoginBtn";
 import TodoBtn from "../../components/btns/TodoBtn";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerBtn from "../../components/btns/WarmerBtn";
+import DummyBtn from "../../components/btns/DummyBtn";
+
 
 function Forum() {
   const forumData = [
@@ -58,6 +60,7 @@ function Forum() {
         altBtn2={MotivatorBtn}
         altBtn3={WarmerBtn}
         altBtn4={AboutButton}
+        altBtn5={DummyBtn}
       ></Header>
       <h2>Welcome to the FORUM</h2>
       <h3>A thread for each goal that you share with others</h3>

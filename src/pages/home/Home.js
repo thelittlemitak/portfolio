@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import Footer from "../../components/Footer";
 import ReadyButton from "../../components/btns/ReadyButton";
@@ -17,15 +17,16 @@ import AboutButton from "../../components/btns/AboutButton";
 import ContactButton from "../../components/btns/ContactButton";
 import LoginBtn from "../../components/btns/LoginBtn";
 import SignUpBtn from "../../components/btns/SignUpBtn";
+import ProfileBtn from "../../components/btns/ProfileBtn";
 import LoginModal from "./login_modals/LoginModal";
 import SignUpModal from "./login_modals/SignUpModal";
 import Overlay from "../../components/Overlay";
 import DummyBtn from "../../components/btns/DummyBtn";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Home() {
-  const loginBtn = <LoginBtn></LoginBtn>;
-  const signUpBtn = <SignUpBtn></SignUpBtn>;
-  const dummyBtn = <DummyBtn></DummyBtn>;
+  const signUpBtn = SignUpBtn;
+  const dummyBtn = DummyBtn;
 
   const [openedModal1, setOpenedModal1] = useState(false);
   const [openedModal2, setOpenedModal2] = useState(false);
@@ -90,30 +91,34 @@ function Home() {
 
   let userListener = function (e) {
     setEmailInserted(e.target.value);
-    if (emailInserted.length == 0) {
-      setUserDefaultStyle({});
-    }
-    if (emailInserted.length == 1) {
-      setBtnStyle("submit-btn");
-    }
-    if (emailInserted.length > 1 && pwInserted.length > 1) {
-      setBtnStyle("submit-btn valid-btn");
-    }
+    console.log("user Li works");
   };
 
   let pwListener = function (e) {
     setPwInserted(e.target.value);
+    console.log("pw Li works");
+  };
+
+  console.log(emailInserted);
+  console.log(pwInserted);
+
+  const testF = function () {
+    if (emailInserted.length > 1 && pwInserted.length > 1) {
+      console.log("this works now");
+      setBtnStyle("submit-btn valid-btn");
+    }
     if (pwInserted.length == 0) {
       setPwDefaultState({});
       setBtnStyle("submit-btn");
     }
-    if (pwInserted.length == 1) {
+    if (emailInserted.length == 0) {
+      setUserDefaultStyle({});
       setBtnStyle("submit-btn");
     }
-    if (emailInserted.length > 1 && pwInserted.length > 1) {
-      setBtnStyle("submit-btn valid-btn");
-    }
   };
+
+  useEffect(testF, [emailInserted]);
+  useEffect(testF, [pwInserted]);
 
   const [userEntered, setUserEntered] = useState();
   const [pwEntered, setPwEntered] = useState();
@@ -134,8 +139,20 @@ function Home() {
     setPwEntered(pwInputRef.current.value);
   };
 
-  console.log(userEntered);
-  console.log(pwEntered);
+  const navigate = useNavigate();
+  const [dummyVar, setDummyVar] = useState("");
+
+  if (userEntered == "123" && pwEntered == "123") {
+    navigate("/profile");
+    localStorage.setItem("isLoggedIn", "yes");
+    localStorage.setItem("user", "recruiter");
+  }
+
+  if (localStorage.getItem("isLoggedIn") == "yes") {
+    console.log("someone is logged in");
+  }
+
+  const userLogged = "recruiter";
 
   return (
     <div>
@@ -145,10 +162,25 @@ function Home() {
         closerTunnel={closer}
       ></Overlay>
       <Header
-        altBtn1={LoginBtn}
-        altBtn2={SignUpBtn}
-        altBtn3={DummyBtn}
+        altBtn1={
+          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : LoginBtn
+        }
+        altBtn2={
+          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : SignUpBtn
+        }
+        altBtn3={
+          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : DummyBtn
+        }
         altBtn4={AboutButton}
+        altBtn5={
+          localStorage.getItem("isLoggedIn") == "yes" ? ProfileBtn : DummyBtn
+        }
+        saluteTextTunnel={
+          localStorage.getItem("isLoggedIn") == "yes" ? "logged in as " : ""
+        }
+        userNameTunnel={
+          localStorage.getItem("user") == "recruiter" ? "recruiter" : ""
+        }
         openedTunnel1={opener1}
         openedTunnel2={opener2}
       ></Header>
@@ -174,6 +206,8 @@ function Home() {
           userInputRefTunnel={userInputRef}
           pwInputRefTunnel={pwInputRef}
           submissionTunnel={submitHandler}
+          valueTunnel={emailInserted}
+          value2Tunnel={pwInserted}
         ></LoginModal>
         <SignUpModal
           statusTunnel={openedModal2}

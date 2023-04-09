@@ -9,6 +9,8 @@ import GenericWrapper from "../../components/GenericWrapper";
 import TodoBtn from "../../components/btns/TodoBtn";
 import MotiTable from "./MotiTable";
 import WarmerBtn from "../../components/btns/WarmerBtn";
+import DummyBtn from "../../components/btns/DummyBtn";
+
 
 function Motivator() {
   const goal1 = [
@@ -176,6 +178,7 @@ function Motivator() {
         altBtn2={ForumBtn}
         altBtn3={WarmerBtn}
         altBtn4={AboutButton}
+        altBtn5={DummyBtn}
       ></Header>
       <h2>Welcome to the MOTIVATOR</h2>
       <h3>A system to remind you why you are doing what you are doing</h3>

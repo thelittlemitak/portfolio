@@ -9,6 +9,7 @@ import GenericWrapper from "../../components/GenericWrapper";
 import TodoBtn from "../../components/btns/TodoBtn";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerTable from "./WarmerTable";
+import DummyBtn from "../../components/btns/DummyBtn";
 
 function Warmer() {
   const greatefulActionsData = [
@@ -65,10 +66,11 @@ function Warmer() {
         altBtn2={ForumBtn}
         altBtn3={MotivatorBtn}
         altBtn4={AboutButton}
+        altBtn5={DummyBtn}
       ></Header>
       <h2>Welcome to the WARMER</h2>
-      <h3>A system to remind you what should you be greateful for</h3>
-      <h3>(recommended to do at the end of the day)</h3>
+      <h3>A system to remind you what you should be greateful for</h3>
+      <h3>(recommended to check it at the end of the day)</h3>
       <main className="main-profile-container">
         <WarmerTable
           dataTunnel={greatefulActionsData}

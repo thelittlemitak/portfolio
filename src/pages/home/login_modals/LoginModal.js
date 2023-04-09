@@ -3,6 +3,8 @@ import ReactDom from "react-dom";
 import "./Modal.css";
 
 function LoginModal(props) {
+  const [user, setUser] = useState("");
+
   if (!props.statusTunnel) {
     return;
   }
@@ -22,6 +24,7 @@ function LoginModal(props) {
             onChange={props.userLiTunnel}
             autocomplete="off"
             required
+            value={props.valueTunnel}
             ref={props.userInputRefTunnel}
           />
         </div>
@@ -37,10 +40,11 @@ function LoginModal(props) {
             onChange={props.pwLiTunnel}
             required
             ref={props.pwInputRefTunnel}
+            value={props.value2Tunnel}
           />
         </div>
         <button
-          type="submit"
+          type="button"
           onClick={props.clickerTunnel}
           className={props.btnStyleTunnel}
         >
