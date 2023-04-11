@@ -10,6 +10,7 @@ import TodoBtn from "../../components/btns/TodoBtn";
 import MotiTable from "./MotiTable";
 import WarmerBtn from "../../components/btns/WarmerBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
+import LogOutBtn from "../../components/btns/LogOutBtn";
 
 
 function Motivator() {
@@ -34,22 +35,22 @@ function Motivator() {
     {
       goal: "Money",
       action: "Have a good salary to invest on myself and my projects",
-      id: 0.7419944123444321,
+      id: 0.7434563456323444321,
     },
     {
       goal: "Leave alone",
       action: "Having a partner is a pain in the ass",
-      id: 0.7419944123444321,
+      id: 0.74199463456435654321,
     },
     {
       goal: "Start with next goals",
       action: "Techno, studio, Tot Fosk, Drums",
-      id: 0.7419944123444321,
+      id: 0.74199345634564321,
     },
     {
       goal: "Stop studying",
       action: "Kind of a retro but true",
-      id: 0.7419944123444321,
+      id: 0.7419944123445679,
     },
   ];
   const goal3 = [
@@ -219,6 +220,7 @@ function Motivator() {
           deadline={"03.06.2023"}
         ></MotiTable>
       </main>
+      <LogOutBtn></LogOutBtn>
       <Footer></Footer>
     </GenericWrapper>
   );

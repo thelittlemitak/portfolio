@@ -183,3 +183,9 @@ const sum2 = (a, b) => a + b; // if there was only one parameter, you can remove
 
 // SUper easy explanation of constructors and the new keyword
 // https://www.youtube.com/watch?v=Uhp9xPCILno
+
+//must read 
+// https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html
+// https://www.youtube.com/watch?v=VShtPwEkDD0
+// https://stackoverflow.com/questions/35995273/how-to-run-html-file-using-node-js
+// https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/

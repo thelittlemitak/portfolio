@@ -8,6 +8,7 @@ function GoalCard(props) {
   let newNumber = Math.random();
   let currentDate = new Date();
   let day = currentDate.getDate();
+  let dayString = day.toString();
   let month = currentDate.getMonth() + 1;
   let monthString = month.toString();
   let year = currentDate.getFullYear();
@@ -21,6 +22,10 @@ function GoalCard(props) {
 
   if (monthString.length < 2) {
     month = "0" + month;
+  }
+
+  if (dayString.length < 2) {
+    day = "0" + day;
   }
 
   let formattedDate = `${hours}:${minutes}h, ${day}.${month}.${year}`;
@@ -38,10 +43,10 @@ function GoalCard(props) {
     setPlaceHolder("Insert your message to the community.");
     if (inputMessage.length > 0) {
       setInputStyle("forum-input");
-      setAddBtnStyle("add-btn valid")
+      setAddBtnStyle("add-btn valid");
     }
     if (inputMessage.length < 1) {
-      setAddBtnStyle("add-btn")
+      setAddBtnStyle("add-btn");
     }
   }
 
@@ -49,20 +54,20 @@ function GoalCard(props) {
     if (inputMessage.length == 0) {
       setInputStyle("forum-input input-error");
       setPlaceHolder("You cannot send an empty message!");
-      setAddBtnStyle("add-btn")
+      setAddBtnStyle("add-btn");
       return;
     }
     setMessage([
       ...message,
       {
-        user: "new user",
+        user: "recruiter",
         time: formattedDate,
         message: inputMessage,
         id: newNumber,
       },
     ]);
     setInputMessage("");
-    setAddBtnStyle("add-btn")
+    setAddBtnStyle("add-btn");
   };
 
   const Remover = function (e) {
@@ -109,7 +114,7 @@ function GoalCard(props) {
                 <div class="chat-line">{x.message}</div>
                 <div
                   class={
-                    x.user == "new user" ? defaultBtnClass : hiddenBtnClass
+                    x.user == "recruiter" ? defaultBtnClass : hiddenBtnClass
                   }
                 >
                   <button onClick={Remover} id={x.id}>

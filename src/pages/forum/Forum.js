@@ -10,6 +10,7 @@ import TodoBtn from "../../components/btns/TodoBtn";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerBtn from "../../components/btns/WarmerBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
+import LogOutBtn from "../../components/btns/LogOutBtn";
 
 
 function Forum() {
@@ -73,6 +74,7 @@ function Forum() {
           ></GoalCard>
         ))}
       </MainWrapper>
+      <LogOutBtn></LogOutBtn>
       <Footer></Footer>
     </div>
   );

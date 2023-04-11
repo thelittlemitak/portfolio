@@ -63,14 +63,14 @@
 
 .alert-title button {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
   font-weight: 900;
   font-size: 2rem;
-	cursor: pointer;
-	outline: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .alert-title button:hover {
@@ -93,4 +93,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.keeper-wrapper {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 2rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.keeper-wrapper input {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+
+.wrong-alert {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: -1rem;
+}
+
+.hidden-alert {
+  display: none !important;
 }

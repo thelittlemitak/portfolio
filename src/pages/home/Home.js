@@ -49,6 +49,7 @@ function Home() {
     setUserDefaultStyle({});
     setPwDefaultState({});
     setBtnStyle("submit-btn");
+    setKeeper(false);
   };
 
   const opener2 = function () {
@@ -58,6 +59,7 @@ function Home() {
     setUserDefaultStyle({});
     setPwDefaultState({});
     setBtnStyle("submit-btn");
+    setKeeper(false);
   };
 
   const closer = function () {
@@ -67,6 +69,7 @@ function Home() {
     setPwDefaultState({});
     setEmailInserted("");
     setPwInserted("");
+    setKeeper(false);
   };
 
   const changerToLogin = function () {
@@ -77,6 +80,7 @@ function Home() {
     setUserDefaultStyle({});
     setPwDefaultState({});
     setBtnStyle("submit-btn");
+    setKeeper(false);
   };
 
   const changerToSignUp = function () {
@@ -87,32 +91,38 @@ function Home() {
     setUserDefaultStyle({});
     setPwDefaultState({});
     setBtnStyle("submit-btn");
+    setKeeper(false);
   };
 
   let userListener = function (e) {
     setEmailInserted(e.target.value);
-    console.log("user Li works");
+    if (e.target.value.length != 0) {
+      setUserDefaultStyle({});
+    }
   };
 
   let pwListener = function (e) {
     setPwInserted(e.target.value);
-    console.log("pw Li works");
+    if (e.target.value.length != 0) {
+      setPwDefaultState({});
+    }
   };
 
-  console.log(emailInserted);
-  console.log(pwInserted);
+  const [signUpAlertStyle, setSignUpAlertStyle] = useState(
+    "wrong-alert hidden-alert"
+  );
 
   const testF = function () {
     if (emailInserted.length > 1 && pwInserted.length > 1) {
-      console.log("this works now");
       setBtnStyle("submit-btn valid-btn");
+      setPwDefaultState({});
+      setAlertStyle("wrong-alert hidden-alert");
+      setSignUpAlertStyle("wrong-alert hidden-alert");
     }
     if (pwInserted.length == 0) {
-      setPwDefaultState({});
       setBtnStyle("submit-btn");
     }
     if (emailInserted.length == 0) {
-      setUserDefaultStyle({});
       setBtnStyle("submit-btn");
     }
   };
@@ -123,36 +133,68 @@ function Home() {
   const [userEntered, setUserEntered] = useState();
   const [pwEntered, setPwEntered] = useState();
 
-  const submitHandler = function () {
+  // console.log(emailInserted);
+  // console.log(pwInserted);
+
+  const backgrounder = function () {
     if (emailInserted.length == 0 && pwInserted.length == 0) {
+      console.log("both user and pw are empty");
       setUserDefaultStyle({ background: "#a1f7d3" });
       setPwDefaultState({ background: "#a1f7d3" });
       setBtnStyle("submit-btn");
     }
     if (emailInserted.length == 0) {
+      console.log("only user is empty");
       setUserDefaultStyle({ background: "#a1f7d3" });
     }
     if (pwInserted.length == 0) {
+      console.log("only pw is empty");
       setPwDefaultState({ background: "#a1f7d3" });
     }
+  };
+
+  const submitHandler = function () {
+    backgrounder();
     setUserEntered(userInputRef.current.value);
     setPwEntered(pwInputRef.current.value);
+    if (userEntered != "123" || pwEntered != "123") {
+      setAlertStyle("wrong-alert");
+    }
   };
 
   const navigate = useNavigate();
   const [dummyVar, setDummyVar] = useState("");
+  const [keeper, setKeeper] = useState(false);
+  const [alertStyle, setAlertStyle] = useState("wrong-alert hidden-alert");
+
+  const checkboxLi = function (e) {
+    if (e.target.checked == true) {
+      setKeeper(true);
+    } else if (e.target.checked == false) setKeeper(false);
+  };
 
   if (userEntered == "123" && pwEntered == "123") {
     navigate("/profile");
-    localStorage.setItem("isLoggedIn", "yes");
-    localStorage.setItem("user", "recruiter");
+    sessionStorage.setItem("isLoggedIn", "yes");
+    sessionStorage.setItem("user", "recruiter");
+    if (keeper == true) {
+      localStorage.setItem("isLoggedIn", "yes");
+      localStorage.setItem("user", "recruiter");
+    }
   }
-
-  if (localStorage.getItem("isLoggedIn") == "yes") {
-    console.log("someone is logged in");
-  }
+  // } else if (localStorage.getItem("isLoggedIn") == "yes") {
+  //   console.log("someone is logged in");
+  // }
 
   const userLogged = "recruiter";
+
+  const signUpErroer = function (e) {
+    backgrounder();
+    e.preventDefault();
+    setSignUpAlertStyle("wrong-alert");
+    console.log(e);
+    console.log("trying to signup");
+  };
 
   return (
     <div>
@@ -163,23 +205,41 @@ function Home() {
       ></Overlay>
       <Header
         altBtn1={
-          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : LoginBtn
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+            ? DummyBtn
+            : LoginBtn
         }
         altBtn2={
-          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : SignUpBtn
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+            ? DummyBtn
+            : SignUpBtn
         }
         altBtn3={
-          localStorage.getItem("isLoggedIn") == "yes" ? DummyBtn : DummyBtn
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+            ? DummyBtn
+            : DummyBtn
         }
         altBtn4={AboutButton}
         altBtn5={
-          localStorage.getItem("isLoggedIn") == "yes" ? ProfileBtn : DummyBtn
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+            ? ProfileBtn
+            : DummyBtn
         }
         saluteTextTunnel={
-          localStorage.getItem("isLoggedIn") == "yes" ? "logged in as " : ""
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+            ? "logged in as "
+            : ""
         }
         userNameTunnel={
-          localStorage.getItem("user") == "recruiter" ? "recruiter" : ""
+          localStorage.getItem("user") ||
+          sessionStorage.getItem("user") == "recruiter"
+            ? "recruiter"
+            : ""
         }
         openedTunnel1={opener1}
         openedTunnel2={opener2}
@@ -192,7 +252,7 @@ function Home() {
         <ArrowDown></ArrowDown>
         <HowToLists></HowToLists>
         <Carousel></Carousel>
-        <ReadyButton openedTunnel={opener2}></ReadyButton>
+        <ReadyButton openedTunnel={opener1}></ReadyButton>
         <Footer></Footer>
         <LoginModal
           statusTunnel={openedModal1}
@@ -208,16 +268,19 @@ function Home() {
           submissionTunnel={submitHandler}
           valueTunnel={emailInserted}
           value2Tunnel={pwInserted}
+          checkboxLiTunnel={checkboxLi}
+          alertStyleTunnel={alertStyle}
         ></LoginModal>
         <SignUpModal
           statusTunnel={openedModal2}
           changerTunnel={changerToLogin}
-          clickerTunnel={submitHandler}
+          clickerTunnel={signUpErroer}
           userLiTunnel={userListener}
           pwLiTunnel={pwListener}
           userDefaultStyleTunnel={userDefaultStyle}
           pwDefaultStyleTunnel={pwDefaultStyle}
           btnStyleTunnel={btnStyle}
+          alertStyleTunnel={signUpAlertStyle}
         ></SignUpModal>
       </MainWrapper>
     </div>

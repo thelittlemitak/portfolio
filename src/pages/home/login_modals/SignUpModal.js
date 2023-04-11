@@ -37,6 +37,7 @@ function SignUpModal(props) {
             required
           />
         </div>
+        <div className={props.alertStyleTunnel}>Sign up function is currently not available!</div>
         <button
           type="submit"
           onClick={props.clickerTunnel}

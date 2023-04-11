@@ -43,6 +43,11 @@ function LoginModal(props) {
             value={props.value2Tunnel}
           />
         </div>
+        <section className="keeper-wrapper">
+          <input type="checkbox" onChange={props.checkboxLiTunnel}></input>
+          <div>Keep me logged</div>
+        </section>
+        <div className={props.alertStyleTunnel}>Email or password introduced is wrong!</div>
         <button
           type="button"
           onClick={props.clickerTunnel}

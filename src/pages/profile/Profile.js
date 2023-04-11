@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import "./style-profile.css";
 import Header from "../../components/Header";
@@ -20,6 +21,7 @@ import Hobbies from "./mains/Hobbies";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerBtn from "../../components/btns/WarmerBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
+import LogOutBtn from "../../components/btns/LogOutBtn";
 
 function Profile() {
   const tempoGoalsData = [
@@ -106,7 +108,7 @@ function Profile() {
       goal: "What's app",
       freq: "Daily",
       length_: "30 min",
-      id: 0.2215648555284685,
+      id: 0.2215641234124284685,
     },
   ];
   const forbiddenActivitiesData = [
@@ -118,7 +120,7 @@ function Profile() {
       goal: "Tim Hecker's gig",
       freq: "18.04.2023",
       length_: "With Javilondon",
-      id: 0.2215648439284685,
+      id: 0.2215612341234284685,
     },
     {
       goal: "Belu",
@@ -143,6 +145,12 @@ function Profile() {
       freq: "26.04.2023",
       length_: "Zaski",
       id: 0.2285855436666685,
+    },
+    {
+      goal: "Papas",
+      freq: "19.04.2023",
+      length_: "Zaski",
+      id: 0.2285855333266685,
     },
   ];
   const ideasData = [
@@ -239,6 +247,17 @@ function Profile() {
     },
   ];
 
+  // const navigate = useNavigate();
+
+  // const outLogger = function () {
+  //   sessionStorage.clear("isLoggedIn");
+  //   sessionStorage.clear("user");
+  //   localStorage.clear("isLoggedIn");
+  //   localStorage.clear("user");
+  //   navigate("/");
+  //   window.scroll(0, 0);
+  // };
+
   return (
     <GenericWrapper>
       <Header
@@ -278,6 +297,7 @@ function Profile() {
         <Ideas dataTunnel={ideasData} titlesTunnel={titles3col}></Ideas>
         <Hobbies dataTunnel={hobbiesData} titlesTunnel={titles3col}></Hobbies>
       </main>
+      <LogOutBtn></LogOutBtn>
       <Footer></Footer>
     </GenericWrapper>
   );

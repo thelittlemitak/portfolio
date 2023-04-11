@@ -10,6 +10,7 @@ import TodoBtn from "../../components/btns/TodoBtn";
 import MotivatorBtn from "../../components/btns/MotivatorBtn";
 import WarmerTable from "./WarmerTable";
 import DummyBtn from "../../components/btns/DummyBtn";
+import LogOutBtn from "../../components/btns/LogOutBtn";
 
 function Warmer() {
   const greatefulActionsData = [
@@ -85,6 +86,8 @@ function Warmer() {
           mainTitleTunnel={titles3col[1].type}
         ></WarmerTable>
       </main>
+      <LogOutBtn></LogOutBtn>
+
       <Footer></Footer>
     </GenericWrapper>
   );
