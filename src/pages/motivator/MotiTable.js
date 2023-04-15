@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 
 import HeaderTable3Col from "../profile/components/HeaderTable3Col";
 import DoubtIcon from "../../components/DoubtIcon";
@@ -7,12 +7,21 @@ import InputTable3Col from "../profile/components/InputTable3Col";
 import GenericWrapper from "../../components/GenericWrapper";
 import NewBtn from "../../components/btns/NewBtn";
 import EditBtn from "../../components/btns/EditBtn";
+import RemoveBtn from "../../components/btns/RemoveBtn";
 import "./Motivator.css";
 
 function MotiTable(props) {
+  // the problem is that when props.dataTunnel changes, tempoGoals keeps being the same
+  // useEffect(() => {setTempoGoals(props.dataTunnel) }), [props.dataTunnel];
+
   const [tempoGoals, setTempoGoals] = useState(props.dataTunnel);
+  useEffect(() => {
+    setTempoGoals(props.dataTunnel);
+  }, [props.dataTunnel]);
 
   let newNumber = Math.random();
+
+  //test
 
   const [inputTempoGoal, setInputTempoGoal] = useState("");
   const [inputTempoAction, setInputTempoAction] = useState("");
@@ -48,7 +57,6 @@ function MotiTable(props) {
       }
       return;
     }
-
     setTempoGoals([
       ...tempoGoals,
       { goal: inputTempoGoal, action: inputTempoAction, id: newNumber },
@@ -57,6 +65,15 @@ function MotiTable(props) {
     setclasser2("");
     setInputTempoGoal("");
     setInputTempoAction("");
+
+    props.topLevelPusherTunnel([
+      ...tempoGoals,
+      {
+        goal: inputTempoGoal,
+        action: inputTempoAction,
+        id: newNumber,
+      },
+    ], props.idTunnel);
   };
 
   const removeF = function (e) {
@@ -70,7 +87,6 @@ function MotiTable(props) {
 
   const keyPusher = function (e) {
     if (e.code == "Enter") {
-      console.log("enter has been pressed");
       Pusher();
     }
   };
@@ -79,10 +95,12 @@ function MotiTable(props) {
     <Fragment>
       <h3 class="h3-moti">Motivator for {props.title}</h3>
       <div className="moti-timing-wrapper">
-        <EditBtn openerTunnel={props.openerTunnel} idTunnel={props.idTunnel}></EditBtn>
+        <EditBtn
+          openerTunnel={props.openerTunnel}
+          idTunnel={props.idTunnel}
+        ></EditBtn>
         <h6>Deadline: {props.deadline}</h6>
         <h6>Days remaining: {props.daysRemainingTunnel}</h6>
-        {/* <h6>Working days remaining: {props.wDaysRemainingTunnel}</h6> */}
       </div>
       <table class="profile-table">
         <HeaderTable3Col

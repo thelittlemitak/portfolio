@@ -27,9 +27,18 @@ function Motivator() {
   const [btnStyle, setBtnStyle] = useState("submit-btn");
 
   const [id, setId] = useState(0);
+  let secondId = 0;
+
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth();
+  let monthPlus1 = month + 1;
+  let day = today.getDate();
+  let test = `${year.toString()}-${monthPlus1.toString()}-${day.toString()}`;
 
   const opener = function (e) {
     setId(e.target.getAttribute("itemid"));
+    secondId = e.target.getAttribute("itemid");
     setOpenedModal(true);
     setGoalInserted("");
     setDeadlineInserted("");
@@ -97,172 +106,19 @@ function Motivator() {
 
   const [newGoal, setNewGoal] = useState("");
 
-  const [reasonsObjArr, setReasonsObjArr] = useState([
-    [
-      {
-        goal: "Career change",
-        action: "Link below",
-        id: 111,
-      },
-    ],
-    [
-      {
-        goal: "Leave Sykes",
-        action: "This job is a horror and I deserve something better",
-        id: 222,
-      },
-      {
-        goal: "Flexibility",
-        action: "Being able to work from everywhere",
-        id: 0.7419944123444685,
-      },
-      {
-        goal: "Money",
-        action: "Have a good salary to invest on myself and my projects",
-        id: 0.7434563456323444321,
-      },
-      {
-        goal: "Leave alone",
-        action: "Having a partner is a pain in the ass",
-        id: 0.74199463456435654321,
-      },
-      {
-        goal: "Start with next goals",
-        action: "Techno, studio, Tot Fosk, Drums",
-        id: 0.74199345634564321,
-      },
-      {
-        goal: "Stop studying",
-        action: "Kind of a retro but true",
-        id: 0.7419944123445679,
-      },
-    ],
-    [
-      {
-        goal: "Not being fat",
-        action: "Having a belly is not sexy",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Muay Thai performance",
-        action: "You train like shit afterwards",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Longevity",
-        action: "You will look better for a longer time",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Health",
-        action: "Less problems in the future regarding your body",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Hotter girls",
-        action: "If you are not hot, others won't be either",
-        id: 0.7419944699444685,
-      },
-    ],
-    [
-      {
-        goal: "Not being fat",
-        action: "Having a belly is not sexy",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Having more fun (MT) for longer periods of time",
-        action: "Having a belly is not sexy",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Having an amazing body",
-        action: "Having a belly is not sexy",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Longevity",
-        action: "You will look better for a longer time",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Health",
-        action: "Less problems in the future regarding your body",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Hotter girls",
-        action: "If you are not hot, others won't be either",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Being more flexible",
-        action: "This reduces body pain, incl. the knee",
-        id: 0.7419944699444685,
-      },
-    ],
-    [
-      {
-        goal: "Not having headaches",
-        action: "You get tension in your head and jaw",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Not being anxious",
-        action: "You get anxious very easily, sometimes without a reason",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Not depending on something out from you",
-        action:
-          "It's horrible to always depend on something just to start the day/living",
-        id: 0.7419944699444685,
-      },
-    ],
-    [
-      {
-        goal: "Being able to apply to more jobs",
-        action: "More jobs = better career",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "More know people in Germany",
-        action: "People = Happiness and opportunities",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Not depending on something out from you",
-        action:
-          "It's horrible to always depend on something just to start the day/living",
-        id: 0.7419944699444685,
-      },
-    ],
-    [
-      {
-        goal: "Mental health",
-        action:
-          "It just feels better to go to the office in exange for some home productivity",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Meeting more people",
-        action: "People = Happiness and opportunities",
-        id: 0.7419944699444685,
-      },
-      {
-        goal: "Stay in contact with friends",
-        action: "That's life",
-        id: 0.7419944699444685,
-      },
-    ],
-  ]);
-
+  // this is the real one but i need a smaller one for testing
   const [componentData, setComponentData] = useState([
     {
-      dataTunnel: reasonsObjArr[0],
+      dataTunnel: [
+        {
+          goal: "Career change",
+          action: "Link below",
+          id: 36039,
+        },
+      ],
       title: "porfolio",
       deadline: "2023-06-07",
-      id: 47128749174,
+      id: 98026,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -272,10 +128,41 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[1],
+      dataTunnel: [
+        {
+          goal: "Leave Sykes",
+          action: "This job is a horror and I deserve something better",
+          id: 36995,
+        },
+        {
+          goal: "Flexibility",
+          action: "Being able to work from everywhere",
+          id: 0.17323,
+        },
+        {
+          goal: "Money",
+          action: "Have a good salary to invest on myself and my projects",
+          id: 0.6732,
+        },
+        {
+          goal: "Leave alone",
+          action: "Having a partner is a pain in the ass",
+          id: 0.80431,
+        },
+        {
+          goal: "Start with next goals",
+          action: "Techno, studio, Tot Fosk, Drums",
+          id: 0.7887,
+        },
+        {
+          goal: "Stop studying",
+          action: "Kind of a retro but true",
+          id: 0.65131,
+        },
+      ],
       title: "career change",
       deadline: "2023-06-07",
-      id: 574325798320475,
+      id: 11329,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -285,10 +172,36 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[2],
+      dataTunnel: [
+        {
+          goal: "Not being fat",
+          action: "Having a belly is not sexy",
+          id: 0.74565,
+        },
+        {
+          goal: "Muay Thai performance",
+          action: "You train like shit afterwards",
+          id: 0.89933,
+        },
+        {
+          goal: "Longevity",
+          action: "You will look better for a longer time",
+          id: 0.31365,
+        },
+        {
+          goal: "Health",
+          action: "Less problems in the future regarding your body",
+          id: 0.37325,
+        },
+        {
+          goal: "Hotter girls",
+          action: "If you are not hot, others won't be either",
+          id: 0.62704,
+        },
+      ],
       title: "not drinking alcohol",
       deadline: "2023-06-07",
-      id: 43572938047592345,
+      id: 85949,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -298,10 +211,46 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[3],
+      dataTunnel: [
+        {
+          goal: "Not being fat",
+          action: "Having a belly is not sexy",
+          id: 0.94713,
+        },
+        {
+          goal: "Having more fun (MT) for longer periods of time",
+          action: "Having a belly is not sexy",
+          id: 0.35115,
+        },
+        {
+          goal: "Having an amazing body",
+          action: "Having a belly is not sexy",
+          id: 0.94594,
+        },
+        {
+          goal: "Longevity",
+          action: "You will look better for a longer time",
+          id: 0.23506,
+        },
+        {
+          goal: "Health",
+          action: "Less problems in the future regarding your body",
+          id: 0.29402,
+        },
+        {
+          goal: "Hotter girls",
+          action: "If you are not hot, others won't be either",
+          id: 0.24165,
+        },
+        {
+          goal: "Being more flexible",
+          action: "This reduces body pain, incl. the knee",
+          id: 0.89649,
+        },
+      ],
       title: "Muay Thai performance",
       deadline: "2023-06-07",
-      id: 23457293047592345,
+      id: 69594,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -311,10 +260,27 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[4],
+      dataTunnel: [
+        {
+          goal: "Not having headaches",
+          action: "You get tension in your head and jaw",
+          id: 0.50941,
+        },
+        {
+          goal: "Not being anxious",
+          action: "You get anxious very easily, sometimes without a reason",
+          id: 0.50947,
+        },
+        {
+          goal: "Not depending on something out from you",
+          action:
+            "It's horrible to always depend on something just to start the day/living",
+          id: 0.50617,
+        },
+      ],
       title: "not drinking coffee",
       deadline: "2023-06-07",
-      id: 523452384750235,
+      id: 98342,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -324,10 +290,27 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[5],
+      dataTunnel: [
+        {
+          goal: "Being able to apply to more jobs",
+          action: "More jobs = better career",
+          id: 0.77533,
+        },
+        {
+          goal: "More know people in Germany",
+          action: "People = Happiness and opportunities",
+          id: 0.11625,
+        },
+        {
+          goal: "Not depending on something out from you",
+          action:
+            "It's horrible to always depend on something just to start the day/living",
+          id: 0.46191,
+        },
+      ],
       title: "learning german",
       deadline: "2023-06-07",
-      id: 54534582234523495807,
+      id: 25348,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -337,10 +320,27 @@ function Motivator() {
       },
     },
     {
-      dataTunnel: reasonsObjArr[6],
+      dataTunnel: [
+        {
+          goal: "Mental health",
+          action:
+            "It just feels better to go to the office in exange for some home productivity",
+          id: 0.2165,
+        },
+        {
+          goal: "Meeting more people",
+          action: "People = Happiness and opportunities",
+          id: 0.95539,
+        },
+        {
+          goal: "Stay in contact with friends",
+          action: "That's life",
+          id: 0.9987,
+        },
+      ],
       title: "going to the office",
       deadline: "2023-06-07",
-      id: 523452345702375492,
+      id: 23199,
       get diffDays() {
         let date1 = new Date(this.deadline);
         let today = new Date();
@@ -350,10 +350,69 @@ function Motivator() {
       },
     },
   ]);
+
+  // console.log(componentData[6].dataTunnel);
+
+  // const [componentData, setComponentData] = useState([
+  //   {
+  //     dataTunnel: [
+  //       {
+  //         goal: "From portfolio",
+  //         action: "From portfolio",
+  //         id: 2389475,
+  //       },
+  //       {
+  //         goal: "From portfolio",
+  //         action: "From portfolio",
+  //         id: 23450982,
+  //       },
+  //     ],
+  //     title: "porfolio",
+  //     deadline: "2023-06-07",
+  //     id: 47128749174,
+  //     get diffDays() {
+  //       let date1 = new Date(this.deadline);
+  //       let today = new Date();
+  //       let diffTime = Math.abs(today - date1);
+  //       let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  //       return diffDays;
+  //     },
+  //   },
+  //   {
+  //     dataTunnel: [
+  //       {
+  //         goal: "From german",
+  //         action: "From german",
+  //         id: 2345089,
+  //       },
+  //       {
+  //         goal: "From german",
+  //         action: "From german",
+  //         id: 2903845,
+  //       },
+  //     ],
+  //     title: "german",
+  //     deadline: "2023-06-07",
+  //     id: 123123123,
+  //     get diffDays() {
+  //       let date1 = new Date(this.deadline);
+  //       let today = new Date();
+  //       let diffTime = Math.abs(today - date1);
+  //       let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  //       return diffDays;
+  //     },
+  //   },
+  // ]);
 
   const [mutation, setMutation] = useState();
 
   const submitHandler = function () {
+    if (goalInserted.length == 0 && deadlineInserted.length == 0) {
+      setGoalDefaultStyle({ background: "#a1f7d3" });
+      setDeadlineDefaultState({ background: "#a1f7d3" });
+      setBtnStyle("submit-btn");
+      return;
+    }
     let indexOfId = componentData.findIndex((x) => x.id == id);
     let goalEntered = goalInputRef.current.value;
     let deadlineEntered = deadlineInputRef.current.value;
@@ -374,10 +433,64 @@ function Motivator() {
 
   const keyPusher = function (e) {
     if (e.code == "Enter") {
-      console.log("enter has been pressed");
       submitHandler();
     }
   };
+
+  let newId = Math.random();
+
+  const adder = function () {
+    setComponentData([
+      ...componentData,
+      {
+        dataTunnel: [
+          {
+            goal: "Stop studying",
+            action: "Kind of a retro but true",
+            id: 76767676,
+          },
+        ],
+        title: "(press edit)",
+        deadline: test,
+        id: newId,
+        get diffDays() {
+          let date1 = new Date(this.deadline);
+          let today = new Date();
+          let diffTime = Math.abs(today - date1);
+          let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          return diffDays;
+        },
+      },
+    ]);
+  };
+
+  const rerender = function () {};
+
+  const remover = function (e) {
+    e.preventDefault();
+    setId(e.target.getAttribute("itemid"));
+    let indexOfComponent = componentData.findIndex((x) => x.id == id);
+    let indexOf;
+    componentData.splice(indexOfComponent, 1);
+    setComponentData([...componentData]);
+    closer();
+  };
+
+  const topLevelPusher = function (data, idintroduced) {
+    console.log(idintroduced);
+    let indexOfComponentEdited = componentData.findIndex(
+      (x) => x.id == idintroduced
+    );
+
+    // this is giving -1 the second time is used
+    console.log(indexOfComponentEdited);
+    //test
+    console.log(componentData);
+
+    componentData[indexOfComponentEdited].dataTunnel = data;
+  };
+
+  // tenemos que hacer dos cosas. 1. updatear el componentData y hacer un rerender
 
   return (
     <GenericWrapper>
@@ -402,12 +515,17 @@ function Motivator() {
             title={x.title}
             deadline={x.deadline}
             openerTunnel={opener}
+            rerenderTunnel={rerender}
             idTunnel={x.id}
             daysRemainingTunnel={x.diffDays}
+            topLevelPusherTunnel={topLevelPusher}
+
+            // tempoGoalListenerTunnel={tempoGoalListener}
+            // tempoActionListenerTunnel={tempoActionListener}
           ></MotiTable>
         ))}
       </main>
-      <NewBtn addFTunnel={""}></NewBtn>
+      <NewBtn addFTunnel={adder}></NewBtn>
       <LogOutBtn></LogOutBtn>
       <Footer></Footer>
       <EditorModal
@@ -423,6 +541,8 @@ function Motivator() {
         clickerTunnel={submitHandler}
         btnStyleTunnel={btnStyle}
         keyPusherTunnel={keyPusher}
+        removerTunnel={remover}
+        idTunnel={id}
       ></EditorModal>
     </GenericWrapper>
   );

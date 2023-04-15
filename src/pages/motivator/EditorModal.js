@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import ReactDom from "react-dom";
+import RemoveBtn from "../../components/btns/RemoveBtn";
 import "./EditorModal.css";
 
 function EditorModal(props) {
@@ -14,10 +15,7 @@ function EditorModal(props) {
   let month = today.getMonth() + 1;
   let day = today.getDate();
   let dateStringed = `${year.toString()}-${month.toString()}-${day.toString()}`;
-  console.log(dateStringed);
   let typer = typeof dateStringed;
-  console.log(typer);
-
 
   return ReactDom.createPortal(
     <div className="modal-editor-wrapper">
@@ -62,8 +60,12 @@ function EditorModal(props) {
           onClick={props.clickerTunnel}
           className={props.btnStyleTunnel}
         >
-          Edit
+          EDIT
         </button>
+        <RemoveBtn
+          removerTunnel={props.removerTunnel}
+          idTunnel={props.idTunnel}
+        ></RemoveBtn>
       </form>
     </div>,
     document.getElementById("modal3")
