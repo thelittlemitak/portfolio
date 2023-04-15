@@ -111,13 +111,11 @@ function SocialGatherings(props) {
   return (
     <Fragment>
       <h3 class="h3-profile">
-          Social gatherings
+          Meetings
           <DoubtIcon></DoubtIcon>
           <div class="info-box info-box--hidden">
-            Simple schedule for your social life and networking purposes.
-            Remember that spending time with others it's important, at least
-            once a week; healthy relationships will make you feel better about
-            life (and eventually make you work harder).
+            Simple schedule for meetings of all kind.
+            They can be social gatherings, doctor appointments, concerts or any anything else that can happen on a specific date.
           </div>
         </h3>
       <table class="profile-table">

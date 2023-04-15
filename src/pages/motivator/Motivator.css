@@ -1,0 +1,44 @@
+.h3-moti {
+  padding: 2.9rem 0rem 1rem 0rem;
+  text-align: center;
+  font-size: 4.4rem;
+  background: linear-gradient(#fde9f1, #e9fdf5);
+  border-top: 0.2rem solid;
+  position: relative;
+  margin-bottom: 0rem;
+}
+
+.moti-timing-wrapper {
+  text-align: center;
+  font-size: 4.4rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.moti-btns {
+  font-family: Verdana, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 799;
+
+  background-color: #fac5db;
+
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  display: inline-block;
+
+  border: 0.3rem solid;
+  box-shadow: 1rem 1rem;
+}
+
+.moti-btns:hover {
+  background-color: #22ec98;
+
+  transition: 0.3s;
+}
+
+.new-btns {
+  display: block;
+  margin: -4rem auto 9rem auto;
+}

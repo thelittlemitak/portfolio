@@ -78,10 +78,9 @@ function ForbiddenActivities(props) {
         Forbidden activities
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          Here you can add the habits that you want to avoid (e.g. biting your
-          nails), but also temporary restrictions (by adding a date) that can
-          help you focusing on your goals for some limited time (e.g. playing
-          video games or using your phone).
+          Here you can add the habits that you want to avoid (e.g. stop biting your
+          nails forever), but also temporary restrictions (e.g. playing
+          video games for the next month until you get a new job).
         </div>
       </h3>
       <table class="profile-table">

@@ -103,7 +103,7 @@ function LimitedActivities(props) {
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
           Less is more. Spending less time doing some activities can give you
-          more room and peace of mind for your goals. But never forget to take
+          more room and peace of mind for your ultimate goals. But never forget to take
           some time for you to rest and relax. We are not robots!
         </div>
       </h3>

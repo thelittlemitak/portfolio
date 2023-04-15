@@ -78,7 +78,9 @@ function Ideas(props) {
         Ideas
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          These are just ideas that are in your mind that are not yet anything you should take any action for.
+          These are just ideas that are in your mind. 
+          Even if they are still nothing you should take any action for, it's important to have them written down
+          to free up your mind (and eventually, work on them).
         </div>
       </h3>
       <table class="profile-table">

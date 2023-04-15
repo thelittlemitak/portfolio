@@ -196,6 +196,13 @@ function Home() {
     console.log("trying to signup");
   };
 
+  const keyPusher = function (e) {
+    if (e.code == "Enter") {
+      console.log("enter has been pressed");
+      submitHandler();
+    }
+  };
+
   return (
     <div>
       <Overlay
@@ -270,6 +277,7 @@ function Home() {
           value2Tunnel={pwInserted}
           checkboxLiTunnel={checkboxLi}
           alertStyleTunnel={alertStyle}
+          keyPusherTunnel={keyPusher}
         ></LoginModal>
         <SignUpModal
           statusTunnel={openedModal2}

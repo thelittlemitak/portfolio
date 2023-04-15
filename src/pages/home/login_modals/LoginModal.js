@@ -26,6 +26,7 @@ function LoginModal(props) {
             required
             value={props.valueTunnel}
             ref={props.userInputRefTunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </div>
         <div>
@@ -41,6 +42,7 @@ function LoginModal(props) {
             required
             ref={props.pwInputRefTunnel}
             value={props.value2Tunnel}
+            onKeyDown={props.keyPusherTunnel}
           />
         </div>
         <section className="keeper-wrapper">

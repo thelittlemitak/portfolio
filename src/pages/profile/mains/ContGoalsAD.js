@@ -99,13 +99,12 @@ function ContGoalsAD(props) {
   return (
     <Fragment>
       <h3 class="h3-profile">
-        Continuous goals (action dependent)
+        Continuous goals/tasks (action dependent)
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          These are the goals that can be accomplished before the day ends but
-          that they only depend on a task to be done, no matter the time. An
-          example could be tidying up your bedroom or prepare the meals for the
-          weekend.
+          These are the goals/tasks that repeat in time, independent of how much time they take. An
+          example could be tidying up your bedroom every day or prepare the meals for the
+          weekend every Thursday.
         </div>
       </h3>
       <table class="profile-table">

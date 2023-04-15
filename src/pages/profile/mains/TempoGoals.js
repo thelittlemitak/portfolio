@@ -75,12 +75,12 @@ function TempoGoals(props) {
   return (
     <Fragment>
       <h3 class="h3-profile">
-        Temporary goals
+        Temporary goals/tasks
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          These are goals that, after they are accomplished, they are done
-          forever. Normally, you would fill this up with your biggest dreams,
-          like a new job or a new milestone in your preferred hobby.
+          These are the goals/tasks that, after they are accomplished, they are done
+          forever. You can fill this up with your biggest dreams,
+          like a new job or milestone, or any ordinary task.
         </div>
       </h3>
       <table class="profile-table">

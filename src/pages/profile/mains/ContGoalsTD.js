@@ -102,10 +102,8 @@ function ContGoalsTD(props) {
         Continuous goals (time dependent)
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          These are the goals that can be accomplished before the day ends. Here
-          you may put the activities that are part of your new habits and that
-          they are accomplished after X amount of time, like having a 30min walk
-          or meditating 20min in the morning.
+          These are the goals that have some continuity and can be accomplished after X amount of time, like having a 30min walk every two days
+          or meditating 20min every morning.
         </div>
       </h3>
       <table class="profile-table">

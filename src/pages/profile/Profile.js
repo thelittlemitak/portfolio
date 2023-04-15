@@ -90,6 +90,12 @@ function Profile() {
       length_: "You know the drill",
       id: 0.2219945333284685,
     },
+    {
+      goal: "Cocinar dietas",
+      freq: "Every day",
+      length_: "You know the drill",
+      id: 0.4728394728937498,
+    },
   ];
   const limitedActivitiesData = [
     {
@@ -183,12 +189,18 @@ function Profile() {
     },
   ];
 
-  const repTitles = ["Goal", "Add/Remove", "How often?"];
+  const repTitles = [
+    "Goal",
+    "Add/Remove",
+    "How often?",
+    "Goal/task",
+    "Comments",
+  ];
   const titles3col = [
     {
       type: "temporary goals",
-      col1: repTitles[0],
-      col2: "What has to happen to accomplish it?",
+      col1: repTitles[3],
+      col2: repTitles[4],
       col3: repTitles[1],
     },
     {
@@ -200,13 +212,13 @@ function Profile() {
     {
       type: "ideas",
       col1: "Idea",
-      col2: "Comments",
+      col2: repTitles[4],
       col3: repTitles[1],
     },
     {
       type: "ideas",
       col1: "Hobby",
-      col2: "Comments",
+      col2: repTitles[4],
       col3: repTitles[1],
     },
   ];

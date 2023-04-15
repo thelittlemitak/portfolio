@@ -1,0 +1,42 @@
+.modal-editor-wrapper {
+  margin: 200px auto;
+  padding: 4rem 2rem 2rem 2rem;
+  width: 30rem;
+  font-size: 3rem;
+  background-color: #f7a1c5;
+  box-shadow: 1.3rem 1.3rem rgba(0, 0, 0, 0.869);
+  border: 0.4rem solid;
+}
+
+.modal-editor-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* text-align: center; */
+}
+
+.modal-editor-wrapper form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-editor-wrapper form div input {
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: #d7fcec;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.modal-editor-wrapper form div label {
+  text-align: center;
+}
+
+#modal3 {
+  position: fixed;
+  z-index: 8978979789787;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

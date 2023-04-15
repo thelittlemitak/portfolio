@@ -5,6 +5,9 @@ import DoubtIcon from "../../components/DoubtIcon";
 import GoalTable3Col from "../profile/components/GoalTable3Col";
 import InputTable3Col from "../profile/components/InputTable3Col";
 import GenericWrapper from "../../components/GenericWrapper";
+import NewBtn from "../../components/btns/NewBtn";
+import EditBtn from "../../components/btns/EditBtn";
+import "./Motivator.css";
 
 function MotiTable(props) {
   const [tempoGoals, setTempoGoals] = useState(props.dataTunnel);
@@ -74,18 +77,13 @@ function MotiTable(props) {
 
   return (
     <Fragment>
-      <h3 class="h3-profile">
-        Motivator for {props.title}
-        <DoubtIcon></DoubtIcon>
+      <h3 class="h3-moti">Motivator for {props.title}</h3>
+      <div className="moti-timing-wrapper">
+        <EditBtn openerTunnel={props.openerTunnel} idTunnel={props.idTunnel}></EditBtn>
         <h6>Deadline: {props.deadline}</h6>
-        <h6>Days remaining: 69</h6>
-        <h6>Working days remaining: 50</h6>
-        <div class="info-box info-box--hidden">
-          These are goals that, after they are accomplished, they are done
-          forever. Normally, you would fill this up with your biggest dreams,
-          like a new job or a new milestone in your preferred hobby.
-        </div>
-      </h3>
+        <h6>Days remaining: {props.daysRemainingTunnel}</h6>
+        {/* <h6>Working days remaining: {props.wDaysRemainingTunnel}</h6> */}
+      </div>
       <table class="profile-table">
         <HeaderTable3Col
           col1Tunnel={"Reasons"}
