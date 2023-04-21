@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 function ForumBtn() {
   return (
-    <a className="main-header-buttons" href="forum">
+    <Link className="main-header-buttons" to="/forum">
+      {" "}
       <strong>FORUM</strong>
-    </a>
+    </Link>
   );
 }
 

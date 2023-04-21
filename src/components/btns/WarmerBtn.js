@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 function WarmerBtn() {
   return (
-    <a className="main-header-buttons" href="warmer">
+    <Link className="main-header-buttons" to="/warmer">
+      {" "}
       <strong>WARMER</strong>
-    </a>
+    </Link>
   );
 }
 

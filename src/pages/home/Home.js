@@ -23,6 +23,7 @@ import SignUpModal from "./login_modals/SignUpModal";
 import Overlay from "../../components/Overlay";
 import DummyBtn from "../../components/btns/DummyBtn";
 import { Navigate, useNavigate } from "react-router-dom";
+import Carousel2 from "./carousel/Carousel2";
 
 function Home() {
   const signUpBtn = SignUpBtn;
@@ -258,7 +259,7 @@ function Home() {
         <PostHeroTitle></PostHeroTitle>
         <ArrowDown></ArrowDown>
         <HowToLists></HowToLists>
-        <Carousel></Carousel>
+        <Carousel2></Carousel2>
         <ReadyButton openedTunnel={opener1}></ReadyButton>
         <Footer></Footer>
         <LoginModal

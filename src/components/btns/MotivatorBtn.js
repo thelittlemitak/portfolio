@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 function MotivatorBtn() {
   return (
-    <a className="main-header-buttons" href="motivator">
+    <Link className="main-header-buttons" to="/motivator">
+      {" "}
       <strong>MOTIVATOR</strong>
-    </a>
+    </Link>
   );
 }
 

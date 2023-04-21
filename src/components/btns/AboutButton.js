@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Abt&CntBtn.css";
 
 function AboutButton() {
   return (
-    <a className="about-button" href="about">
+    <Link className="about-button" to="/about">
       ...about
-    </a>
+    </Link>
   );
 }
 

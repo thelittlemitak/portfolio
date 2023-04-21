@@ -1,7 +1,7 @@
 .about-hero {
   margin-top: 17rem;
   margin-bottom: 10rem;
-  
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -9,25 +9,44 @@
 
 .about-hero-left-img {
   height: 45rem;
+  opacity: 0;
 
-  
   box-shadow: 1rem 1rem;
   border: 0.3rem solid #212529;
-  
+
   margin-left: 4rem;
+  /* transition: all 1s; */
+  animation: appearance1 0.5s forwards 0.3s;
+}
+
+@keyframes appearance1 {
+  100% {
+    opacity: 100;
+  }
 }
 
 .about-hero-right {
   max-width: 60rem;
   height: 70%;
   position: relative;
-  
+  opacity: 0;
+
   font-size: 5.2rem;
-  
+
   background-color: #fac5db;
   border: 0.3rem solid #212529;
   box-shadow: 1rem 1rem;
-  
+
   padding: 3rem 1rem 0rem 3rem;
   margin: auto auto;
+  /* transform: translateX(1000px); */
+
+  animation: appearance2 0.5s forwards 0.3s;
+}
+
+@keyframes appearance2 {
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
 }

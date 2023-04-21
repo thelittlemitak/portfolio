@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./Carousel.css";
 import Picture1 from "./Picture1";
 import Picture2 from "./Picture2";
@@ -18,6 +18,16 @@ function Carousel() {
   const pic4 = <Picture4></Picture4>;
 
   const pictures = [pic1, pic2, pic3, pic4];
+
+  function preloadImage(url) {
+    var img = new Image();
+    img.src = url;
+    return img;
+  }
+
+  useEffect(() => {
+    preloadImage("/../../../img/testimonial2.webp");
+  }, []);
 
   const arrayEl2 = [
     <BlockQuote1></BlockQuote1>,

@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 function TodoBtn() {
   return (
-    <a className="main-header-buttons" href="profile">
+    <Link className="main-header-buttons" to="/profile">
+      {" "}
       <strong>TO-DO</strong>
-    </a>
+    </Link>
   );
 }
 
