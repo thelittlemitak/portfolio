@@ -2,7 +2,7 @@ import "./Footer.css";
 
 function Footer() {
   let currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="footer-test" id="footer">
       <div className="footer-test-container">
@@ -39,26 +39,31 @@ function Footer() {
               Copyright &copy; <span>{currentYear}</span>
             </p>
             <p>All rights reserved</p>
+            <p>Kidding; but cool</p>
+
           </div>
         </div>
         <nav>
           <p className="footer-title">Resources</p>
           <ul className="footer-nav">
             <li>
-              <a href="about">About MoreMoreMe</a>
+              <a href="build.zip" download>Direct DL source code</a>
             </li>
             <li>
-              <a href="#">Privacy & terms</a>
+              <a href="https://github.com/thelittlemitak/portfolio" target="_blank">GitHUB source code</a>
             </li>
             <li>
+              <a href="/about">About MoreMoreMe</a>
+            </li>
+            {/* <li>
               <a href="#">Help center</a>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div>
           <p className="footer-title">Contact</p>
           <address>
-          <p>Jose Riera Tur</p>
+            <p>Jose Riera Tur</p>
 
             <p>Kreutzigerstr. 10</p>
             <p>10247 Berlin, Germany</p>

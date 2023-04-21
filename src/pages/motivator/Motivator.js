@@ -108,32 +108,27 @@ function Motivator() {
 
   // this is the real one but i need a smaller one for testing
   const [componentData, setComponentData] = useState([
+    // {
+    //   dataTunnel: [
+    //     {
+    //       goal: "Career change",
+    //       action: "Link below",
+    //       id: 36039,
+    //     },
+    //   ],
+    //   title: "porfolio",
+    //   deadline: "2023-06-07",
+    //   id: 98026,
+    //   get diffDays() {
+    //     let date1 = new Date(this.deadline);
+    //     let today = new Date();
+    //     let diffTime = Math.abs(today - date1);
+    //     let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    //     return diffDays;
+    //   },
+    // },
     {
       dataTunnel: [
-        {
-          goal: "Career change",
-          action: "Link below",
-          id: 36039,
-        },
-      ],
-      title: "porfolio",
-      deadline: "2023-06-07",
-      id: 98026,
-      get diffDays() {
-        let date1 = new Date(this.deadline);
-        let today = new Date();
-        let diffTime = Math.abs(today - date1);
-        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
-      },
-    },
-    {
-      dataTunnel: [
-        {
-          goal: "Leave Sykes",
-          action: "This job is a horror and I deserve something better",
-          id: 36995,
-        },
         {
           goal: "Flexibility",
           action: "Being able to work from everywhere",
@@ -145,7 +140,7 @@ function Motivator() {
           id: 0.6732,
         },
         {
-          goal: "Leave alone",
+          goal: "Live alone",
           action: "Having a partner is a pain in the ass",
           id: 0.80431,
         },
@@ -219,7 +214,7 @@ function Motivator() {
         },
         {
           goal: "Having more fun (MT) for longer periods of time",
-          action: "Having a belly is not sexy",
+          action: "MT is just fun",
           id: 0.35115,
         },
         {
@@ -247,6 +242,11 @@ function Motivator() {
           action: "This reduces body pain, incl. the knee",
           id: 0.89649,
         },
+        {
+          goal: "Feeling great",
+          action: "It just feels great",
+          id: 0.231232,
+        },
       ],
       title: "Muay Thai performance",
       deadline: "2023-06-07",
@@ -259,36 +259,36 @@ function Motivator() {
         return diffDays;
       },
     },
-    {
-      dataTunnel: [
-        {
-          goal: "Not having headaches",
-          action: "You get tension in your head and jaw",
-          id: 0.50941,
-        },
-        {
-          goal: "Not being anxious",
-          action: "You get anxious very easily, sometimes without a reason",
-          id: 0.50947,
-        },
-        {
-          goal: "Not depending on something out from you",
-          action:
-            "It's horrible to always depend on something just to start the day/living",
-          id: 0.50617,
-        },
-      ],
-      title: "not drinking coffee",
-      deadline: "2023-06-07",
-      id: 98342,
-      get diffDays() {
-        let date1 = new Date(this.deadline);
-        let today = new Date();
-        let diffTime = Math.abs(today - date1);
-        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
-      },
-    },
+    // {
+    //   dataTunnel: [
+    //     {
+    //       goal: "Not having headaches",
+    //       action: "You get tension in your head and jaw",
+    //       id: 0.50941,
+    //     },
+    //     {
+    //       goal: "Not being anxious",
+    //       action: "You get anxious very easily, sometimes without a reason",
+    //       id: 0.50947,
+    //     },
+    //     {
+    //       goal: "Not depending on something out from you",
+    //       action:
+    //         "It's horrible to always depend on something just to start the day/living",
+    //       id: 0.50617,
+    //     },
+    //   ],
+    //   title: "not drinking coffee",
+    //   deadline: "2023-06-07",
+    //   id: 98342,
+    //   get diffDays() {
+    //     let date1 = new Date(this.deadline);
+    //     let today = new Date();
+    //     let diffTime = Math.abs(today - date1);
+    //     let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    //     return diffDays;
+    //   },
+    // },
     {
       dataTunnel: [
         {
@@ -307,6 +307,12 @@ function Motivator() {
             "It's horrible to always depend on something just to start the day/living",
           id: 0.46191,
         },
+        {
+          goal: "Less headaches when interacting/better adaptation",
+          action:
+            "Avoid anxiety everytime you need someone from Germany",
+          id: 0.46191,
+        },
       ],
       title: "learning german",
       deadline: "2023-06-07",
@@ -319,92 +325,42 @@ function Motivator() {
         return diffDays;
       },
     },
-    {
-      dataTunnel: [
-        {
-          goal: "Mental health",
-          action:
-            "It just feels better to go to the office in exange for some home productivity",
-          id: 0.2165,
-        },
-        {
-          goal: "Meeting more people",
-          action: "People = Happiness and opportunities",
-          id: 0.95539,
-        },
-        {
-          goal: "Stay in contact with friends",
-          action: "That's life",
-          id: 0.9987,
-        },
-      ],
-      title: "going to the office",
-      deadline: "2023-06-07",
-      id: 23199,
-      get diffDays() {
-        let date1 = new Date(this.deadline);
-        let today = new Date();
-        let diffTime = Math.abs(today - date1);
-        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
-      },
-    },
+    // {
+    //   dataTunnel: [
+    //     {
+    //       goal: "Mental health",
+    //       action:
+    //         "It just feels better to go to the office in exange for some home productivity",
+    //       id: 0.2165,
+    //     },
+    //     {
+    //       goal: "Meeting more people",
+    //       action: "People = Happiness and opportunities",
+    //       id: 0.95539,
+    //     },
+    //     {
+    //       goal: "Stay in contact with friends",
+    //       action: "That's life",
+    //       id: 0.9987,
+    //     },
+    //   ],
+    //   title: "going to the office",
+    //   deadline: "2023-06-07",
+    //   id: 23199,
+    //   get diffDays() {
+    //     let date1 = new Date(this.deadline);
+    //     let today = new Date();
+    //     let diffTime = Math.abs(today - date1);
+    //     let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    //     return diffDays;
+    //   },
+    // },
   ]);
 
-  // console.log(componentData[6].dataTunnel);
-
-  // const [componentData, setComponentData] = useState([
-  //   {
-  //     dataTunnel: [
-  //       {
-  //         goal: "From portfolio",
-  //         action: "From portfolio",
-  //         id: 2389475,
-  //       },
-  //       {
-  //         goal: "From portfolio",
-  //         action: "From portfolio",
-  //         id: 23450982,
-  //       },
-  //     ],
-  //     title: "porfolio",
-  //     deadline: "2023-06-07",
-  //     id: 47128749174,
-  //     get diffDays() {
-  //       let date1 = new Date(this.deadline);
-  //       let today = new Date();
-  //       let diffTime = Math.abs(today - date1);
-  //       let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  //       return diffDays;
-  //     },
-  //   },
-  //   {
-  //     dataTunnel: [
-  //       {
-  //         goal: "From german",
-  //         action: "From german",
-  //         id: 2345089,
-  //       },
-  //       {
-  //         goal: "From german",
-  //         action: "From german",
-  //         id: 2903845,
-  //       },
-  //     ],
-  //     title: "german",
-  //     deadline: "2023-06-07",
-  //     id: 123123123,
-  //     get diffDays() {
-  //       let date1 = new Date(this.deadline);
-  //       let today = new Date();
-  //       let diffTime = Math.abs(today - date1);
-  //       let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  //       return diffDays;
-  //     },
-  //   },
-  // ]);
-
   const [mutation, setMutation] = useState();
+  const [deadlineAlertStyle, setDeadlineAlertStyle] = useState(
+    "wrong-alert hidden-alert"
+  );
 
   const submitHandler = function () {
     if (goalInserted.length == 0 && deadlineInserted.length == 0) {
@@ -416,6 +372,16 @@ function Motivator() {
     let indexOfId = componentData.findIndex((x) => x.id == id);
     let goalEntered = goalInputRef.current.value;
     let deadlineEntered = deadlineInputRef.current.value;
+
+    let dateEntered = new Date(deadlineEntered);
+    let today = new Date();
+    let diffTime = today - dateEntered;
+    if (diffTime > 0) {
+      console.log("hey this is wrong");
+      setDeadlineAlertStyle("wrong-alert");
+      return;
+    }
+
     backgrounder();
     componentData[indexOfId].title = goalEntered;
     componentData[indexOfId].deadline = deadlineEntered;
@@ -507,7 +473,9 @@ function Motivator() {
         altBtn5={DummyBtn}
       ></Header>
       <h2>Welcome to the MOTIVATOR</h2>
+      <h3>(because some things need a push)</h3>
       <h3>A system to remind you why you are doing what you are doing</h3>
+      <h3>It is recommended to check it every morning</h3>
       <main className="main-profile-container">
         {componentData.map((x) => (
           <MotiTable
@@ -519,7 +487,6 @@ function Motivator() {
             idTunnel={x.id}
             daysRemainingTunnel={x.diffDays}
             topLevelPusherTunnel={topLevelPusher}
-
             // tempoGoalListenerTunnel={tempoGoalListener}
             // tempoActionListenerTunnel={tempoActionListener}
           ></MotiTable>
@@ -543,6 +510,7 @@ function Motivator() {
         keyPusherTunnel={keyPusher}
         removerTunnel={remover}
         idTunnel={id}
+        deadlineAlertStyleTunnel={deadlineAlertStyle}
       ></EditorModal>
     </GenericWrapper>
   );

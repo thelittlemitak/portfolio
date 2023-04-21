@@ -123,12 +123,6 @@ function Profile() {
   ];
   const socialGatheringsData = [
     {
-      goal: "Tim Hecker's gig",
-      freq: "18.04.2023",
-      length_: "With Javilondon",
-      id: 0.2215612341234284685,
-    },
-    {
       goal: "Belu",
       freq: "Every Monday 15:00",
       length_: "None",
@@ -151,12 +145,6 @@ function Profile() {
       freq: "26.04.2023",
       length_: "Zaski",
       id: 0.2285855436666685,
-    },
-    {
-      goal: "Papas",
-      freq: "19.04.2023",
-      length_: "Zaski",
-      id: 0.2285855333266685,
     },
   ];
   const ideasData = [

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.108a90fe.css",
+    "main.js": "/static/js/main.61045caf.js",
+    "static/media/about-salute.webp": "/static/media/about-salute.91f328e9e051a4a7d832.webp",
+    "static/media/testimonial1.webp": "/static/media/testimonial1.7eb2a8ff4f434d0d731d.webp",
+    "static/media/testimonial4.webp": "/static/media/testimonial4.a29e967f5686f0150a22.webp",
+    "static/media/testimonial3.webp": "/static/media/testimonial3.da68c9d04f95171009d8.webp",
+    "static/media/graphics.webp": "/static/media/graphics.ebb00838b47200cd7c42.webp",
+    "static/media/testimonial2.webp": "/static/media/testimonial2.63c51f3a7fc8bc32041b.webp",
+    "static/media/test1.webp": "/static/media/test1.cf7495b6fb0acf3aff7a.webp",
+    "static/media/test2.webp": "/static/media/test2.11c871465899d45bf056.webp",
+    "static/media/test3.webp": "/static/media/test3.a196ab2d5c64c4f54a1f.webp",
+    "index.html": "/index.html",
+    "main.108a90fe.css.map": "/static/css/main.108a90fe.css.map",
+    "main.61045caf.js.map": "/static/js/main.61045caf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.108a90fe.css",
+    "static/js/main.61045caf.js"
+  ]
+}

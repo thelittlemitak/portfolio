@@ -55,6 +55,7 @@ function EditorModal(props) {
             min={dateStringed}
           />
         </div>
+        <div className={props.deadlineAlertStyleTunnel}>Wrong date!</div>
         <button
           type="button"
           onClick={props.clickerTunnel}

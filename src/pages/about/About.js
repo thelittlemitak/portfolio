@@ -17,32 +17,164 @@ function About() {
   const [h2StyleRight, setH2StyleRight] = useState("h2-about-right");
   const [h2StyleLeft, setH2StyleLeft] = useState("h2-about-left");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(function (entries) {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        console.log("it is intersecting");
-        setH2StyleRight("h2-about-right appearance");
-        setH2StyleLeft("h2-about-left appearance");
-      }
-    });
-    observer.observe(h2Ref.current);
-  }, []);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(function (entries) {
+  //     const entry = entries[0];
+  //     if (entry.isIntersecting) {
+  //       console.log("it is intersecting");
+  //       setH2StyleRight("h2-about-right appearance");
+  //       setH2StyleLeft("h2-about-left appearance");
+  //     }
+  //   });
+  //   observer.observe(h2Ref.current);
+  // }, []);
 
   return (
     <div>
       <HeaderAbout altBtn4={ContactButton}></HeaderAbout>
       <MainWrapper>
         <Hero></Hero>
-        <div style={{ textAlign: "center", marginBottom: "6rem" }}>
+        <div className="wrapper-test">
+          <div className="about-sec about-sec-1">
+            <div className="presentation presentation-titles">
+              What is MoreMoreMe?
+            </div>
+            {/* <div className="presentation">
+          Since I don't have prior working experience I decided to create a
+          website that shows my skills as a web developer.
+        </div> */}
+            <div className="presentation">
+              A simple but powerful CRUD React-based website that shows all my
+              current web developer skills.
+            </div>
+          </div>
+          <section className="logo-sec">
+            <div className="logos-title">Technologies</div>
+            <div className="pictures-grid">
+              <div className="pic-titles-box">
+                <picture>
+                  <source
+                    srcSet={require("../../img/vsc-logo.webp")}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={"../../img/backup-pngs/vsc-logo.png"}
+                    type="image/png"
+                  />
+                  <img
+                    src="../../img/backup-pngs/vsc-logo.png"
+                    alt="blue logo of a design software company"
+                    className="about-logo"
+                  ></img>
+                </picture>
+                <div>VS Code</div>
+              </div>
+              <div className="pic-titles-box">
+                <picture>
+                  <source
+                    srcSet={require("../../img/code-logos.webp")}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={"../../img/backup-pngs/code-logos.png"}
+                    type="image/png"
+                  />
+                  <img
+                    src="../../img/backup-pngs/code-logos.png"
+                    alt="multi color logo of web development technologies"
+                    className="about-logo"
+                  ></img>
+                </picture>
+                <div>HTML CSS JS</div>
+              </div>
+              <div className="pic-titles-box">
+                <picture>
+                  <source
+                    srcSet={require("../../img/react.webp")}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={"../../img/backup-pngs/react.png"}
+                    type="image/png"
+                  />
+                  <img
+                    src="../../img/backup-pngs/react.png"
+                    alt="blue logo of a web development technology"
+                    className="about-logo"
+                  ></img>
+                </picture>
+                <div>React</div>
+              </div>
+              <div className="pic-titles-box">
+                <picture>
+                  <source
+                    srcSet={require("../../img/affinity-logo.webp")}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={"../../img/backup-pngs/affinity-logo.png"}
+                    type="image/png"
+                  />
+                  <img
+                    src="../../img/backup-pngs/affinity-logo.png"
+                    alt="blue logo of a design software company"
+                    className="about-logo"
+                  ></img>
+                </picture>
+                <div>Affinity Designer</div>
+              </div>
+            </div>
+          </section>
+          <div className="about-sec about-sec-2">
+            <div className="presentation presentation-titles">
+              Is this a real company?
+            </div>
+            <div className="presentation">
+              No. MoreMoreMe (MMM) is a dummy project. Testimonials are
+              fictional and the purpose of the mainpage is just for practice.
+            </div>
+          </div>
+          <div className="about-sec about-sec-3">
+            <div className="presentation presentation-titles">
+              And the rest?
+            </div>
+            <div className="presentation">
+              After the login, you will find different tools that were added,
+              not only for the purpose of practicing, but also to organize
+              myself during the learning process. This served very well my
+              motivation to do something different.
+            </div>
+          </div>
+          <div className="about-sec about-sec-4">
+            <div className="presentation presentation-titles">
+              How can I navigate the website?
+            </div>
+            <div className="presentation">
+              You just need some credentials (Username: <em>recruiter</em>{" "}
+              Password: <em>123asd</em>) and then, click the logo on the header
+              to go to the mainpage. Happy drive!
+            </div>
+          </div>
+        </div>
+        {/* <div className="presentation presentation-titles">
+          In case you want to know more:
+        </div>
+        <div className="presentation presentation-titles">Why MMM?</div>
+        <div className="presentation">
+          Because the project was big enough to learn React very well. Also, the
+          tools inside of it were actually of huge help to me, that being an
+          enormous motivator to do something different.
+        </div> */}
+
+        {/* <div style={{ textAlign: "center", marginBottom: "6rem" }}>
           Scroll down
         </div>
         <h2 className={h2StyleRight} ref={h2Ref}>
-          Hola
+          Why should you hire me?
         </h2>
-        <h2 className={h2StyleLeft}>Hola</h2>
-        <h2 className="h2-about">Hola</h2>
-        <div className="about-not-hero">
+        <h2 className={h2StyleLeft}>Why</h2>
+        <h2 className="h2-about">Hola</h2>*/}
+        {/* <div className="about-not-hero">
           <div className="faq-question-container">
             <div className="faq-number">1</div>
             <div className="faq-question">Why MoreMoreMe?</div>
@@ -374,7 +506,7 @@ function About() {
           <div className="faq-answer">
             <div>Xxxxxxxxxxxxxx.</div>
           </div>
-        </div>
+        </div> */}
       </MainWrapper>
       <Footer></Footer>
     </div>
