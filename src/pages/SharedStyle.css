@@ -52,18 +52,6 @@ a {
   transition: all 0.3s;
 }
 
-footer {
-  font-size: 2.4rem;
-  
-  color: #343a40;
-  
-  padding-top: 8rem;
-  padding-left: 5rem;
-  margin-bottom: 2rem;
-  
-  border-top: 1px solid #343a405b;;
-}
-
 input {
   font-family: inherit;
 }

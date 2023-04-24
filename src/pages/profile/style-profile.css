@@ -54,7 +54,7 @@
 } */
 
 .profile-table {
-  width: 110rem;
+  max-width: 130rem;
   background-color: #d7fcec;
   margin: 0rem auto 8rem auto;
   /* border: 0.2rem solid; */

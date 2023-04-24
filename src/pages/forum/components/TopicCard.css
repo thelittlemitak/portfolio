@@ -37,7 +37,7 @@ h3 {
 
 .thread-wrapper {
   transform: translateX(2%);
-  box-shadow: 0.5rem 0.5rem;
+  /* box-shadow: 0.5rem 0.5rem; */
 }
 
 .user-line-wrapper {

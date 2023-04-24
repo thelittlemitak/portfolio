@@ -39,7 +39,7 @@ function Footer() {
               Copyright &copy; <span>{currentYear}</span>
             </p>
             <p>All rights reserved</p>
-            <p>Kidding; but cool</p>
+            <p>Kidding</p>
 
           </div>
         </div>

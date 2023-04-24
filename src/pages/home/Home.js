@@ -12,7 +12,7 @@ import HeroBelowSection from "../../components/HeroBelowSection";
 import Hero from "./Hero";
 import Header from "../../components/Header";
 import MainWrapper from "./MainWrapper";
-import "./HomeQueries.css";
+import "../MediaQueries.css";
 import AboutButton from "../../components/btns/AboutButton";
 import ContactButton from "../../components/btns/ContactButton";
 import LoginBtn from "../../components/btns/LoginBtn";

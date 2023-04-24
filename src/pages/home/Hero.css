@@ -8,8 +8,8 @@
 }
 
 .graphics-pic {
-  max-width: 67rem;
-  max-height: 36rem;
+  max-width: 80rem;
+  max-height: 40rem;
   opacity: 0;
 
   object-fit: contain;
@@ -21,14 +21,14 @@
 
 .hero-right-box {
   opacity: 0;
-  max-width: 50rem;
+  max-width: 65rem;
 
-  font-size: 5.2rem;
+  font-size: 6.2rem;
 
   background-color: #a1f7d3;
 
   line-height: 7rem;
-  padding: 2rem 0rem 2rem 5rem;
+  padding: 3rem 0rem 2rem 7rem;
   margin-left: 1.1rem;
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;

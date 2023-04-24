@@ -11,6 +11,7 @@ import SignUpBtn from "../../components/btns/SignUpBtn";
 import LoginBtn from "../../components/btns/LoginBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
 import HeaderAbout from "../../components/HeaderAbout";
+import "../MediaQueries.css";
 
 function About() {
   let h2Ref = useRef();

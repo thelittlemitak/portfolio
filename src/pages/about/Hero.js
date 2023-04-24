@@ -1,4 +1,5 @@
 import "./Hero.css";
+import "../MediaQueries.css"
 
 function Hero() {
   return (
