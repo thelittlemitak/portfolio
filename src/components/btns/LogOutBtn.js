@@ -1,11 +1,7 @@
 import { Navigate, useNavigate } from "react-router-dom";
+import "./LogOutBtn.css";
 
 function LogOutBtn(props) {
-  const style = {
-    margin: "2rem auto",
-    display: "block",
-    backgroundColor: "white",
-  };
   const navigate = useNavigate();
 
   const outLogger = function () {
@@ -19,7 +15,7 @@ function LogOutBtn(props) {
 
   return (
     <div>
-      <button className="main-header-buttons" style={style} onClick={outLogger}>
+      <button className="main-header-buttons logout" onClick={outLogger}>
         <strong>LOGOUT</strong>
       </button>
     </div>

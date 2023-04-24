@@ -1,6 +1,6 @@
 import "./CarouselDots.css";
 
-function CarouselDots() {
+function CarouselDots(props) {
   return (
     <div className="carousel-dots-container">
       <div className="carousel-dot selected-dot" id="dot1">

@@ -26,11 +26,6 @@ import LogOutBtn from "../../components/btns/LogOutBtn";
 function Profile() {
   const tempoGoalsData = [
     {
-      goal: "Change career path",
-      action: "Study and get a coding job",
-      id: 0.7419944699444685,
-    },
-    {
       goal: "Linda's present",
       action: "Check a concert to go",
       id: 0.7419944699232888,
@@ -73,22 +68,10 @@ function Profile() {
       id: 0.2219945439284685,
     },
     {
-      goal: "A/D videos",
-      freq: "Every 2 weeks",
-      length_: "After/before body videos",
-      id: 0.2219945439284685,
-    },
-    {
       goal: "Fruit/water supply",
       freq: "Daily (2h before MT)",
       length_: "Drink a lot and eat fruits before training",
       id: 0.2219945439284685,
-    },
-    {
-      goal: "Youtube vlog",
-      freq: "Every Saturday",
-      length_: "You know the drill",
-      id: 0.2219945333284685,
     },
     {
       goal: "Cocinar dietas",
@@ -162,11 +145,6 @@ function Profile() {
       goal: "App para entrenar blockieren",
       action: " ",
       id: 0.7415123212344685,
-    },
-    {
-      goal: "Piano",
-      action: "Ya tu sabe",
-      id: 0.7415199912344685,
     },
   ];
   const hobbiesData = [

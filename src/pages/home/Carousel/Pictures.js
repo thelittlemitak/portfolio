@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Pictures(props) {
-  console.log(props.currentPosTunnel);
+  // console.log(props.currentPosTunnel);
 
   const style1 = "testimonial-img";
   const style2 = "testimonial-img hidden";

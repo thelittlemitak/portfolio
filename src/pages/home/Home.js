@@ -139,17 +139,17 @@ function Home() {
 
   const backgrounder = function () {
     if (emailInserted.length == 0 && pwInserted.length == 0) {
-      console.log("both user and pw are empty");
+      // console.log("both user and pw are empty");
       setUserDefaultStyle({ background: "#a1f7d3" });
       setPwDefaultState({ background: "#a1f7d3" });
       setBtnStyle("submit-btn");
     }
     if (emailInserted.length == 0) {
-      console.log("only user is empty");
+      // console.log("only user is empty");
       setUserDefaultStyle({ background: "#a1f7d3" });
     }
     if (pwInserted.length == 0) {
-      console.log("only pw is empty");
+      // console.log("only pw is empty");
       setPwDefaultState({ background: "#a1f7d3" });
     }
   };
@@ -193,16 +193,32 @@ function Home() {
     backgrounder();
     e.preventDefault();
     setSignUpAlertStyle("wrong-alert");
-    console.log(e);
-    console.log("trying to signup");
+    // console.log(e);
+    // console.log("trying to signup");
   };
 
   const keyPusher = function (e) {
     if (e.code == "Enter") {
-      console.log("enter has been pressed");
+      // console.log("enter has been pressed");
       submitHandler();
     }
   };
+
+  const [styleLeft, setStyleLeft] = useState("how-to-lists-container left-card");
+  const [styleRight, setStyleRight] = useState("how-to-lists-container right-card");
+  const arrowRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        console.log("it is intersecting");
+        setStyleLeft("how-to-lists-container appearanceCardHomeClass");
+        setStyleRight("how-to-lists-container appearanceCardHomeClass");
+      }
+    });
+    observer.observe(arrowRef.current);
+  }, []);
 
   return (
     <div>
@@ -257,8 +273,11 @@ function Home() {
         <HeroBelowSection></HeroBelowSection>
         <ImagesCont></ImagesCont>
         <PostHeroTitle></PostHeroTitle>
-        <ArrowDown></ArrowDown>
-        <HowToLists></HowToLists>
+        <ArrowDown refTunnel={arrowRef}></ArrowDown>
+        <HowToLists
+          styleLeftTunnel={styleLeft}
+          styleRightTunnel={styleRight}
+        ></HowToLists>
         <Carousel2></Carousel2>
         <ReadyButton openedTunnel={opener1}></ReadyButton>
         <Footer></Footer>

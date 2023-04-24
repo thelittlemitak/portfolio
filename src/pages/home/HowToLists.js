@@ -1,9 +1,9 @@
 import "./HowToLists.css";
 
 
-function HowToLists() {
+function HowToLists(props) {
   return <div className="how-to-lists-section-container">
-  <div className="how-to-lists-container">
+  <div className={props.styleLeftTunnel}>
     <h4>How it works</h4>
     <div className="list-lines-container">
       <div className="list-individual-lines">
@@ -65,7 +65,7 @@ function HowToLists() {
       </div>
     </div>
   </div>
-  <div className="how-to-lists-container">
+  <div className={props.styleRightTunnel}>
     <h4>Share with others</h4>
     <div className="list-lines-container">
       <div className="list-individual-lines">

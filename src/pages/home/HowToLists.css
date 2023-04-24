@@ -7,41 +7,29 @@
 
 .how-to-lists-container {
   width: 100%;
-  
+
   font-size: 3.6rem;
-  
+
   background-color: #b3f8dc;
-  
+
   padding: 3rem 0rem 3rem 0rem;
   margin-bottom: 3.2rem;
-  
+
   border: 0.3rem solid;
   box-shadow: 0.7rem 0.7rem;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  
-  transition: all 0.3s;
-}
 
-.how-to-lists-container:hover {
-  transform: translateY(-1.5rem);
-  
-  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.705);
-}
-
-.how-to-lists-container:hover .list-icon {
-  transform: rotate(360deg);
-  
   transition: all 0.3s;
 }
 
 .list-lines-container {
   margin-bottom: 2rem;
   margin-left: 3rem;
-  
+
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -54,6 +42,44 @@
 
 .how-to-lists-container h4 {
   margin-bottom: 1rem;
-  
+
   align-self: center;
 }
+
+.left-card {
+  transform: translateX(-1200px);
+}
+
+.right-card {
+  transform: translateX(1200px);
+}
+
+.appearanceCardHomeClass {
+  animation: appearanceCardHome 1s forwards 0.5s;
+  /* transition: all 0.3s; */
+}
+
+@keyframes appearanceCardHome {
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.how-to-lists-container:hover .list-icon {
+  transform: rotate(360deg);
+
+  transition: all 0.3s;
+}
+
+.how-to-lists-container.appearanceCardHomeClass:hover {
+  box-shadow: 1.2rem 1.2rem rgba(0, 0, 0, 0.705);
+  translate: 0 -1.5rem;
+
+  /* animation: hoverA 0.3s forwards; */
+}
+
+/* @keyframes hoverA {
+  100% {
+    transform: translateY(-1.5rem);
+  }
+} */

@@ -1,6 +1,6 @@
 function UnselectedDot(props) {
   return (
-    <div className="carousel-dot">
+    <div className="carousel-dot" onClick={props.dotHandlerTunnel} id={props.idTunnel}>
       &nbsp;
     </div>
   );

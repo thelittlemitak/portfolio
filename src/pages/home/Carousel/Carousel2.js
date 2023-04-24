@@ -10,10 +10,9 @@ import BlockQuote3 from "./BlockQuote3";
 import BlockQuote4 from "./BlockQuote4";
 import SelectedDot from "./SelectedDot";
 import UnselectedDot from "./UnselectedDot";
-import Pictures from "./Pictures"
+import Pictures from "./Pictures";
 
 function Carousel2() {
-
   const arrayEl2 = [
     <BlockQuote1></BlockQuote1>,
     <BlockQuote2></BlockQuote2>,
@@ -21,14 +20,66 @@ function Carousel2() {
     <BlockQuote4></BlockQuote4>,
   ];
 
+  const dotHandler = function (e) {
+    let idPressed = e.target.id;
+    if (idPressed == "id1") {
+      console.log("you pressed 1");
+      setDots(dotChances[0]);
+      setCurrentPos(0);
+      setLeftBtnStatus("hide-btn");
+      setRightBtnStatus("");
+    } else if (idPressed == "id2") {
+      console.log("you pressed 2");
+      setDots(dotChances[1]);
+      setCurrentPos(1);
+      setLeftBtnStatus("");
+      setRightBtnStatus("");
+    } else if (idPressed == "id3") {
+      console.log("you pressed 3");
+      setDots(dotChances[2]);
+      setCurrentPos(2);
+      setLeftBtnStatus("");
+      setRightBtnStatus("");
+    } else if (idPressed == "id4") {
+      console.log("you pressed 4");
+      setDots(dotChances[3]);
+      setCurrentPos(3);
+      setLeftBtnStatus("");
+      setRightBtnStatus("hide-btn");
+    }
+  };
+
   const selectedDot = <SelectedDot></SelectedDot>;
-  const unSelectedDot = <UnselectedDot></UnselectedDot>;
+  const unSelectedDot1 = (
+    <UnselectedDot
+      dotHandlerTunnel={dotHandler}
+      idTunnel={"id1"}
+    ></UnselectedDot>
+  );
+  const unSelectedDot2 = (
+    <UnselectedDot
+      dotHandlerTunnel={dotHandler}
+      idTunnel={"id2"}
+    ></UnselectedDot>
+  );
+  const unSelectedDot3 = (
+    <UnselectedDot
+      dotHandlerTunnel={dotHandler}
+      idTunnel={"id3"}
+    ></UnselectedDot>
+  );
+  const unSelectedDot4 = (
+    <UnselectedDot
+      dotHandlerTunnel={dotHandler}
+      idTunnel={"id4"}
+    ></UnselectedDot>
+  );
 
   const dotChances = [
-    [selectedDot, unSelectedDot, unSelectedDot, unSelectedDot],
-    [unSelectedDot, selectedDot, unSelectedDot, unSelectedDot],
-    [unSelectedDot, unSelectedDot, selectedDot, unSelectedDot],
-    [unSelectedDot, unSelectedDot, unSelectedDot, selectedDot],
+    [selectedDot, unSelectedDot2, unSelectedDot3, unSelectedDot4],
+    [unSelectedDot1, selectedDot, unSelectedDot3, unSelectedDot4],
+    [unSelectedDot1, unSelectedDot2, selectedDot, unSelectedDot4],
+    [unSelectedDot1, unSelectedDot2, unSelectedDot3, selectedDot],
   ];
 
   let [dots, setDots] = useState(dotChances[0]);
@@ -77,7 +128,7 @@ function Carousel2() {
   };
 
   const secondF = function () {
-    console.log("this works too");
+    // console.log("this works too");
   };
 
   return (

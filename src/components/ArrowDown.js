@@ -1,7 +1,7 @@
 import "./ArrowDown.css";
 
-function ArrowDown () {
-  return <div className="arrow">&darr;</div>
+function ArrowDown (props) {
+  return <div className="arrow" ref={props.refTunnel}>&darr;</div>
 }
 
 export default ArrowDown;
