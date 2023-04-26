@@ -88,7 +88,6 @@
     font-size: 52.5%;
   }
 
-
   .testimonial-img {
     height: 37rem;
   }
@@ -116,13 +115,13 @@
   }
 
   .hero {
-    margin-top: 12rem;
+    margin-top: 6rem;
 
     display: block;
   }
 
   .graphics-pic {
-    max-width: 60%;
+    max-width: 70%;
 
     translate: 0rem 2rem;
 
@@ -215,7 +214,6 @@
     display: block;
     margin: 2rem auto;
 
-
     /*! margin: 2rem 50%; !wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf!wtf */
 
     /* display: block; */
@@ -271,6 +269,20 @@
 
 /* 750 */
 @media (max-width: 47em) {
+  .social-media-container {
+    font-size: 3rem;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+  .hero-below-table {
+    margin: 0 0;
+  }
+  .hero {
+    margin-top: 5rem;
+  }
+  .graphics-pic {
+    max-width: 80%;
+  }
   html {
     font-size: 47.5%;
   }
@@ -297,13 +309,13 @@
   }
 
   footer {
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     padding-top: 3rem;
   }
 
   .footer-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .how-to-lists-container {
@@ -313,6 +325,26 @@
 
 /* 600 */
 @media (max-width: 38em) {
+  .social-media-container {
+    font-size: 3rem;
+    justify-content: space-around;
+    margin-bottom: 0rem;
+  }
+  .footer-test-container {
+    justify-content: space-between;
+  }
+  .footer-title {
+    font-size: 2.2rem;
+  }
+  footer {
+    font-size: 1.6rem;
+  }
+  .hero {
+    margin-top: 4rem;
+  }
+  .graphics-pic {
+    max-width: 90%;
+  }
   html {
     font-size: 45%;
   }
@@ -343,6 +375,20 @@
   html {
     font-size: 42%;
   }
+  .hero-below-section {
+    height: 27rem;
+  }
+  .square {
+    display: none;
+  }
+  .hero-below-table-title {
+    font-size: 4.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .table-item {
+    font-size: 1.8rem;
+  }
 
   .images-section-container {
     display: grid;
@@ -368,8 +414,14 @@
     align-items: center;
   }
 
-  .button-area {  
+  .button-area {
     /* display: flex; */
     justify-content: space-around;
+  }
+
+  .about-button:link,
+  .about-button:visited {
+    translate: 0rem 2rem;
+    align-self: center;
   }
 }
