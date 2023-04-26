@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  
+
   font-style: none;
 
   padding: 0;
@@ -13,17 +13,21 @@
 
 html {
   scroll-behavior: smooth;
-  
+
   font-size: 62.5%;
 }
 
 body {
   overflow-x: hidden;
-  
+
   font-family: "work sans", verdana;
 
   color: #212529;
   background-color: #e9fdf5;
+
+  /* temp */
+  /* border: 50px black solid; */
+  /* temp */
 
   border-bottom: 0.5rem solid #7df4c2;
 }
@@ -38,17 +42,17 @@ h4 {
 
 button {
   color: #212529;
-  
+
   cursor: pointer;
-  
+
   transition: all 0.3s;
 }
 
 a {
   text-decoration: none;
-  
+
   color: #212529;
-  
+
   transition: all 0.3s;
 }
 
@@ -58,7 +62,7 @@ input {
 
 address {
   font-style: normal;
-  
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

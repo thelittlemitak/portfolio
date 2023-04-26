@@ -68,6 +68,9 @@
 
 //310. Authentication
 
+//Sticky nav
+// https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30
+
 
 function sum(a, b) {
   return a + b;

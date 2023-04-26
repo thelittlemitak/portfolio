@@ -15,7 +15,9 @@ function Header(props) {
         <props.altBtn1 openedTunnel1={props.openedTunnel1}></props.altBtn1>
         <props.altBtn2 openedTunnel2={props.openedTunnel2}></props.altBtn2>
         <props.altBtn3></props.altBtn3>
-        <div className="salute-wrapper">
+        {/* <div className="salute-wrapper"> */}
+        <div className={props.saluteStyleTunnel}>
+
           <div className="salute">{props.saluteTextTunnel}</div>
         </div>
         <props.altBtn5 userNameTunnel={props.userNameTunnel}></props.altBtn5>

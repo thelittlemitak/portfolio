@@ -165,7 +165,7 @@ function Home() {
 
   const navigate = useNavigate();
   const [dummyVar, setDummyVar] = useState("");
-  const [keeper, setKeeper] = useState(false);
+  const [keeper, setKeeper] = useState(false); //keeper was created to keep cx logged in when clicking a checkbox in the modal window
   const [alertStyle, setAlertStyle] = useState("wrong-alert hidden-alert");
 
   const checkboxLi = function (e) {
@@ -204,8 +204,12 @@ function Home() {
     }
   };
 
-  const [styleLeft, setStyleLeft] = useState("how-to-lists-container left-card");
-  const [styleRight, setStyleRight] = useState("how-to-lists-container right-card");
+  const [styleLeft, setStyleLeft] = useState(
+    "how-to-lists-container left-card"
+  );
+  const [styleRight, setStyleRight] = useState(
+    "how-to-lists-container right-card"
+  );
   const arrowRef = useRef();
 
   useEffect(() => {
@@ -267,6 +271,12 @@ function Home() {
         }
         openedTunnel1={opener1}
         openedTunnel2={opener2}
+        saluteStyleTunnel={
+          localStorage.getItem("isLoggedIn") ||
+          sessionStorage.getItem("isLoggedIn") == "yes"
+          ? "salute-wrapper"
+          : "salute-wrapper display-none"
+        }
       ></Header>
       <MainWrapper>
         <Hero></Hero>
