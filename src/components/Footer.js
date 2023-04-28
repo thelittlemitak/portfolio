@@ -60,7 +60,7 @@ function Footer() {
             </li> */}
           </ul>
         </nav>
-        <div>
+        <div className="contact-footer">
           <p className="footer-title">Contact</p>
           <address>
             <p>Jose Riera Tur</p>

@@ -260,7 +260,7 @@ function Home() {
         saluteTextTunnel={
           localStorage.getItem("isLoggedIn") ||
           sessionStorage.getItem("isLoggedIn") == "yes"
-            ? "logged in as "
+            ? "logged-in as "
             : ""
         }
         userNameTunnel={
