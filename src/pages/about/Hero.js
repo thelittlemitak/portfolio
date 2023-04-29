@@ -22,7 +22,7 @@ function Hero() {
       <div className="about-hero-right">
         <p>
           My name is <strong>Jose Riera Tur</strong> and I welcome you to my{" "}
-          <strong>portfolio!</strong>
+          <strong>web portfolio!</strong>
         </p>
       </div>
     </div>

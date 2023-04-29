@@ -12,11 +12,36 @@ import LoginBtn from "../../components/btns/LoginBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
 import HeaderAbout from "../../components/HeaderAbout";
 import "../MediaQueries.css";
+import ArrowDown from "../../components/ArrowDown";
 
 function About() {
   let h2Ref = useRef();
   const [h2StyleRight, setH2StyleRight] = useState("h2-about-right");
   const [h2StyleLeft, setH2StyleLeft] = useState("h2-about-left");
+  const dummyFloat = useRef();
+
+  const [postpostLeftStyle, setPostpostLeftStyle] = useState(
+    "postposthero-card postposthero-leftcard"
+  );
+  const [postpostRightStyle, setPostpostRightStyle] = useState(
+    "postposthero-card postposthero-rightcard"
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        console.log("it is intersecting");
+        setPostpostLeftStyle(
+          "postposthero-card postposthero-leftcard inthemiddle"
+        );
+        setPostpostRightStyle(
+          "postposthero-card postposthero-rightcard inthemiddle"
+        );
+      }
+    });
+    observer.observe(dummyFloat.current);
+  }, []);
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver(function (entries) {
@@ -36,7 +61,7 @@ function About() {
       <MainWrapper>
         <Hero></Hero>
         <div className="wrapper-test">
-          <div className="about-sec about-sec-1">
+          <div className="posthero-card posthero-leftcard">
             <div className="presentation presentation-titles">
               What is MoreMoreMe?
             </div>
@@ -49,8 +74,10 @@ function About() {
               current web developer skills.
             </div>
           </div>
-          <section className="logo-sec">
-            <div className="logos-title">Technologies</div>
+          <section className="posthero-card posthero-rightcard">
+            <div className="presentation presentation-titles">
+              Technologies used
+            </div>
             <div className="pictures-grid">
               <div className="pic-titles-box">
                 <picture>
@@ -126,7 +153,7 @@ function About() {
               </div>
             </div>
           </section>
-          <div className="about-sec about-sec-2">
+          <div className={postpostLeftStyle}>
             <div className="presentation presentation-titles">
               Is this a real company?
             </div>
@@ -135,15 +162,13 @@ function About() {
               fictional and the purpose of the mainpage is just for practice.
             </div>
           </div>
-          <div className="about-sec about-sec-3">
+          <div className={postpostRightStyle}>
             <div className="presentation presentation-titles">
               And the rest?
             </div>
             <div className="presentation">
-              After the login, you will find different tools that were added,
-              not only for the purpose of practicing, but also to organize
-              myself during the learning process. This served very well my
-              motivation to do something different.
+              After logging in, you will find several organizational tools. This
+              served very well my motivation since I used them myself during the learning process.
             </div>
           </div>
           <div className="about-sec about-sec-4">
@@ -156,6 +181,7 @@ function About() {
               to go to the mainpage. Happy drive!
             </div>
           </div>
+          <div className="dummy-floatingEl" ref={dummyFloat}></div>
         </div>
         {/* <div className="presentation presentation-titles">
           In case you want to know more:

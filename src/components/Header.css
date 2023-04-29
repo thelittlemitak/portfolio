@@ -122,8 +122,8 @@
 
   background-color: #d7fcec;
 
-  padding-top: 1.3rem;
-  padding-bottom: 7.65rem;
+  /* padding-top: 1.3rem;
+  padding-bottom: 7.65rem; */
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

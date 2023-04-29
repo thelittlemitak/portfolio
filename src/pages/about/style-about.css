@@ -23,19 +23,6 @@
   background-color: #22ec98;
 }
 
-.about-hero-right:after {
-  content: "hi!";
-  top: -6rem;
-  left: -3rem;
-  position: absolute;
-  transform: rotate(-10deg);
-
-  background-color: yellow;
-  border: 0.3rem solid #212529;
-
-  padding: 0.1rem 1rem;
-}
-
 .faq-number {
   font-size: 3.8rem;
 
@@ -130,15 +117,12 @@
 .presentation {
   font-size: 3rem;
   padding: 0rem 3rem 4rem 5rem;
-  line-height: 4rem;
-
-  /* margin: auto 40rem; */
-  /* margin-bottom: 10rem; */
+  line-height: 5rem;
 }
 
 .presentation-titles {
   text-align: center;
-  padding: 4rem 0rem 1rem 0rem;
+  padding: 3rem 0rem 1rem 0rem;
   font-size: 4rem;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -148,24 +132,37 @@
   margin-top: -6rem;
 }
 
-.about-sec {
+.posthero-card {
   background-color: #7df4c2;
-  margin: 0rem auto;
-  margin-bottom: 3rem;
-  width: 66rem;
   border: 0.3rem solid black;
   box-shadow: 1rem 1rem black;
+  animation: card-appareance 0.5s forwards 0.3s;
+}
+
+@keyframes card-appareance {
+  100% {
+    transform: translateX(000px);
+  }
+}
+
+.posthero-leftcard {
+  margin-bottom: 3rem;
+  height: 100%;
+  transform: translateX(-1000px);
+}
+
+.posthero-rightcard {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-left: 5rem;
+  grid-column: 2 / 3;
+  transform: translateX(1000px);
 }
 
 .about-sec-1 {
-  width: 100%;
   font-size: 3rem;
   margin-left: 2rem;
-}
-
-.about-sec-2 {
-  width: 70%;
-  background-color: #fcd7e6;
 }
 
 .about-sec-3 {
@@ -179,23 +176,16 @@
 
 .wrapper-test {
   display: grid;
-  grid-template-columns: 0.7fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 1rem 3rem;
   row-gap: 6rem;
+  position: relative;
 }
 
 .about-logo {
   height: 110px;
   width: 110px;
   margin-bottom: 1rem;
-}
-
-.logo-sec {
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-left: 5rem;
-  grid-column: 2 / 3;
 }
 
 .logos-title {
@@ -215,7 +205,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  gap: 5rem;
+  gap: 0rem;
   margin: 0rem 2rem;
 }
 
@@ -224,4 +214,33 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
+}
+
+.postposthero-card {
+  background-color: #7df4c2;
+  border: 0.3rem solid black;
+  box-shadow: 1rem 1rem black;
+  transform: translatey(500px);
+}
+
+.postposthero-leftcard {
+  background-color: #fac5db;
+  transition: all 0.3s;
+}
+
+.postposthero-rightcard {
+  background-color: #fac5db;
+  margin-left: 5rem;
+  transition: all 0.3s;
+}
+
+.inthemiddle {
+  transform: translatey(0px);
+}
+
+.dummy-floatingEl {
+  background-color: red;
+  position: absolute;
+  top: 40%;
+  left: 50%;
 }

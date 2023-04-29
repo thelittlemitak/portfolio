@@ -1,6 +1,6 @@
 .about-hero {
-  margin-top: 17rem;
-  margin-bottom: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 7rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,6 +17,19 @@
   margin-left: 4rem;
   /* transition: all 1s; */
   animation: appearance1 0.5s forwards 0.3s;
+}
+
+.about-hero-right:after {
+  content: "hi!";
+  top: -6rem;
+  left: -3rem;
+  position: absolute;
+  transform: rotate(-10deg);
+
+  background-color: yellow;
+  border: 0.3rem solid #212529;
+
+  padding: 0.1rem 1rem;
 }
 
 @keyframes appearance1 {

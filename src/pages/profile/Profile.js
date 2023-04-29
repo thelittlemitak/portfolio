@@ -117,18 +117,6 @@ function Profile() {
       length_: "Sweeden",
       id: 0.2215648439284685,
     },
-    {
-      goal: "Hybral/Lesser Of",
-      freq: "28.04.2023",
-      length_: "Zaski",
-      id: 0.2285855439284685,
-    },
-    {
-      goal: "Cita Jobcenter",
-      freq: "26.04.2023",
-      length_: "Zaski",
-      id: 0.2285855436666685,
-    },
   ];
   const ideasData = [
     {

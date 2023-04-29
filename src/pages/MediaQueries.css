@@ -402,10 +402,8 @@
     font-size: 2rem;
   }
   .post-hero-title {
-    width: 110%;
     font-size: 2.5rem;
     margin: 0 0 0 0rem;
-    text-align: center;
   }
   .hero-below-section::after {
     top: -11%;

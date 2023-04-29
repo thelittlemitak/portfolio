@@ -25,3 +25,8 @@
 .d {
   margin: 1rem 1rem;
 }
+
+.contact-btn:link,
+.contact-btn:visited {
+  translate: 0rem 4rem;
+}
