@@ -24,6 +24,7 @@ import Overlay from "../../components/Overlay";
 import DummyBtn from "../../components/btns/DummyBtn";
 import { Navigate, useNavigate } from "react-router-dom";
 import Carousel2 from "./carousel/Carousel2";
+import ScalingAlert from "../../components/ScalingAlert";
 
 function Home() {
   const signUpBtn = SignUpBtn;
@@ -274,8 +275,8 @@ function Home() {
         saluteStyleTunnel={
           localStorage.getItem("isLoggedIn") ||
           sessionStorage.getItem("isLoggedIn") == "yes"
-          ? "salute-wrapper"
-          : "salute-wrapper display-none"
+            ? "salute-wrapper"
+            : "salute-wrapper display-none"
         }
       ></Header>
       <MainWrapper>

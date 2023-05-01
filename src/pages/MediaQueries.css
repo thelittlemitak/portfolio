@@ -1,4 +1,3 @@
-/* 1456px (1440) minimac; so we start with 1080p*/
 .about-hero-right {
   position: relative;
   opacity: 0;
@@ -18,6 +17,7 @@
   height: 70%;
 }
 
+/* & 1456px (1440) minimac; so we start with 1080p*/
 @media (max-width: 91em) {
   .graphics-pic {
     max-width: 67rem;
@@ -49,8 +49,11 @@
   }
 }
 
-/* 1312px */
+/* & 1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px */
 @media (max-width: 82em) {
+  .sa-main-wrapper {
+    right: 30px;
+  }
   .salute-wrapper {
     transform: translateX(4rem);
   }
@@ -79,6 +82,10 @@
 
 /* 1168px */
 @media (max-width: 73em) {
+  .sa-main-wrapper {
+    top: 24px;
+    right: 20px;
+  }
   .carousel-container {
     height: 60rem;
   }
@@ -94,6 +101,17 @@
 @media (max-width: 66em) {
   html {
     font-size: 52.5%;
+  }
+  .letter-container {
+    width: 12px;
+  }
+  .dot {
+    width: 10px;
+    padding: 2px 0px;
+  }
+  .sa-main-wrapper {
+    top: 19px;
+    right: 20px;
   }
   .testimonial-img {
     height: 37rem;
@@ -115,8 +133,12 @@
   }
 }
 
-/* 912px */
+/* & 912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px*/
 @media (max-width: 57em) {
+  .sa-main-wrapper {
+    top: 19px;
+    right: 30px;
+  }
   .main-header {
     grid-template-columns: 1fr 1.5fr;
   }
@@ -275,8 +297,16 @@
   }
 }
 
-/* 750 */
+/* & 750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px */
 @media (max-width: 47em) {
+  .sa-main-wrapper {
+    top: 19px;
+    right: 30px;
+  }
+  .letter-container {
+    width: 9px;
+  }
+
   .social-media-container {
     font-size: 3rem;
     justify-content: space-around;
@@ -330,8 +360,12 @@
   }
 }
 
-/* 600px */
+/* & 600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px */
 @media (max-width: 38em) {
+  .sa-main-wrapper {
+    top: 17px;
+    right: 10px;
+  }
   .salute-wrapper {
     font-size: 2rem;
   }
@@ -390,15 +424,19 @@
   }
 }
 
-/* 528px */
+/* & 528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px */
 @media (max-width: 33em) {
   html {
     font-size: 42%;
   }
+  .sa-main-wrapper {
+    top: 59px;
+    right: 40px;
+  }
   .salute-wrapper {
     transform: translateX(7rem);
   }
-  .salute{
+  .salute {
     font-size: 2rem;
   }
   .post-hero-title {
@@ -496,12 +534,12 @@
   }
 }
 
-/* 400px */
+/* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
   .salute-wrapper {
     transform: translateX(3rem);
   }
-  .salute{
+  .salute {
     font-size: 2rem;
   }
   .social-media-container {

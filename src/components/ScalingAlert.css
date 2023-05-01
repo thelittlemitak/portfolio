@@ -1,0 +1,135 @@
+.sa-main-wrapper {
+  height: 3.2rem;
+
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: 2rem;
+  /* background-color: red; */
+  background-color: yellow;
+  border: 0.3rem solid;
+  transform: rotate(4deg);
+  opacity: 30%;
+  /* box-shadow: 0.7rem 0.7rem; */
+}
+
+.letter-container {
+  width: 15px;
+  text-align: center;
+}
+
+.t1 {
+  animation: scaling 1s ease-in-out infinite alternate;
+}
+.t2 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+  transform: translateX(-1px);
+}
+.t3 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+}
+.t4 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 0.6s;
+}
+.t5 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+}
+.t6 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 1s;
+}
+.t7 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+  transform: translateX(-3px);
+}
+.t8 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 1.4s;
+  transform: translateX(-3px);
+}
+.t9 {
+  animation: scaling 1s ease-in-out infinite alternate;
+  animation-delay: 1.6s;
+  transform: translateX(-3px);
+}
+
+@keyframes scaling {
+  100% {
+    font-size: 2.5rem;
+  }
+}
+
+.dot-container {
+  position: absolute;
+  left: -12px;
+  top: -5px;
+}
+
+.dot {
+  width: 10px;
+  height: 5px;
+  padding: 3px 0px;
+}
+
+.d1 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  transform: translateX(-1px);
+}
+.d2 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+  transform: translateX(-5px);
+
+}
+.d3 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+  transform: translateX(-7px);
+
+}
+.d4 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 0.6s;
+  transform: translateX(-8px);
+
+}
+.d5 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+  transform: translateX(-7px);
+
+}
+.d6 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 1s;
+  transform: translateX(-5px);
+
+}
+.d7 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+  transform: translateX(0px);
+}
+.d8 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 1.4s;
+  transform: translateX(8px);
+}
+.d9 {
+  animation: scaling2 0.7s ease-in-out infinite alternate;
+  animation-delay: 1.6s;
+  transform: translateX(6px);
+}
+
+@keyframes scaling2 {
+  100% {
+    opacity: 0%;
+  }
+}

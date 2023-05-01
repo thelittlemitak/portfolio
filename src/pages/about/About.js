@@ -43,6 +43,25 @@ function About() {
     observer.observe(dummyFloat.current);
   }, []);
 
+  const dummyFloat2 = useRef();
+
+  const [postpostpostCardStyle, setPostPostPostCardStyle] = useState(
+    "postpostposthero-card about-sec-4"
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        console.log("it is intersecting");
+        setPostPostPostCardStyle(
+          "postpostposthero-card about-sec-4 inthemiddle"
+        );
+      }
+    });
+    observer.observe(dummyFloat2.current);
+  }, []);
+
   // useEffect(() => {
   //   const observer = new IntersectionObserver(function (entries) {
   //     const entry = entries[0];
@@ -71,7 +90,7 @@ function About() {
         </div> */}
             <div className="presentation">
               A simple but powerful CRUD React-based website that shows all my
-              current web developer skills.
+              current web developer skills. Also responsive!
             </div>
           </div>
           <section className="posthero-card posthero-rightcard">
@@ -168,10 +187,11 @@ function About() {
             </div>
             <div className="presentation">
               After logging in, you will find several organizational tools. This
-              served very well my motivation since I used them myself during the learning process.
+              served very well my motivation since I used them myself during the
+              learning process.
             </div>
           </div>
-          <div className="about-sec about-sec-4">
+          <div className={postpostpostCardStyle}>
             <div className="presentation presentation-titles">
               How can I navigate the website?
             </div>
@@ -182,6 +202,7 @@ function About() {
             </div>
           </div>
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
+          <div className="dummy-floatingEl2" ref={dummyFloat2}></div>
         </div>
         {/* <div className="presentation presentation-titles">
           In case you want to know more:
