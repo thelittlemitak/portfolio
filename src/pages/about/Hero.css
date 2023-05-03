@@ -1,23 +1,8 @@
-.about-hero {
-  margin-top: 8rem;
-  margin-bottom: 7rem;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
+/* * HERO RIGHT IS ON MEDIA QUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIES */
+/* * ABOUT-HERO IS ON MEDIA QUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIESQUERIES */
 
-.about-hero-left-img {
-  max-height: 55rem;
-  opacity: 0;
 
-  box-shadow: 1rem 1rem;
-  border: 0.3rem solid #212529;
-
-  margin-left: 4rem;
-  /* transition: all 1s; */
-  animation: appearance1 0.5s forwards 0.3s;
-}
 
 .about-hero-right:after {
   content: "hi!";
@@ -37,8 +22,6 @@
     opacity: 100;
   }
 }
-
-
 
 @keyframes appearance2 {
   100% {

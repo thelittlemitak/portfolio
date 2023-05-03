@@ -94,12 +94,12 @@ function About() {
             </div>
           </div>
           <section className="posthero-card posthero-rightcard">
-            <div className="presentation presentation-titles">
+            <div className="presentation presentation-titles techno-title">
               Technologies used
             </div>
             <div className="pictures-grid">
               <div className="pic-titles-box">
-                <picture>
+                <picture className="about-pic-wrapper">
                   <source
                     srcSet={require("../../img/vsc-logo.webp")}
                     type="image/webp"
@@ -204,6 +204,8 @@ function About() {
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
           <div className="dummy-floatingEl2" ref={dummyFloat2}></div>
         </div>
+        
+
         {/* <div className="presentation presentation-titles">
           In case you want to know more:
         </div>
@@ -213,7 +215,6 @@ function About() {
           tools inside of it were actually of huge help to me, that being an
           enormous motivator to do something different.
         </div> */}
-
         {/* <div style={{ textAlign: "center", marginBottom: "6rem" }}>
           Scroll down
         </div>

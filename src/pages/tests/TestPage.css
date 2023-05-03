@@ -3,3 +3,12 @@
   text-align: center;
   margin-top: 15rem;
 }
+
+.testcont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.testcont img {
+  max-width: 100%;
+}

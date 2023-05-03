@@ -5,12 +5,12 @@ function TestPage() {
   const [test, setTest] = useState([111, 222, 333, 444, 555]);
   console.log(test);
   test[0] = 999;
-  console.log(test)
+  console.log(test);
 
   return (
-    <div>
-      <div className="test1">Holi</div>
-      <input type="date" min="2023-06-06"></input>
+    <div className="testcont">
+      <img src={require("../../img/test1.webp")} alt="this is just a test" />{" "}
+      <div>asdf asdf asdf as jasldfj alsdjf lkasjdf lkajsdklf jasldñkf jlasñdfj l</div>
     </div>
   );
 }
