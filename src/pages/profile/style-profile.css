@@ -1,6 +1,7 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
 
 .main-profile-container {
+  width: 100%;
   margin-top: 7rem;
   font-size: 3rem;
 }
@@ -54,7 +55,7 @@
 } */
 
 .profile-table {
-  max-width: 130rem;
+  width: 100%;
   background-color: #d7fcec;
   margin: 0rem auto 8rem auto;
   /* border: 0.2rem solid; */

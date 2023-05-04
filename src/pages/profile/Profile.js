@@ -143,13 +143,7 @@ function Profile() {
     },
   ];
 
-  const repTitles = [
-    "Goal",
-    "Add/Remove",
-    "How often?",
-    "Goal/task",
-    "Comments",
-  ];
+  const repTitles = ["Goal", "+/-", "How often?", "Goal/task", "Comments"];
   const titles3col = [
     {
       type: "temporary goals",
@@ -230,8 +224,9 @@ function Profile() {
         altBtn1={ForumBtn}
         altBtn2={MotivatorBtn}
         altBtn3={WarmerBtn}
-        altBtn4={AboutButton}
+        altBtn4={DummyBtn}
         altBtn5={DummyBtn}
+        saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
       <h2>Welcome to the TO-DO</h2>
       <h3>A structured set of sections to remind you what you have to do</h3>

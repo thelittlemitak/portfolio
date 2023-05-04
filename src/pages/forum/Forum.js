@@ -60,8 +60,9 @@ function Forum() {
         altBtn1={TodoBtn}
         altBtn2={MotivatorBtn}
         altBtn3={WarmerBtn}
-        altBtn4={AboutButton}
+        altBtn4={DummyBtn}
         altBtn5={DummyBtn}
+        saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
       <h2>Welcome to the FORUM</h2>
       <h3>A thread for each goal that you share with others</h3>

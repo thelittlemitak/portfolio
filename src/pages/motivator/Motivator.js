@@ -309,8 +309,7 @@ function Motivator() {
         },
         {
           goal: "Less headaches when interacting/better adaptation",
-          action:
-            "Avoid anxiety everytime you need someone from Germany",
+          action: "Avoid anxiety everytime you need someone from Germany",
           id: 0.46191,
         },
       ],
@@ -469,8 +468,9 @@ function Motivator() {
         altBtn1={TodoBtn}
         altBtn2={ForumBtn}
         altBtn3={WarmerBtn}
-        altBtn4={AboutButton}
+        altBtn4={DummyBtn}
         altBtn5={DummyBtn}
+        saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
       <h2>Welcome to the MOTIVATOR</h2>
       <h3>(because some things need a push)</h3>

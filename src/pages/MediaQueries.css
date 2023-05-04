@@ -83,6 +83,7 @@
   .about-hero-right {
     font-size: 5.2rem;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px1312px */
 @media (max-width: 82em) {
@@ -117,6 +118,7 @@
     padding: 3rem 1rem 4rem 3rem;
     margin: 6rem auto 8rem 5rem;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px */
 @media (max-width: 73em) {
@@ -131,9 +133,11 @@
   .salute-wrapper {
     transform: translateX(2rem);
   }
-  main {
-    padding: 0px 35px;
-  }
+  /* here i removed padding: 0px 35px; from mainEl */
+  /* here i removed padding: 0px 35px; from mainEl */
+  /* here i removed padding: 0px 35px; from mainEl */
+  /* here i removed padding: 0px 35px; from mainEl */
+
   /* ^ aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout */
   .pictures-grid {
     display: grid;
@@ -147,6 +151,7 @@
   .pic-titles-box {
     margin-bottom: 1rem !important;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 105610561056105610561056105610561056105610561056105610561056105610561056105610561056105610561056105610561056 */
 @media (max-width: 66em) {
@@ -177,10 +182,12 @@
     line-height: 5rem;
     margin-right: 0rem;
   }
-  main {
-    padding: 0px 32px;
-  }
+  /* here i removed padding: 0px 32px; from mainEl */
+  /* here i removed padding: 0px 32px; from mainEl */
+  /* here i removed padding: 0px 32px; from mainEl */
+  /* here i removed padding: 0px 32px; from mainEl */
   /* ^ aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout */
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px*/
 @media (max-width: 57em) {
@@ -191,6 +198,19 @@
   }
   .main-header {
     grid-template-columns: 1fr 1.5fr;
+  }
+  .main-header-about {
+    font-size: 2.4rem;
+
+    background-color: #d7fcec;
+
+    /* padding-top: 1.3rem;
+    padding-bottom: 7.65rem; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
   }
   .salute-wrapper {
     transform: translateX(3rem);
@@ -295,9 +315,10 @@
     top: 50%;
     transform: translateX(50%) translatey(-50%);
   }
-  main {
-    padding: 0px 28px;
-  }
+  /* here i removed padding: 0px 28px; from mainEl */
+  /* here i removed padding: 0px 28px; from mainEl */
+  /* here i removed padding: 0px 28px; from mainEl */
+  /* here i removed padding: 0px 28px; from mainEl */
   footer {
     font-size: 2rem;
 
@@ -354,6 +375,7 @@
     font-size: 4.5rem !important;
     margin-bottom: 4rem !important;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px */
 @media (max-width: 47em) {
@@ -386,9 +408,10 @@
     top: -5%;
     right: 0%;
   }
-  main {
-    padding: 0px 25px;
-  }
+  /* here i removed padding: 0px 25px; from mainEl */
+  /* here i removed padding: 0px 25px; from mainEl */
+  /* here i removed padding: 0px 25px; from mainEl */
+  /* here i removed padding: 0px 25px; from mainEl */
   .table-item {
     font-size: 2.6rem;
   }
@@ -413,6 +436,7 @@
   .presentation-titles {
     margin: 0 3rem !important;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px */
 @media (max-width: 38em) {
@@ -479,6 +503,7 @@
     width: 90px !important;
     margin-bottom: 1rem;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px528px */
 @media (max-width: 33em) {
@@ -595,6 +620,7 @@
   .presentation {
     line-height: 4rem !important;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }
 /* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
@@ -640,4 +666,5 @@
   .about-hero-right {
     margin: 0 2rem;
   }
+  /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
 }

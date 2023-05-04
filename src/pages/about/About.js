@@ -90,7 +90,7 @@ function About() {
         </div> */}
             <div className="presentation">
               A simple but powerful CRUD React-based website that shows all my
-              current web developer skills. Also responsive!
+              current web developer skills. It is also responsive!
             </div>
           </div>
           <section className="posthero-card posthero-rightcard">
