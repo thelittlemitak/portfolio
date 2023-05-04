@@ -228,8 +228,10 @@ function Profile() {
         altBtn5={DummyBtn}
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
-      <h2>Welcome to the TO-DO</h2>
-      <h3>A structured set of sections to remind you what you have to do</h3>
+      <h2 className="h2-profile">TO-DO</h2>
+      <h3 className="h2-h3-profile">
+        A structured set of sections to remind you what you have to do
+      </h3>
       <main className="main-profile-container">
         <TempoGoals
           dataTunnel={tempoGoalsData}
