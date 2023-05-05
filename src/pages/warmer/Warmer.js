@@ -70,9 +70,8 @@ function Warmer() {
         altBtn5={DummyBtn}
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
-      <h2>Welcome to the WARMER</h2>
-      <h3>A system to remind you what you should be greateful for</h3>
-      <h3>(recommended to check it at the end of the day)</h3>
+      <h2 className="h2-profile">WARMER</h2>
+      <h3 className="h2-h3-profile">A system to remind you what you should be greateful for</h3>
       <main className="main-profile-container">
         <WarmerTable
           dataTunnel={greatefulActionsData}

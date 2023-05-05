@@ -629,7 +629,6 @@
   .h3-profile {
     margin-bottom: 0rem;
     font-size: 4rem !important;
-
   }
   .h2-profile {
     margin-top: 4rem;
@@ -645,6 +644,31 @@
   .logout {
     margin-top: -4rem !important;
   }
+  .margin-bottom {
+    margin-bottom: 4rem !important;
+  }
+  .h3-moti {
+    font-size: 4rem !important;
+  }
+  /* ^ forumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforum */
+
+  .topic-header {
+    grid-template-columns: 2.4fr 2fr 2fr !important;
+    justify-items: center;
+    align-items: center;
+  }
+  .users {
+    padding-right: 2rem !important;
+    font-size: 2.2rem;
+  }
+
+  .last-post {
+    font-size: 2.2rem;
+  }
+  .chat-line {
+    font-size: 2rem;
+  }
+ 
 }
 /* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
@@ -691,4 +715,9 @@
     margin: 0 2rem;
   }
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  /* ^ forumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforumforum */
+
+  .users {
+    padding-right: 0rem !important;
+  }
 }

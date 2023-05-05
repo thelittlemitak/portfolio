@@ -98,10 +98,10 @@ function GoalCard(props) {
           <div class="topic-header-goal">
             <strong>{props.goalTunnel}</strong>
           </div>
-          <div>
+          <div className="users">
             <strong>7 users</strong> share this goal
           </div>
-          <div>
+          <div className="last-post">
             Last post by <strong>rosa</strong> on (04.02.2023)
           </div>
         </div>

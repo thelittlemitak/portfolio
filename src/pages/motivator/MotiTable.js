@@ -100,13 +100,13 @@ function MotiTable(props) {
           idTunnel={props.idTunnel}
         ></EditBtn>
         <h6>Deadline: {props.deadline}</h6>
-        <h6>Days remaining: {props.daysRemainingTunnel}</h6>
+        <h6 className="days-remaining">Days remaining: {props.daysRemainingTunnel}</h6>
       </div>
       <table class="profile-table">
         <HeaderTable3Col
           col1Tunnel={"Reasons"}
-          col2Tunnel={"Why is this reason relevant to you?"}
-          col3Tunnel={"Add/Remove"}
+          col2Tunnel={"Why is relevant to you?"}
+          col3Tunnel={"+/-"}
         ></HeaderTable3Col>
         {tempoGoals.map((x) => (
           <GoalTable3Col

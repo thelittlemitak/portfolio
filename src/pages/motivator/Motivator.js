@@ -472,10 +472,8 @@ function Motivator() {
         altBtn5={DummyBtn}
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
-      <h2>Welcome to the MOTIVATOR</h2>
-      <h3>(because some things need a push)</h3>
-      <h3>A system to remind you why you are doing what you are doing</h3>
-      <h3>It is recommended to check it every morning</h3>
+      <h2 className="h2-profile">MOTIVATOR</h2>
+      <h3 className="h2-h3-profile">A system to remind you why you are doing what you are doing</h3>
       <main className="main-profile-container">
         {componentData.map((x) => (
           <MotiTable

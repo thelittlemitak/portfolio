@@ -64,8 +64,8 @@ function Forum() {
         altBtn5={DummyBtn}
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
-      <h2>Welcome to the FORUM</h2>
-      <h3>A thread for each goal that you share with others</h3>
+      <h2 className="h2-profile">FORUM</h2>
+      <h3 className="h2-h3-profile margin-bottom">A thread for each goal that you share with others</h3>
       <MainWrapper class="forum-container">
         {forumData.map((x) => (
           <GoalCard

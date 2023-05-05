@@ -60,3 +60,7 @@
   display: block;
   margin: -4rem auto 9rem auto;
 }
+
+.days-remaining {
+  margin-bottom: 2rem;
+}

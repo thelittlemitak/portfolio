@@ -1,5 +1,13 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&& SECTION */
 
+.h2-profile {
+  margin-top: 7rem;
+}
+
+.h2-h3-profile {
+  margin: 0 6rem;
+}
+
 .main-profile-container {
   width: 100%;
   margin-top: 7rem;
@@ -13,6 +21,7 @@
   background: linear-gradient(#fde9f1, #e9fdf5);
   border-top: 0.2rem solid;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .info-box {
@@ -157,4 +166,8 @@ th {
 
 .empty-input {
   background-color: red;
+}
+
+.margin-bottom {
+  margin-bottom: 6rem;
 }
