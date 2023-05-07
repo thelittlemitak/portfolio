@@ -226,7 +226,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="home-body">
       <Overlay
         statusTunnel={openedModal1}
         statusTunnel2={openedModal2}
