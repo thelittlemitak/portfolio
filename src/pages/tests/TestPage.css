@@ -1,14 +1,16 @@
-.test1 {
-  font-size: 10rem;
-  text-align: center;
-  margin-top: 15rem;
-}
-
 .testcont {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: 10rem auto;
+  height: 20rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.testcont img {
-  max-width: 100%;
+.testcont2 {
+  background-color: blue;
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+

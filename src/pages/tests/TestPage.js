@@ -9,8 +9,10 @@ function TestPage() {
 
   return (
     <div className="testcont">
-      <img src={require("../../img/test1.webp")} alt="this is just a test" />{" "}
-      <div>asdf asdf asdf as jasldfj alsdjf lkasjdf lkajsdklf jasldñkf jlasñdfj l</div>
+      <div className="testcont2">
+        {" "}
+        <input />
+      </div>
     </div>
   );
 }

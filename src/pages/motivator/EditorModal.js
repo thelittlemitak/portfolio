@@ -53,6 +53,7 @@ function EditorModal(props) {
             ref={props.deadlineInputRefTunnel}
             onKeyDown={props.keyPusherTunnel}
             min={dateStringed}
+            className="deadline"
           />
         </div>
         <div className={props.deadlineAlertStyleTunnel}>Wrong date!</div>
