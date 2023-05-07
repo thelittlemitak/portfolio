@@ -119,6 +119,12 @@
     margin: 6rem auto 8rem 5rem;
   }
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  .dummy-floatingEl {
+    top: 35% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 78% !important;
+  }
 }
 /* & 1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px1168px */
 @media (max-width: 73em) {
@@ -152,6 +158,12 @@
     margin-bottom: 1rem !important;
   }
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  .dummy-floatingEl {
+    top: 35% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 78% !important;
+  }
 }
 /* & 105610561056105610561056105610561056105610561056105610561056105610561056105610561056105610561056105610561056 */
 @media (max-width: 66em) {
@@ -188,6 +200,12 @@
   /* here i removed padding: 0px 32px; from mainEl */
   /* ^ aboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutaboutabout */
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  .dummy-floatingEl {
+    top: 38% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 77% !important;
+  }
 }
 /* & 912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px912px*/
 @media (max-width: 57em) {
@@ -376,6 +394,12 @@
     margin-bottom: 4rem !important;
   }
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  .dummy-floatingEl {
+    top: 41% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 82.5% !important;
+  }
 }
 /* & 750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px750px */
 @media (max-width: 47em) {
@@ -691,6 +715,12 @@
   .user-line-wrapper {
     grid-template-columns: 2fr 5fr 1fr !important;
   }
+  .dummy-floatingEl {
+    top: 47% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 82.5% !important;
+  }
 }
 /* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
@@ -741,5 +771,11 @@
 
   .users {
     padding-right: 0rem !important;
+  }
+  .dummy-floatingEl {
+    top: 41% !important;
+  }
+  .dummy-floatingEl2 {
+    top: 82.5% !important;
   }
 }

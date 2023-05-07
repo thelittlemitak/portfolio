@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.8450bbb2.css",
-    "main.js": "/static/js/main.bb1c9bf7.js",
-    "static/media/about-salute.webp": "/static/media/about-salute.91f328e9e051a4a7d832.webp",
+    "main.css": "/static/css/main.4dee15c6.css",
+    "main.js": "/static/js/main.11771a9b.js",
+    "static/media/about-salute.webp": "/static/media/about-salute.5249bcc35806da80745d.webp",
     "static/media/testimonial1.webp": "/static/media/testimonial1.7eb2a8ff4f434d0d731d.webp",
     "static/media/testimonial4.webp": "/static/media/testimonial4.a29e967f5686f0150a22.webp",
     "static/media/testimonial3.webp": "/static/media/testimonial3.da68c9d04f95171009d8.webp",
@@ -16,11 +16,11 @@
     "static/media/react.webp": "/static/media/react.2a0cac33f155e4a27216.webp",
     "static/media/code-logos.webp": "/static/media/code-logos.3005e0f715b6e4c3cad4.webp",
     "index.html": "/index.html",
-    "main.8450bbb2.css.map": "/static/css/main.8450bbb2.css.map",
-    "main.bb1c9bf7.js.map": "/static/js/main.bb1c9bf7.js.map"
+    "main.4dee15c6.css.map": "/static/css/main.4dee15c6.css.map",
+    "main.11771a9b.js.map": "/static/js/main.11771a9b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8450bbb2.css",
-    "static/js/main.bb1c9bf7.js"
+    "static/css/main.4dee15c6.css",
+    "static/js/main.11771a9b.js"
   ]
 }
