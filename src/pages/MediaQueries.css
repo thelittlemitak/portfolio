@@ -591,6 +591,9 @@
     justify-items: center;
     align-items: center;
   }
+  .main-header-about {
+    gap: 0rem;
+  }
   .button-area {
     /* display: flex; */
     justify-content: space-around;
