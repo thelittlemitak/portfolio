@@ -109,9 +109,9 @@ function GoalCard(props) {
           <div className="thread-wrapper">
             {message.map((x) => (
               <div className="user-line-wrapper">
-                <div className="chat-line">{x.user}</div>
-                <div className="chat-line">{x.time}</div>
-                <div className="chat-line">{x.message}</div>
+                <div className="chat-line user">{x.user}</div>
+                <div className="chat-line time">{x.time}</div>
+                <div className="chat-line post">{x.message}</div>
                 <div
                   className={
                     x.user == "recruiter" ? defaultBtnClass : hiddenBtnClass

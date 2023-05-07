@@ -58,6 +58,14 @@ h3 {
   grid-template-columns: 1.3fr 1fr 4fr 0.75fr;
 }
 
+.chat-line.user {
+  font-weight: 700;
+}
+
+.chat-line.time {
+  font-weight: 500;
+}
+
 .hidden {
   display: none;
 }

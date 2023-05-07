@@ -437,6 +437,24 @@
     margin: 0 3rem !important;
   }
   /* ^ profileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofileprofile */
+  /* ^ forumforumforumforumforumforumforumforumforumforumforumforumforumforumforum */
+
+  .user-line-wrapper {
+    padding: 1rem 1rem 0rem 1rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 5fr 1fr !important;
+  }
+  .chat-line.user {
+    grid-column: 1/2;
+    font-weight: 700;
+  }
+  .chat-line.time {
+    grid-column: 2/4;
+  }
+  .chat-line.post {
+    grid-column: 2/3;
+  }
 }
 /* & 600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px600px */
 @media (max-width: 38em) {
@@ -664,14 +682,15 @@
     padding-right: 2rem !important;
     font-size: 2.2rem;
   }
-
   .last-post {
     font-size: 2.2rem;
   }
   .chat-line {
     font-size: 2rem;
   }
- 
+  .user-line-wrapper {
+    grid-template-columns: 2fr 5fr 1fr !important;
+  }
 }
 /* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
