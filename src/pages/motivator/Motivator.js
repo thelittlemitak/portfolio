@@ -53,6 +53,7 @@ function Motivator() {
     setDeadlineDefaultState({});
     setGoalInserted("");
     setDeadlineInserted("");
+    setDeadlineAlertStyle("wrong-alert hidden-alert")
   };
 
   let goalListener = function (e) {
@@ -375,12 +376,13 @@ function Motivator() {
     let dateEntered = new Date(deadlineEntered);
     let today = new Date();
     let diffTime = today - dateEntered;
-    if (diffTime > 0) {
+    let typeOfDiffTime = isNaN(diffTime);
+    if (diffTime > 0 || typeOfDiffTime == true) {
       console.log("hey this is wrong");
       setDeadlineAlertStyle("wrong-alert");
       return;
     }
-
+    
     backgrounder();
     componentData[indexOfId].title = goalEntered;
     componentData[indexOfId].deadline = deadlineEntered;
