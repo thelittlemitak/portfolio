@@ -6,7 +6,7 @@ function DoubtIcon() {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="title-icons"
+      className="title-icons"
     >
       <path
         stroke-linecap="round"

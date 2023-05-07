@@ -94,8 +94,8 @@ function GoalCard(props) {
   return (
     <div>
       <div>
-        <div class="topic-header">
-          <div class="topic-header-goal">
+        <div className="topic-header">
+          <div className="topic-header-goal">
             <strong>{props.goalTunnel}</strong>
           </div>
           <div className="users">
@@ -106,14 +106,14 @@ function GoalCard(props) {
           </div>
         </div>
         <div>
-          <div class="thread-wrapper">
+          <div className="thread-wrapper">
             {message.map((x) => (
-              <div class="user-line-wrapper">
-                <div class="chat-line">{x.user}</div>
-                <div class="chat-line">{x.time}</div>
-                <div class="chat-line">{x.message}</div>
+              <div className="user-line-wrapper">
+                <div className="chat-line">{x.user}</div>
+                <div className="chat-line">{x.time}</div>
+                <div className="chat-line">{x.message}</div>
                 <div
-                  class={
+                  className={
                     x.user == "recruiter" ? defaultBtnClass : hiddenBtnClass
                   }
                 >
@@ -123,11 +123,11 @@ function GoalCard(props) {
                 </div>
               </div>
             ))}
-            <div class="input-container">
+            <div className="input-container">
               <input
                 type="text"
                 placeholder={placeHolder}
-                class={inputStyle}
+                className={inputStyle}
                 value={inputMessage}
                 onChange={messageListener}
                 onKeyDown={keyPusher}

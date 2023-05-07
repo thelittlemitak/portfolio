@@ -93,7 +93,7 @@ function MotiTable(props) {
 
   return (
     <Fragment>
-      <h3 class="h3-moti">Motivator for {props.title}</h3>
+      <h3 className="h3-moti">Motivator for {props.title}</h3>
       <div className="moti-timing-wrapper">
         <EditBtn
           openerTunnel={props.openerTunnel}
@@ -102,7 +102,7 @@ function MotiTable(props) {
         <h6>Deadline: {props.deadline}</h6>
         <h6 className="days-remaining">Days remaining: {props.daysRemainingTunnel}</h6>
       </div>
-      <table class="profile-table">
+      <table className="profile-table">
         <HeaderTable3Col
           col1Tunnel={"Reasons"}
           col2Tunnel={"Why is relevant to you?"}
