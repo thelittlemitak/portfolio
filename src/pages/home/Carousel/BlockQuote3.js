@@ -8,8 +8,8 @@ function BlockQuote3() {
         "I don't need to have any other management APP on the phone; this
         improved my productivity tremendously."
       </p>
-      <p className="testimonial-name">Teresa de la Empresa</p>
-      <p className="testimonial-description">SEO of all PCs</p>
+      <p className="testimonial-name">Teresito Luna</p>
+      <p className="testimonial-description">SEO of STEAM</p>
     </blockquote>
   );
 }

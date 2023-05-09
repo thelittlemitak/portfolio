@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./TopicCard.css";
 
@@ -50,6 +50,9 @@ function GoalCard(props) {
     }
   }
 
+  const [lastPostUser, setLastPostUser] = useState(props.lastPostTunnel.user);
+  const [lastPostTime, setLastPostTime] = useState(props.lastPostTunnel.time);
+
   const Pusher = function () {
     if (inputMessage.length == 0) {
       setInputStyle("forum-input input-error");
@@ -68,6 +71,8 @@ function GoalCard(props) {
     ]);
     setInputMessage("");
     setAddBtnStyle("add-btn");
+    setLastPostUser("recruiter");
+    setLastPostTime(formattedDate);
   };
 
   const Remover = function (e) {
@@ -77,6 +82,9 @@ function GoalCard(props) {
     );
     message.splice(indexOfCheckboxPressed, 1);
     setMessage([...message]);
+    let indexOfLastEl = message.length - 1;
+    setLastPostUser(message[indexOfLastEl].user);
+    setLastPostTime(message[indexOfLastEl].time);
   };
 
   let defaultBtnClass = "button-wrapper";
@@ -102,7 +110,8 @@ function GoalCard(props) {
             <strong>7 users</strong> share this goal
           </div>
           <div className="last-post">
-            Last post by <strong>rosa</strong> on (04.02.2023)
+            Last post by <strong>{lastPostUser}</strong> on{" "}
+            <strong>{lastPostTime}</strong>
           </div>
         </div>
         <div>

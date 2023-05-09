@@ -53,7 +53,7 @@ function Motivator() {
     setDeadlineDefaultState({});
     setGoalInserted("");
     setDeadlineInserted("");
-    setDeadlineAlertStyle("wrong-alert hidden-alert")
+    setDeadlineAlertStyle("wrong-alert hidden-alert");
   };
 
   let goalListener = function (e) {
@@ -131,33 +131,23 @@ function Motivator() {
     {
       dataTunnel: [
         {
-          goal: "Flexibility",
-          action: "Being able to work from everywhere",
+          goal: "Strength",
+          action: "Be stronger and look nicer for the summer",
           id: 0.17323,
         },
         {
-          goal: "Money",
-          action: "Have a good salary to invest on myself and my projects",
+          goal: "Endurance",
+          action: "Being able to run faster and for a longer time",
           id: 0.6732,
         },
         {
-          goal: "Live alone",
-          action: "Having a partner is a pain in the ass",
+          goal: "Meet friends",
+          action: "Miguel and Simon are going there already",
           id: 0.80431,
         },
-        {
-          goal: "Start with next goals",
-          action: "Techno, studio, Tot Fosk, Drums",
-          id: 0.7887,
-        },
-        {
-          goal: "Stop studying",
-          action: "Kind of a retro but true",
-          id: 0.65131,
-        },
       ],
-      title: "career change",
-      deadline: "2023-06-07",
+      title: "going to the gym",
+      deadline: "2023-10-07",
       id: 11329,
       get diffDays() {
         let date1 = new Date(this.deadline);
@@ -170,152 +160,29 @@ function Motivator() {
     {
       dataTunnel: [
         {
-          goal: "Not being fat",
-          action: "Having a belly is not sexy",
-          id: 0.74565,
-        },
-        {
-          goal: "Muay Thai performance",
-          action: "You train like shit afterwards",
-          id: 0.89933,
-        },
-        {
-          goal: "Longevity",
-          action: "You will look better for a longer time",
-          id: 0.31365,
-        },
-        {
-          goal: "Health",
-          action: "Less problems in the future regarding your body",
-          id: 0.37325,
-        },
-        {
-          goal: "Hotter girls",
-          action: "If you are not hot, others won't be either",
-          id: 0.62704,
-        },
-      ],
-      title: "not drinking alcohol",
-      deadline: "2023-06-07",
-      id: 85949,
-      get diffDays() {
-        let date1 = new Date(this.deadline);
-        let today = new Date();
-        let diffTime = Math.abs(today - date1);
-        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
-      },
-    },
-    {
-      dataTunnel: [
-        {
-          goal: "Not being fat",
-          action: "Having a belly is not sexy",
-          id: 0.94713,
-        },
-        {
-          goal: "Having more fun (MT) for longer periods of time",
-          action: "MT is just fun",
-          id: 0.35115,
-        },
-        {
-          goal: "Having an amazing body",
-          action: "Having a belly is not sexy",
-          id: 0.94594,
-        },
-        {
-          goal: "Longevity",
-          action: "You will look better for a longer time",
-          id: 0.23506,
-        },
-        {
-          goal: "Health",
-          action: "Less problems in the future regarding your body",
-          id: 0.29402,
-        },
-        {
-          goal: "Hotter girls",
-          action: "If you are not hot, others won't be either",
-          id: 0.24165,
-        },
-        {
-          goal: "Being more flexible",
-          action: "This reduces body pain, incl. the knee",
-          id: 0.89649,
-        },
-        {
-          goal: "Feeling great",
-          action: "It just feels great",
-          id: 0.231232,
-        },
-      ],
-      title: "Muay Thai performance",
-      deadline: "2023-06-07",
-      id: 69594,
-      get diffDays() {
-        let date1 = new Date(this.deadline);
-        let today = new Date();
-        let diffTime = Math.abs(today - date1);
-        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
-      },
-    },
-    // {
-    //   dataTunnel: [
-    //     {
-    //       goal: "Not having headaches",
-    //       action: "You get tension in your head and jaw",
-    //       id: 0.50941,
-    //     },
-    //     {
-    //       goal: "Not being anxious",
-    //       action: "You get anxious very easily, sometimes without a reason",
-    //       id: 0.50947,
-    //     },
-    //     {
-    //       goal: "Not depending on something out from you",
-    //       action:
-    //         "It's horrible to always depend on something just to start the day/living",
-    //       id: 0.50617,
-    //     },
-    //   ],
-    //   title: "not drinking coffee",
-    //   deadline: "2023-06-07",
-    //   id: 98342,
-    //   get diffDays() {
-    //     let date1 = new Date(this.deadline);
-    //     let today = new Date();
-    //     let diffTime = Math.abs(today - date1);
-    //     let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    //     return diffDays;
-    //   },
-    // },
-    {
-      dataTunnel: [
-        {
-          goal: "Being able to apply to more jobs",
-          action: "More jobs = better career",
+          goal: "Series",
+          action: "Being able to watch anime in original language",
           id: 0.77533,
         },
         {
-          goal: "More know people in Germany",
-          action: "People = Happiness and opportunities",
+          goal: "Video games",
+          action: "Being able to play in original language",
           id: 0.11625,
         },
         {
-          goal: "Not depending on something out from you",
+          goal: "Travelling",
           action:
-            "It's horrible to always depend on something just to start the day/living",
-          id: 0.46191,
+            "Going to Japan and talk to people has to be amazing",
+          id: 0.52345,
         },
         {
-          goal: "Less headaches when interacting/better adaptation",
-          action: "Avoid anxiety everytime you need someone from Germany",
-          id: 0.46191,
+          goal: "Mind",
+          action: "More languages means a bigger mind",
+          id: 0.8578,
         },
       ],
-      title: "learning german",
-      deadline: "2023-06-07",
+      title: "learning Japanese",
+      deadline: "2023-09-01",
       id: 25348,
       get diffDays() {
         let date1 = new Date(this.deadline);
@@ -382,7 +249,7 @@ function Motivator() {
       setDeadlineAlertStyle("wrong-alert");
       return;
     }
-    
+
     backgrounder();
     componentData[indexOfId].title = goalEntered;
     componentData[indexOfId].deadline = deadlineEntered;
@@ -405,6 +272,8 @@ function Motivator() {
   };
 
   let newId = Math.random();
+  let newId2 = Math.random();
+
 
   const adder = function () {
     setComponentData([
@@ -414,7 +283,7 @@ function Motivator() {
           {
             goal: "Stop studying",
             action: "Kind of a retro but true",
-            id: 76767676,
+            id: newId2,
           },
         ],
         title: "(press edit)",
@@ -475,7 +344,9 @@ function Motivator() {
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
       <h2 className="h2-profile">MOTIVATOR</h2>
-      <h3 className="h2-h3-profile">A system to remind you why you are doing what you are doing</h3>
+      <h3 className="h2-h3-profile">
+        A system to remind you why you are doing what you are doing
+      </h3>
       <main className="main-profile-container">
         {componentData.map((x) => (
           <MotiTable

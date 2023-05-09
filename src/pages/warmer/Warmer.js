@@ -15,27 +15,27 @@ import LogOutBtn from "../../components/btns/LogOutBtn";
 function Warmer() {
   const greatefulActionsData = [
     {
-      goal: "Study coding",
-      action: "After 10 days",
-      id: 0.7419919119444685,
+      goal: "I studied for 2 hours",
+      action: "You are a beast!",
+      id: 0.75676547457,
     },
     {
-      goal: "Trained 30 min with my bike",
-      action: "You are a beast",
-      id: 0.7419944699232888,
+      goal: "Trained 30 min with my bike in the morning",
+      action: "Better do 20 minutes",
+      id: 0.53452345,
     },
   ];
 
   const greatefulPossessionsData = [
     {
-      goal: "A home in Boxi",
-      action: "After 10 days",
-      id: 0.7419919119444685,
+      goal: "I have a house with hot water",
+      action: "You are lucky!",
+      id: 0.23523452345245,
     },
     {
-      goal: "Healthy body",
-      action: "You are a beast",
-      id: 0.7419944699232888,
+      goal: "Healthy family",
+      action: "Your sister loves you",
+      id: 0.765754675467,
     },
   ];
 

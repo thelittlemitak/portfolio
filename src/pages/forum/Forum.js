@@ -12,7 +12,6 @@ import WarmerBtn from "../../components/btns/WarmerBtn";
 import DummyBtn from "../../components/btns/DummyBtn";
 import LogOutBtn from "../../components/btns/LogOutBtn";
 
-
 function Forum() {
   const forumData = [
     {
@@ -21,18 +20,18 @@ function Forum() {
         {
           user: "Jose",
           time: "12:20h, 11.02.2023",
-          message:
-            "ot to say. Bla pare nostrum i'm nervous and I have a lot to say. Bla pare nostrum",
+          message: "Does anyone know a good book about the topic?",
           id: 0.2215648439284433,
         },
         {
           user: "Fina",
           time: "13:22h, 12.02.2023",
-          message: "i'm relaxed",
+          message: "Yes but I need to search for them",
           id: 0.2215657687284433,
         },
       ],
       id: 999,
+      lastpost: { user: "Fina", time: "13:22h, 12.02.2023" },
     },
     {
       goal: "Exercise",
@@ -40,17 +39,18 @@ function Forum() {
         {
           user: "María",
           time: "11:10h, 14.02.2023",
-          message: "i'm tired",
+          message: "I'm too tired of training too much",
           id: 0.5768748439284433,
         },
         {
           user: "LaCamella",
           time: "11:30h, 17.02.2023",
-          message: "i'm warmed up",
+          message: "Better try going slow with this",
           id: 0.8888848439284433,
         },
       ],
       id: 998,
+      lastpost: { user: "LaCamella", time: "11:30h, 17.02.2023" },
     },
   ];
 
@@ -65,13 +65,16 @@ function Forum() {
         saluteStyleTunnel={"salute-wrapper display-none"}
       ></Header>
       <h2 className="h2-profile">FORUM</h2>
-      <h3 className="h2-h3-profile margin-bottom">A thread for each goal that you share with others</h3>
+      <h3 className="h2-h3-profile margin-bottom">
+        A thread for each goal that you share with others
+      </h3>
       <MainWrapper class="forum-container">
         {forumData.map((x) => (
           <GoalCard
             goalTunnel={x.goal}
             chatLineTunnel={x.chatLine}
             key={x.id}
+            lastPostTunnel={x.lastpost}
           ></GoalCard>
         ))}
       </MainWrapper>

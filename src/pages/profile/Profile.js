@@ -26,24 +26,19 @@ import LogOutBtn from "../../components/btns/LogOutBtn";
 function Profile() {
   const tempoGoalsData = [
     {
-      goal: "Linda's present",
-      action: "Check a concert to go",
+      goal: "Buy new bed",
+      action: "Check the store Pablo said",
       id: 0.7419944699232888,
     },
     {
-      goal: "Belen bills",
-      action: "Pay 4 of them at the end of the month",
+      goal: "Belen's bills",
+      action: "Pay the bills at the end of the month",
       id: 0.7419576879444222,
     },
     {
-      goal: "Bea email",
-      action: "Mirar lo del Kaution ",
+      goal: "Career change",
+      action: "Check the website Jason said",
       id: 0.7419228888844222,
-    },
-    {
-      goal: "Cita DNI",
-      action: "Necesito esperar para que me salgan fechas cuando estoy",
-      id: 0.7412343328844222,
     },
   ];
   const contGoalsTDData = [
@@ -58,11 +53,11 @@ function Profile() {
     {
       goal: "MT schedule",
       freq: "Weekly (Fri)",
-      length_: "Book next week MT",
+      length_: "Book slots for the next week",
       id: 0.2219945439284685,
     },
     {
-      goal: "Rewe order",
+      goal: "Rewe online order",
       freq: "Weekly (Fri)",
       length_: "Book next week Rewe for Monday morning",
       id: 0.2219945439284685,
@@ -74,9 +69,9 @@ function Profile() {
       id: 0.2219945439284685,
     },
     {
-      goal: "Cocinar dietas",
-      freq: "Every day",
-      length_: "You know the drill",
+      goal: "Cooking",
+      freq: "Every Sunday",
+      length_: "Cook meals for the week",
       id: 0.4728394728937498,
     },
   ];
@@ -90,55 +85,55 @@ function Profile() {
     {
       goal: "Facebook",
       freq: "Daily",
-      length_: "One second",
+      length_: "One minute",
       id: 0.2215648555284685,
     },
     {
-      goal: "What's app",
+      goal: "WhatsApp",
       freq: "Daily",
-      length_: "30 min",
+      length_: "30 minutes",
       id: 0.2215641234124284685,
     },
   ];
   const forbiddenActivitiesData = [
-    { goal: "Youtube", action: "Post MT", id: 0.7419944699444684 },
-    { goal: "Phone", action: "Post MT", id: 0.7419576869444683 },
+    { goal: "PlayStation", action: "Until the end of June", id: 0.7419944699444684 },
+    { goal: "Scalextric", action: "Until the end of the week", id: 0.7419576869444683 },
   ];
   const socialGatheringsData = [
     {
-      goal: "Belu",
-      freq: "Every Monday 15:00",
-      length_: "None",
+      goal: "Joan",
+      freq: "Every Monday at 15:00",
+      length_: "Bring flowers",
       id: 0.7419221219444444,
     },
     {
       goal: "Aphex Twin",
       freq: "08.06.2023",
-      length_: "Sweeden",
+      length_: "Get some tickets",
       id: 0.2215648439284685,
     },
   ];
   const ideasData = [
     {
-      goal: "Guitar",
-      action: "Try shoegaze effects",
+      goal: "Play Guitar in a cave",
+      action: "Bring shoegaze effect pedals",
       id: 0.7415556799444685,
     },
     {
-      goal: "Renoise",
-      action: "Try renoise plugin",
+      goal: "Buy Renoise or Redux",
+      action: "Try the plugin inside Ableton",
       id: 0.7415551112344685,
     },
     {
-      goal: "App para entrenar blockieren",
-      action: " ",
+      goal: "Blocking App",
+      action: "Do an App to train boxing blocking",
       id: 0.7415123212344685,
     },
   ];
   const hobbiesData = [
     {
       goal: "Video games",
-      action: "Cities: Skylines",
+      action: "Skyrim",
       id: 0.7415551232144685,
     },
   ];
