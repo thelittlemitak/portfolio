@@ -20,6 +20,10 @@ function GoalCard(props) {
     minutes = "0" + minutes;
   }
 
+  if (hours.length < 2) {
+    hours = "0" + hours;
+  }
+
   if (monthString.length < 2) {
     month = "0" + month;
   }

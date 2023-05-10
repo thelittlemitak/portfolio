@@ -13,6 +13,7 @@ import DummyBtn from "../../components/btns/DummyBtn";
 import HeaderAbout from "../../components/HeaderAbout";
 import "../MediaQueries.css";
 import ArrowDown from "../../components/ArrowDown";
+import QuestionAnswer from "./QuestionAnswer";
 
 function About() {
   let h2Ref = useRef();
@@ -73,6 +74,29 @@ function About() {
   //   });
   //   observer.observe(h2Ref.current);
   // }, []);
+
+  const faqs = [
+    {
+      question: "What is your current status at the moment?",
+      answer: "Looking for a job",
+    },
+    {
+      question: "Do you have new projects in mind?",
+      answer: "Blockierung App",
+    },
+    {
+      question: "What did you learnt so far?",
+      answer: "Udemy courses and this and that",
+    },
+    {
+      question: "Will MMM be ever completely functional?",
+      answer: "With backend probably",
+    },
+    {
+      question: "Do you have other interests?",
+      answer: "Video games, backend",
+    },
+  ];
 
   return (
     <div>
@@ -172,7 +196,7 @@ function About() {
               </div>
             </div>
           </section>
-          <div className={postpostLeftStyle}>
+          {/* <div className={postpostLeftStyle}>
             <div className="presentation presentation-titles">
               Is this a real company?
             </div>
@@ -200,11 +224,20 @@ function About() {
               Password: <em>123asd</em>) and then, click the logo on the header
               to go to the mainpage. Happy drive!
             </div>
-          </div>
+          </div> */}
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
           <div className="dummy-floatingEl2" ref={dummyFloat2}></div>
         </div>
-        
+        <section className="faq-senction">
+          {" "}
+          <h2 className="faq-h2">FAQ</h2>
+          <QuestionAnswer faqTunnel={faqs[0]}></QuestionAnswer>
+          <QuestionAnswer faqTunnel={faqs[1]}></QuestionAnswer>
+          <QuestionAnswer faqTunnel={faqs[2]}></QuestionAnswer>
+          <QuestionAnswer faqTunnel={faqs[3]}></QuestionAnswer>
+          <QuestionAnswer faqTunnel={faqs[4]}></QuestionAnswer>
+
+        </section>
 
         {/* <div className="presentation presentation-titles">
           In case you want to know more:
