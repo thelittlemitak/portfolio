@@ -175,7 +175,10 @@ function Home() {
     } else if (e.target.checked == false) setKeeper(false);
   };
 
-  if (userEntered == "recruiter" && pwEntered == "123asd") {
+  if (
+    (userEntered == "recruiter" && pwEntered == "123asd") ||
+    (userEntered == "Recruiter" && pwEntered == "123asd")
+  ) {
     navigate("/profile");
     sessionStorage.setItem("isLoggedIn", "yes");
     sessionStorage.setItem("user", "recruiter");

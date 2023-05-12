@@ -34,7 +34,9 @@ function Motivator() {
   let month = today.getMonth();
   let monthPlus1 = month + 1;
   let day = today.getDate();
-  let test = `${year.toString()}-${monthPlus1.toString()}-${day.toString()}`;
+  console.log(day);
+  let dayForTest = day + 1;
+  let test = `${year.toString()}-${monthPlus1.toString()}-${dayForTest.toString()}`;
 
   const opener = function (e) {
     setId(e.target.getAttribute("itemid"));
@@ -171,8 +173,7 @@ function Motivator() {
         },
         {
           goal: "Travelling",
-          action:
-            "Going to Japan and talk to people has to be amazing",
+          action: "Going to Japan and talk to people has to be amazing",
           id: 0.52345,
         },
         {
@@ -274,15 +275,14 @@ function Motivator() {
   let newId = Math.random();
   let newId2 = Math.random();
 
-
   const adder = function () {
     setComponentData([
       ...componentData,
       {
         dataTunnel: [
           {
-            goal: "Stop studying",
-            action: "Kind of a retro but true",
+            goal: "Good reason",
+            action: "Because it's a very good reason",
             id: newId2,
           },
         ],
