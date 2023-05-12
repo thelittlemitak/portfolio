@@ -77,25 +77,39 @@ function About() {
 
   const faqs = [
     {
-      question: "What is your current status at the moment?",
-      answer: "Looking for a job",
+      question: "What is your current employment status?",
+      answer:
+        "My current contract ends on the 30th of June, so, from the 1st of July on, I will be available to join your company.",
     },
     {
-      question: "Do you have new projects in mind?",
-      answer: "Blockierung App",
+      question:
+        "Do you only have this website (MMM) as your portfolio? If so, why?",
+      answer:
+        "Yes. Having worked in other projects in the past made aware of how easy it is to hesitate and start something new when things get too complicated. By doing one big project, I have forced myself to commit to an end result and solve all the problems that appeared on my way no matter how difficult they were.",
     },
     {
-      question: "What did you learnt so far?",
-      answer: "Udemy courses and this and that",
+      question: "Will MMM ever be completely functional for users?",
+      answer:
+        "Yes, but only as a result of my learning goals and not because I want it to be a real company. I set up backend development to be my next step, so my focus at the moment is (while learning) creating a database and having users to be able to login separately and save their entries.",
     },
     {
-      question: "Will MMM be ever completely functional?",
-      answer: "With backend probably",
+      question: "Why did you learn how to program?",
+      answer:
+        "For me it was mostly about the will of creating. Learning never felt as something secluded but as part of who I am; it was just the result of the necesity of wanting to create something with these tools. Programming and design get me in the flow, as if I were playing an instrument or video games.",
     },
     {
-      question: "Do you have other interests?",
-      answer: "Video games, backend",
+      question: "Are you self-taught? What resources did you use to learn?",
+      answer:
+        "Yes. I started with Udemy courses since they are so long (all together, more than 200 hours) that they allow the student to have a structure, which I think it is very needed at the beginning. Then, at some point, I was just focused on what I wanted to do and go to Google/YouTube when needed.",
     },
+    // {
+    //   question: "What did you learnt so far?",
+    //   answer: "Udemy courses and this and that",
+    // },
+    // {
+    //   question: "Do you have other interests?",
+    //   answer: "Video games, backend",
+    // },
   ];
 
   return (
@@ -114,7 +128,7 @@ function About() {
         </div> */}
             <div className="presentation">
               A simple but powerful CRUD React-based website that shows all my
-              current web developer skills. It is also responsive!
+              current web developer skills. It is also responsive (try in on your phone)!
             </div>
           </div>
           <section className="posthero-card posthero-rightcard">
@@ -196,7 +210,7 @@ function About() {
               </div>
             </div>
           </section>
-          {/* <div className={postpostLeftStyle}>
+          <div className={postpostLeftStyle}>
             <div className="presentation presentation-titles">
               Is this a real company?
             </div>
@@ -217,14 +231,14 @@ function About() {
           </div>
           <div className={postpostpostCardStyle}>
             <div className="presentation presentation-titles">
-              How can I navigate the website?
+              How can I navigate this website?
             </div>
             <div className="presentation">
               You just need some credentials (Username: <em>recruiter</em>{" "}
               Password: <em>123asd</em>) and then, click the logo on the header
-              to go to the mainpage. Happy drive!
+              to go to the mainpage. There, you will be able to login and see the different tools.
             </div>
-          </div> */}
+          </div>
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
           <div className="dummy-floatingEl2" ref={dummyFloat2}></div>
         </div>
@@ -236,7 +250,6 @@ function About() {
           <QuestionAnswer faqTunnel={faqs[2]}></QuestionAnswer>
           <QuestionAnswer faqTunnel={faqs[3]}></QuestionAnswer>
           <QuestionAnswer faqTunnel={faqs[4]}></QuestionAnswer>
-
         </section>
 
         {/* <div className="presentation presentation-titles">

@@ -8,8 +8,8 @@
   border: 0.3rem solid #212529;
   box-shadow: 1rem 1rem;
 
-  padding: 3rem 1rem 0rem 3rem;
-  margin: 9rem auto 5rem 5rem;
+  padding: 6rem 1rem 4rem 6rem;
+  margin: 9rem auto 10rem auto;
 
   animation: appearance2 0.5s forwards 0.3s;
   max-width: 60rem;
@@ -21,7 +21,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 18rem;
 }
 
 .about-hero-left-img {
@@ -63,6 +63,24 @@
 
 /* & 1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px1456px (1440) minimac; so we start with 1080p*/
 @media (max-width: 91em) {
+  .about-hero {
+    gap: 4rem;
+  }
+  .about-hero-right {  
+    padding: 3rem 1rem 0rem 3rem;
+    margin: 9rem auto 5rem 5rem;
+  }
+  .about-hero-left-img {
+    max-width: 100%;
+    opacity: 0;
+  
+    box-shadow: 1rem 1rem;
+    border: 0.3rem solid #212529;
+  
+    margin-left: 4rem;
+    /* transition: all 1s; */
+    animation: appearance1 0.5s forwards 0.3s;
+  }
   .footer-title {
     font-size: 3.2rem;
   }

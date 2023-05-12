@@ -167,3 +167,8 @@
 .inthemiddle {
   transform: translatey(0px);
 }
+
+.faq-h2 {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
