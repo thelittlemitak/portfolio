@@ -14,6 +14,8 @@ import HeaderAbout from "../../components/HeaderAbout";
 import "../MediaQueries.css";
 import ArrowDown from "../../components/ArrowDown";
 import QuestionAnswer from "./QuestionAnswer";
+import TestF from "../../components/TestF";
+import ScrollToTop from "../../components/ScrollToTop";
 
 function About() {
   let h2Ref = useRef();
@@ -116,6 +118,7 @@ function About() {
     <div>
       <HeaderAbout altBtn4={ContactButton}></HeaderAbout>
       <MainWrapper>
+        <ScrollToTop></ScrollToTop>
         <Hero></Hero>
         <div className="wrapper-test">
           <div className="posthero-card posthero-leftcard">
@@ -128,7 +131,8 @@ function About() {
         </div> */}
             <div className="presentation">
               A simple but powerful CRUD React-based website that shows all my
-              current web developer skills. It is also responsive (try in on your phone)!
+              current web developer skills. It is also responsive (try it on
+              your phone)!
             </div>
           </div>
           <section className="posthero-card posthero-rightcard">
@@ -236,7 +240,8 @@ function About() {
             <div className="presentation">
               You just need some credentials (Username: <em>recruiter</em>{" "}
               Password: <em>123asd</em>) and then, click the logo on the header
-              to go to the mainpage. There, you will be able to login and see the different tools.
+              to go to the mainpage. There, you will be able to login and see
+              the different tools.
             </div>
           </div>
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
