@@ -160,7 +160,7 @@ function Home() {
     backgrounder();
     setUserEntered(userInputRef.current.value);
     setPwEntered(pwInputRef.current.value);
-    if (userEntered != "123" || pwEntered != "123") {
+    if (userEntered != "recruiter" || pwEntered != "123asdXX") {
       setAlertStyle("wrong-alert");
     }
   };
@@ -177,8 +177,8 @@ function Home() {
   };
 
   if (
-    (userEntered == "recruiter" && pwEntered == "123asd") ||
-    (userEntered == "Recruiter" && pwEntered == "123asd")
+    (userEntered == "recruiter" && pwEntered == "123asdXX") ||
+    (userEntered == "Recruiter" && pwEntered == "123asdXX")
   ) {
     navigate("/profile");
     sessionStorage.setItem("isLoggedIn", "yes");

@@ -1,11 +1,11 @@
 .rec-alert-wrapper {
   text-align: center;
-  margin: 2rem 10% 0rem 10%;
-  font-size: 2rem;
+  margin: 2rem 5% 0rem 5%;
+  font-size: 2.2rem;
   background-color: #7df4c2;
   border: 1px solid rgba(0, 0, 0, 0.705);
   transition: all 1s;
-  padding: 0.2rem;
+  padding: 0.6rem 0.6rem 0.8rem 1rem;
   font-weight: 500;
 }
 
@@ -30,4 +30,58 @@
 .rec-alert--hidden.opened {
   height: 100%;
   opacity: 100;
+}
+
+.rec-alert--hidden.opened p:first-of-type {
+  margin-bottom: 0.4rem;
+}
+
+.rec-alert-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.rec-alert-flex svg {
+  height: 2.5rem;
+  justify-self: end;
+  background-color: #f47dae;
+  border-radius: 4px;
+}
+
+.rec-alert-flex.copied:after {
+  content: "Copied";
+  position: absolute;
+  top: -1rem;
+  right: -10rem;
+  background-color: white;
+  padding: 8px 10px;
+  font-size: 2rem;
+  z-index: 991919;
+  animation: copied 3s forwards;
+  border-radius: 1rem;
+}
+
+@keyframes copied {
+  0% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.rec-alert-flex svg:active {
+  background-color: red;
+}
+
+.rec-alert-flex svg:hover {
+  cursor: pointer;
 }
