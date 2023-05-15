@@ -16,6 +16,7 @@ import ArrowDown from "../../components/ArrowDown";
 import QuestionAnswer from "./QuestionAnswer";
 import TestF from "../../components/TestF";
 import ScrollToTop from "../../components/ScrollToTop";
+import { Link } from "react-router-dom";
 
 function About() {
   let h2Ref = useRef();
@@ -238,10 +239,7 @@ function About() {
               How can I navigate this website?
             </div>
             <div className="presentation">
-              You just need some credentials (Username: <em>recruiter</em>{" "}
-              Password: <em>123asd</em>) and then, click the logo on the header
-              to go to the mainpage. There, you will be able to login and see
-              the different tools.
+              After having a view of the home page you are ready to see the organizational tools! For that, go to the <Link to={"/"} className="presentation--link">main page</Link> and press the Login button. Credentials are found below under <strong>"I am a recruiter"</strong> message.
             </div>
           </div>
           <div className="dummy-floatingEl" ref={dummyFloat}></div>

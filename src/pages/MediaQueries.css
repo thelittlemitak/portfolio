@@ -743,6 +743,16 @@
 /* & 400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px400px */
 @media (max-width: 25em) {
   /* ^ homehomehomehomehomehomehomehomehomehomehomehomehomehomehomehomehomehome */
+  .hero-below-table {
+    gap: 0rem;
+  }
+  .table-item {
+    font-size: 1.6rem;
+  }
+  .icon {
+    height: 3rem;
+
+  }
   .sa-main-wrapper {
     top: 65px;
     right: 15px;

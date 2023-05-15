@@ -25,6 +25,7 @@ import DummyBtn from "../../components/btns/DummyBtn";
 import { Navigate, useNavigate } from "react-router-dom";
 import Carousel2 from "./carousel/Carousel2";
 import ScalingAlert from "../../components/ScalingAlert";
+import ScrollToTop from "../../components/ScrollToTop";
 
 function Home() {
   const signUpBtn = SignUpBtn;
@@ -235,6 +236,8 @@ function Home() {
         statusTunnel2={openedModal2}
         closerTunnel={closer}
       ></Overlay>
+      <ScrollToTop></ScrollToTop>
+
       <Header
         altBtn1={
           localStorage.getItem("isLoggedIn") ||

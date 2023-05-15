@@ -1,0 +1,33 @@
+.rec-alert-wrapper {
+  text-align: center;
+  margin: 2rem 10% 0rem 10%;
+  font-size: 2rem;
+  background-color: #7df4c2;
+  border: 1px solid rgba(0, 0, 0, 0.705);
+  transition: all 1s;
+  padding: 0.2rem;
+  font-weight: 500;
+}
+
+.colored {
+  background-color: #b3f8dc;
+}
+
+.rec-alert-msg:hover {
+  cursor: pointer;
+}
+
+.rec-alert-msg.lost {
+  display: none;
+}
+
+.rec-alert--hidden {
+  height: 0rem;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.rec-alert--hidden.opened {
+  height: 100%;
+  opacity: 100;
+}

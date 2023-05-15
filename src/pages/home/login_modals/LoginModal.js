@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import ReactDom from "react-dom";
 import "./Modal.css";
+import RecruiterAlert from "./RecruiterAlert";
 
 function LoginModal(props) {
   const [user, setUser] = useState("");
@@ -62,6 +63,7 @@ function LoginModal(props) {
         You don't have an account yet? Let's{" "}
         <button onClick={props.changerTunnel}>sign up!</button>
       </div>
+      <RecruiterAlert></RecruiterAlert>
     </div>,
     document.getElementById("modal1")
   );
