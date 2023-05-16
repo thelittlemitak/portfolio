@@ -5,7 +5,6 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import About from "./pages/about/About";
 import Forum from "./pages/forum/Forum";
-import TestPage from "./pages/tests/TestPage";
 import Motivator from "./pages/motivator/Motivator";
 import Warmer from "./pages/warmer/Warmer";
 
@@ -17,7 +16,6 @@ const router = createBrowserRouter([
   { path: "/motivator", element: <Motivator></Motivator> },
   { path: "/about", element: <About></About> },
   { path: "/forum", element: <Forum></Forum> },
-  { path: "/test", element: <TestPage></TestPage> },
   { path: "/warmer", element: <Warmer></Warmer> },
 ]);
 
