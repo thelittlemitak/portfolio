@@ -136,6 +136,11 @@ function Profile() {
       action: "Skyrim",
       id: 0.7415551232144685,
     },
+    {
+      goal: "TV show",
+      action: "Sopranos",
+      id: 0.7415551212341234185,
+    },
   ];
 
   const repTitles = ["Goal", "+/-", "How often?", "Goal/task", "Comments"];
@@ -225,7 +230,7 @@ function Profile() {
       ></Header>
       <h2 className="h2-profile">TO-DO</h2>
       <h3 className="h2-h3-profile">
-        A structured set of sections to remind you what you have to do
+        A structured set of tables to remind you what you have to do
       </h3>
       <main className="main-profile-container">
         <TempoGoals

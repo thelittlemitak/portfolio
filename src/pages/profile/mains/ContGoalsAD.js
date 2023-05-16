@@ -102,7 +102,7 @@ function ContGoalsAD(props) {
         Continuous goals/tasks (action dependent)
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
-          These are the goals/tasks that repeat in time, independent of how much time they take. An
+          These are the goals/tasks that repeat in time, regardless of how much time they take. An
           example could be tidying up your bedroom every day or prepare the meals for the
           weekend every Thursday.
         </div>

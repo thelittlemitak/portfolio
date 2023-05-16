@@ -79,8 +79,8 @@ function Hobbies(props) {
         <DoubtIcon></DoubtIcon>
         <div class="info-box info-box--hidden">
           Time to enjoy! It is good to remind ourselves what we can do when we
-          finish our daily tasks. This can serve as our "present-menu" for all the work we did during the day. 
-          Video games, a music instrument, a serie...
+          finish our daily tasks. This can serve as our "reward-menu" for all the work we did during the day. 
+          Video games, a music instrument, a TV show...
         </div>
       </h3>
       <table class="profile-table">

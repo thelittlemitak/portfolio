@@ -88,7 +88,7 @@ function About() {
       question:
         "Do you only have this website (MMM) as your portfolio? If so, why?",
       answer:
-        "Yes. Having worked in other projects in the past made aware of how easy it is to hesitate and start something new when things get too complicated. By doing one big project, I have forced myself to commit to an end result and solve all the problems that appeared on my way no matter how difficult they were.",
+        "Yes. Having worked on other projects in the past made me aware of how easy it is to hesitate and start something new when things get too complicated. By doing one big project, I have forced myself to commit to an end result and solve all the problems that appeared on my way no matter how difficult they were.",
     },
     {
       question: "Will MMM ever be completely functional for users?",
@@ -221,7 +221,7 @@ function About() {
             </div>
             <div className="presentation">
               No. MoreMoreMe (MMM) is a dummy project. Testimonials are
-              fictional and the purpose of the mainpage is just for practice.
+              fictional and the purpose of the mainpage and some features are just for practice.
             </div>
           </div>
           <div className={postpostRightStyle}>
@@ -229,7 +229,7 @@ function About() {
               And the rest?
             </div>
             <div className="presentation">
-              After logging in, you will find several organizational tools. This
+              After logging in, you will find several (CRUD) organizational tools. This
               served very well my motivation since I used them myself during the
               learning process.
             </div>
