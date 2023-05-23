@@ -44,4 +44,7 @@ Thank you for taking the time to review my project!
 I appreciate your interest and hope you found it informative.
 
 Best regards,
+
+<br>
+
 Jose
