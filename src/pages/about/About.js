@@ -82,29 +82,24 @@ function About() {
     {
       question: "What is your current employment status?",
       answer:
-        "My current contract ends on the 30th of June, so, from the 1st of July on, I will be available to join your company.",
-    },
+      "I am currently under contract, which will conclude on the 30th of June. Therefore, starting from the 1st of July, I will be available to join your company."    },
     {
       question:
         "Do you only have this website (MMM) as your portfolio? If so, why?",
       answer:
-        "Yes. Having worked on other projects in the past made me aware of how easy it is to hesitate and start something new when things get too complicated. By doing one big project, I have forced myself to commit to an end result and solve all the problems that appeared on my way no matter how difficult they were.",
-    },
+      "Yes, based on my experience working on previous projects, I have come to realize how easy it can be to hesitate and switch to something new when faced with complex challenges. By undertaking one large project, I have pushed myself to commit to achieving a final result and resolve all the obstacles that arose along the way, regardless of their level of difficulty."    },
     {
       question: "Will MMM ever be completely functional for users?",
       answer:
-        "Yes, but only as a result of my learning goals and not because I want it to be a real company. I set up backend development to be my next step, so my focus at the moment is (while learning) creating a database and having users to be able to login separately and save their entries.",
-    },
+      "Yes, but only in the context of my learning goals and not with the intention of establishing it as a real company. As I progress, my next step is to venture into backend development. Currently, my focus revolves around learning and implementing database functionality, enabling individual user logins, and providing the capability to save and manage user entries."    },
     {
       question: "Why did you learn how to program?",
       answer:
-        "For me it was mostly about the will of creating. Learning never felt as something secluded but as part of who I am; it was just the result of the necesity of wanting to create something with these tools. Programming and design get me in the flow, as if I were playing an instrument or video games.",
-    },
+      "For me, it was primarily driven by the desire to create. Learning programming never felt like a separate endeavor but rather an intrinsic part of my identity. It emerged from a genuine need to utilize these tools to bring my ideas to life. Programming and design immerse me in a state of flow, like playing a musical instrument or video games."    },
     {
       question: "Are you self-taught? What resources did you use to learn?",
       answer:
-        "Yes. I started with Udemy courses since they are so long (all together, more than 200 hours) that they allow the student to have a structure, which I think it is very needed at the beginning. Then, at some point, I was just focused on what I wanted to do and go to Google/YouTube when needed.",
-    },
+      "Yes, I initially began my programming journey with Udemy courses. These courses provided a structured learning path, spanning over 200 hours collectively, which proved to be immensely helpful, especially in the early stages. However, as I progressed, I found myself increasingly focused on specific projects and goals, relying on resources such as Google and YouTube whenever I encountered specific challenges or needed further guidance."    },
     // {
     //   question: "What did you learnt so far?",
     //   answer: "Udemy courses and this and that",
@@ -220,8 +215,11 @@ function About() {
               Is this a real company?
             </div>
             <div className="presentation">
-              No. MoreMoreMe (MMM) is a dummy project. Testimonials are
-              fictional and the purpose of the mainpage and some features are just for practice.
+              MoreMoreMe (MMM) is a fictitious project aimed at providing a
+              platform for practice and experimentation. The testimonials
+              featured on the website are purely fictional, and the main page,
+              along with certain functionalities, serves as a practice exercise
+              to enhance skills and knowledge.
             </div>
           </div>
           <div className={postpostRightStyle}>
@@ -229,9 +227,10 @@ function About() {
               And the rest?
             </div>
             <div className="presentation">
-              After logging in, you will find several (CRUD) organizational tools. This
-              served very well my motivation since I used them myself during the
-              learning process.
+              Once logged in, you will discover a range of organizational tools,
+              specifically focused on CRUD operations. These tools were
+              instrumental in motivating my learning process as I actively
+              utilized them myself.
             </div>
           </div>
           <div className={postpostpostCardStyle}>
@@ -239,7 +238,13 @@ function About() {
               How can I navigate this website?
             </div>
             <div className="presentation">
-              After having a view of the home page you are ready to see the organizational tools! For that, go to the <Link to={"/"} className="presentation--link">main page</Link> and press the Login button. Credentials are found below under <strong>"I am a recruiter"</strong> message.
+              Once you have explored the home page, you are ready to dive into
+              the organizational tools! To access them, simply head back to the{" "}
+              <Link to={"/"} className="presentation--link">
+                main page
+              </Link>{" "}
+              and click on the Login button. The required credentials can be
+              found below the message labeled "I am a recruiter".
             </div>
           </div>
           <div className="dummy-floatingEl" ref={dummyFloat}></div>
