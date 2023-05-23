@@ -1,6 +1,6 @@
 # MoreMoreMe - Portfolio website
 
-Hi! My name is Jose and this is the project folder of [my portfolio website](https://moremore.me/). Most of the general questions that you may have about the project or me are already answered in the about section, so here we will have a look at its architecture and the purpose of its pages.
+Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages.
 
 ## Flowchart
 
@@ -16,30 +16,32 @@ graph TD;
 ```
 
 <br>
-Since this is a portfolio, my main goal was putting in practice as much tools as possible under one big project. Every page of the website had a different purpose: 
+Since this is a portfolio, my main goal was putting into practice as many tools as possible under one large project. Every page of the website has a different purpose: 
 
 <br>
 
 ## Homepage
 
-On the homepage I tried to make use of the most common web components in order to practice as much CSS as possible such as a carousel, cards, tables, testimonials and different lists. Also design rules and best practices (contrast, white spaces, color choices, etc.). Also the picture of the graphics on the left side of the hero was self-made using Affinity Designer.
+On the homepage, I aimed to incorporate the most common web components to maximize my CSS practice. I included elements such as a carousel, cards, tables, testimonials and various lists. Additionally, I followed design rules and best practices, including considerations for contrast, white spaces, and color choices. I want to highlight that the graphic on the left side of the hero section was created by me using Affinity Designer.
 
-Disclaimer: you will see that some of the features announced are not found later on the tools. This is because my priority was to have a complete homepage, no matter how many tools would I later create.
+Please note that while I mentioned certain features in the introduction, you may not find all of them implemented in the subsequent pages. My main focus was to create a realistic-looking homepage, so I included more tools than what is actually present. The intention was to showcase my design and development skills by creating a comprehensive and visually appealing homepage.
 
 ## About
 
-Here you will also find different common components, but the main purpose of this page, is giving some explanations of the website itself and also, a little bit about myself.
+On this page, you will also find various common components. However, the main purpose of this page is to provide explanations about the website itself and to provide a brief overview of myself. It serves as an introduction to provide visitors with information about the purpose and content of the website, as well as to offer some insights into my background and experience.
 
 ## To-do/Motivator/Forum/Warmer
 
-In these tools is where I applied most of the functionality of the website, those being, mostly, modifiable tables. I think that managing state, side effects and data transfer between components, specially on CRUD elements (so in this case, the modifiable tables), are the core of working with React.
+In these tools, I focused on implementing the majority of the website's functionality, primarily through modifiable tables. I believe that handling state, side effects, and data transfer between components, particularly in CRUD (Create, Read, Update, Delete) elements such as the modifiable tables, forms the core of working with React. These tools allowed me to practice and demonstrate my ability to effectively manage data and interactivity within a React application.
 
 ## Responsiveness
 
-The website is responsive to different screens, from 1080p to small mobile phones. I also made use of https://caniuse.com/ and feedback from friends and family (specially for the different phone OS) to get the best results on all possible devices. Even if this is not a real company, I still wanted to be presented with the bugs and errors that different OS can have and get to experience as much of them as possible.
+The website has been designed to be responsive across various screen sizes, ranging from 1080p resolution to small mobile phones. To ensure optimal results on different devices, I utilized resources like https://caniuse.com/ and sought feedback from friends and family, particularly regarding various phone operating systems. Even though this website represents a fictional company, I wanted to simulate and address potential bugs and errors that can occur across different operating systems. By doing so, I aimed to gain experience in handling a wide range of issues and provide the best possible user experience on all devices.
 
 <br>
 
-Thanks for checking!
+Thank you for taking the time to review my project!
+I appreciate your interest and hope you found it informative.
 
+Best regards,
 Jose
