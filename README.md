@@ -1,6 +1,22 @@
 # MoreMoreMe - Portfolio website
 
-Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages.
+Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages. But first:
+
+## How to open the project on your computer:
+
+1. Install Node.js: download and install Node.js from the [official website](https://nodejs.org) following the installation instructions for your operating system. This step is necessary even though the project's dependencies are already included in the repo.
+
+2. Clone the repository: navigate to the directory where you want to clone the repository and run the following command in your terminal:
+
+```
+git clone git@github.com:thelittlemitak/portfolio.git
+```
+
+3. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally:
+
+```
+npm start
+```
 
 ## Flowchart
 
@@ -16,7 +32,7 @@ graph TD;
 ```
 
 <br>
-Since this is a portfolio, my main goal was putting into practice as many tools as possible under one large project. Every page of the website has a different purpose: 
+Since this is a portfolio, my main goal was putting into practice as many tools as possible under one large project. Every page of the website has a different purpose:
 
 <br>
 
