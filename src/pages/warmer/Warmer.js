@@ -34,7 +34,7 @@ function Warmer() {
     },
     {
       goal: "Healthy family",
-      action: "Your sister loves you",
+      action: "Your sister loves you!",
       id: 0.765754675467,
     },
   ];
