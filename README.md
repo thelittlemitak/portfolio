@@ -4,7 +4,7 @@ Hi! I'm Jose, and this is the project folder of [my portfolio website](https://m
 
 ## How to open the project on your computer:
 
-1. Install Node.js: download and install Node.js from the [official website](https://nodejs.org) following the installation instructions for your operating system. This step is necessary even though the project's dependencies are already included in the repo.
+1. Install Node.js: download and install Node.js from the [official website](https://nodejs.org) following the installation instructions for your operating system.
 
 2. Clone the repository: navigate to the directory where you want to clone the repository and run the following command in your terminal:
 
@@ -12,7 +12,12 @@ Hi! I'm Jose, and this is the project folder of [my portfolio website](https://m
 git clone git@github.com:thelittlemitak/portfolio.git
 ```
 
-3. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally:
+3. Install dependencies by running the following command in your terminal:
+```
+npm install
+```
+
+4. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally (it should appear on  http://localhost:3000):
 
 ```
 npm start
