@@ -1,3 +1,27 @@
+https://moremore.me/
+
+17/08/2023: Hello, world! After making some recent clean ups here and there I decided to leave this project in the past as a legacy (with all its errors and potencial improvements; believe me, I am aware of them) and start new portfolio projects.
+<br>
+
+I trusted this project a lot but, after some time looking for a job (160 applications sent so far), I came to realize that the market is too competent for a single React project, so I want to get back to work and put in practice all the new things I learnt since I finished with this project (NextJS, NodeJS, TypeScript and other less important and easy to use libraries that are everywhere!).
+<br>
+
+I am very happy and proud of this project. Believe it or not, I had no feedback at all since I wrote my first line of code (more than a year ago) until a week ago. And in case you didn't know, this is not a follow-along project. Everything came from my ideas, incl. the tools inside of it, design, texts etc. And without teacher or mentor. After recieving this extremely constructive feedback, instead of proceeding with changes, I just removed the node_modules (how noob!), create a .gitignore file, update the README and leave it as it is. I want to get back and see everything I accomplished on my own as a reminder that we all have a place to start! And if this project is not enough to land a job, it's understandable; there's so much to learn...
+<br>
+
+I actually miss the days that I just coded and coded for hours without worrying... I will send less and better applications so I have time for the new projects! I am in Germany and an application is not a single CV->send; it takes time and more documentation and there are so many offers that they can take your day out.
+<br>
+
+If you read this far, thank you for checking in and I see you in the next project!
+<br>
+
+Lots of love,
+<br>
+Jose
+<br>
+
+PS: The project is still heavier than it should be because it seems that some commits have changes on the ESLint Cache of the node_modules... Please be patient; it's just a few MB's more!
+
 # MoreMoreMe - Portfolio website
 
 Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages. But first:
@@ -13,11 +37,12 @@ git clone git@github.com:thelittlemitak/portfolio.git
 ```
 
 3. Install dependencies by running the following command in your terminal:
+
 ```
 npm install
 ```
 
-4. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally (it should appear on  http://localhost:3000):
+4. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally (it should appear on http://localhost:3000):
 
 ```
 npm start
