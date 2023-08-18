@@ -33,19 +33,24 @@ Hi! I'm Jose, and this is the project folder of [my portfolio website](https://m
 2. Clone the repository: navigate to the directory where you want to clone the repository and run the following command in your terminal:
 
 ```
-git clone git@github.com:thelittlemitak/portfolio.git
+$ git clone git@github.com:thelittlemitak/portfolio.git
+```
+
+3. Navigate into the downloaded repository folder
+```
+$ cd portfolio
 ```
 
 3. Install dependencies by running the following command in your terminal:
 
 ```
-npm install
+$ npm install
 ```
 
 4. Start the development server: once the folder is downloaded, you can run the following command in order to run the React project locally (it should appear on http://localhost:3000):
 
 ```
-npm start
+$ npm start
 ```
 
 ## Flowchart
