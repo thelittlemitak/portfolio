@@ -26,6 +26,9 @@ PS: The project is still heavier than it should be because it seems that some co
 
 Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages. But first:
 
+## Quick disclaimer about the commits:
+If you go back to the first commit you will see the project half done, but without React. This repo was created when I decided to start using React and moved all the content of a vanilla JS website to a React project. If I find the vanilla one, I will upload it too, for legacy (still, it's like half of this one).
+
 ## How to open the project on your computer:
 
 1. Install Node.js: download and install Node.js from the [official website](https://nodejs.org) following the installation instructions for your operating system.
