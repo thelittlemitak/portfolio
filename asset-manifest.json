@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.94c44b30.css",
+    "main.js": "/portfolio/static/js/main.d766c85e.js",
+    "static/media/about-salute.webp": "/portfolio/static/media/about-salute.5249bcc35806da80745d.webp",
+    "static/media/testimonial1.webp": "/portfolio/static/media/testimonial1.7eb2a8ff4f434d0d731d.webp",
+    "static/media/testimonial4.webp": "/portfolio/static/media/testimonial4.a29e967f5686f0150a22.webp",
+    "static/media/testimonial3.webp": "/portfolio/static/media/testimonial3.da68c9d04f95171009d8.webp",
+    "static/media/graphics.webp": "/portfolio/static/media/graphics.ebb00838b47200cd7c42.webp",
+    "static/media/testimonial2.webp": "/portfolio/static/media/testimonial2.63c51f3a7fc8bc32041b.webp",
+    "static/media/test1.webp": "/portfolio/static/media/test1.cf7495b6fb0acf3aff7a.webp",
+    "static/media/test2.webp": "/portfolio/static/media/test2.11c871465899d45bf056.webp",
+    "static/media/affinity-logo.webp": "/portfolio/static/media/affinity-logo.e1f375bef92ad581d1a9.webp",
+    "static/media/test3.webp": "/portfolio/static/media/test3.a196ab2d5c64c4f54a1f.webp",
+    "static/media/vsc-logo.webp": "/portfolio/static/media/vsc-logo.84448b14d12940e49aa4.webp",
+    "static/media/react.webp": "/portfolio/static/media/react.2a0cac33f155e4a27216.webp",
+    "static/media/code-logos.webp": "/portfolio/static/media/code-logos.3005e0f715b6e4c3cad4.webp",
+    "index.html": "/portfolio/index.html",
+    "main.94c44b30.css.map": "/portfolio/static/css/main.94c44b30.css.map",
+    "main.d766c85e.js.map": "/portfolio/static/js/main.d766c85e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94c44b30.css",
+    "static/js/main.d766c85e.js"
+  ]
+}
