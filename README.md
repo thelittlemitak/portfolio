@@ -1,7 +1,9 @@
-https://moremore.me/
+https://thelittlemitak.github.io/portfolio/
 
 17/08/2023: Hello, world! After making some recent clean ups here and there I decided to leave this project in the past as a legacy (with all its errors and potencial improvements; believe me, I am aware of them) and start new portfolio projects.
 <br>
+
+05/11/2023: Today it's a very sad day! For financial reasons, moremore.me will stop existing... From now on, the website will be available only through pages at https://thelittlemitak.github.io/portfolio/
 
 I trusted this project a lot but, after some time looking for a job (160 applications sent so far), I came to realize that the market is too competent for a single React project, so I want to get back to work and put in practice all the new things I learnt since I finished with this project (NextJS, NodeJS, TypeScript and other less important and easy to use libraries that are everywhere!).
 <br>
@@ -24,7 +26,7 @@ PS: The project is still heavier than it should be because it seems that some co
 
 # MoreMoreMe - Portfolio website
 
-Hi! I'm Jose, and this is the project folder of [my portfolio website](https://moremore.me/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages. But first:
+Hi! I'm Jose, and this is the project folder of [my portfolio website](https://thelittlemitak.github.io/portfolio/). If you have any general questions about the project or me, you may find the answers in the about section of the website. Here, we will focus on examining the architecture of this one and the purpose of its pages. But first:
 
 ## Quick disclaimer about the commits:
 If you go back to the first commit you will see the project half done, but without React. This repo was created when I decided to start using React and moved all the content of a vanilla JS website to a React project. If I find the vanilla one, I will upload it too, for legacy (still, it's like half of this one).

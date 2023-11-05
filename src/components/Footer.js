@@ -46,11 +46,7 @@ function Footer() {
         <nav>
           <p className="footer-title">Resources</p>
           <ul className="footer-nav">
-            <li>
-              <a href="build.zip" download>
-                Direct DL source code
-              </a>
-            </li>
+            
             <li>
               <a
                 href="https://github.com/thelittlemitak/portfolio"
