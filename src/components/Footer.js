@@ -60,7 +60,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <Link to="/about">About MoreMoreMe</Link>
+              <Link to="/portfolio/about">About MoreMoreMe</Link>
             </li>
             {/* <li>
               <a href="#">Help center</a>

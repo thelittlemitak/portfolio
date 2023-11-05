@@ -240,7 +240,7 @@ function About() {
             <div className="presentation">
               Once you have explored the home page, you are ready to dive into
               the organizational tools! To access them, simply head back to the{" "}
-              <Link to={"/"} className="presentation--link">
+              <Link to={"/portfolio"} className="presentation--link">
                 main page
               </Link>{" "}
               and click on the Login button. The required credentials can be

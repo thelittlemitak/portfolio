@@ -180,7 +180,7 @@ function Home() {
     (userEntered == "recruiter" && pwEntered == "123asdXX") ||
     (userEntered == "Recruiter" && pwEntered == "123asdXX")
   ) {
-    navigate("/profile");
+    navigate("/portfolio/profile");
     sessionStorage.setItem("isLoggedIn", "yes");
     sessionStorage.setItem("user", "recruiter");
     if (keeper == true) {

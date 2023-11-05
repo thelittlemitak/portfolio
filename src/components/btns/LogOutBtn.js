@@ -9,7 +9,7 @@ function LogOutBtn(props) {
     sessionStorage.clear("user");
     localStorage.clear("isLoggedIn");
     localStorage.clear("user");
-    navigate("/");
+    navigate("/portfolio");
     window.scroll(0, 0);
   };
 
