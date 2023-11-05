@@ -11,12 +11,12 @@ import Warmer from "./pages/warmer/Warmer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Home></Home> },
-  { path: "/profile", element: <Profile></Profile> },
-  { path: "/motivator", element: <Motivator></Motivator> },
-  { path: "/about", element: <About></About> },
-  { path: "/forum", element: <Forum></Forum> },
-  { path: "/warmer", element: <Warmer></Warmer> },
+  { path: "/portfolio/", element: <Home></Home> },
+  { path: "/portfolio/profile", element: <Profile></Profile> },
+  { path: "/portfolio/motivator", element: <Motivator></Motivator> },
+  { path: "/portfolio/about", element: <About></About> },
+  { path: "/portfolio/forum", element: <Forum></Forum> },
+  { path: "/portfolio/warmer", element: <Warmer></Warmer> },
 ]);
 
 function App() {
