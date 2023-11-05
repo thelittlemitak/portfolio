@@ -75,7 +75,7 @@ function Footer() {
             <p>Kreutzigerstr. 10</p>
             <p>10247 Berlin, Germany</p>
             <p>
-              <a href="tel:+34654177940">+34654177940</a>
+              <a href="tel:+4915208659779">0152 / 086 59 779</a>
             </p>
             <p>
               <a href="mailto:rieraturjose@gmail.com">rieraturjose@gmail.com</a>

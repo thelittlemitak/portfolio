@@ -18,7 +18,7 @@ function Header(props) {
 
   return (
     <header className="main-header sticky">
-      <a className="logo-box logo-box--index" href="/">
+      <a className="logo-box logo-box--index" href="/portfolio">
         M<div id="logo-a">ore</div>M<div id="logo-b">ore</div>M
         <div id="logo-c">e</div>
       </a>
