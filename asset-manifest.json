@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.94c44b30.css",
-    "main.js": "/portfolio/static/js/main.fc606753.js",
+    "main.js": "/portfolio/static/js/main.e36ebcc5.js",
     "static/media/about-salute.webp": "/portfolio/static/media/about-salute.5249bcc35806da80745d.webp",
     "static/media/testimonial1.webp": "/portfolio/static/media/testimonial1.7eb2a8ff4f434d0d731d.webp",
     "static/media/testimonial4.webp": "/portfolio/static/media/testimonial4.a29e967f5686f0150a22.webp",
@@ -17,10 +17,10 @@
     "static/media/code-logos.webp": "/portfolio/static/media/code-logos.3005e0f715b6e4c3cad4.webp",
     "index.html": "/portfolio/index.html",
     "main.94c44b30.css.map": "/portfolio/static/css/main.94c44b30.css.map",
-    "main.fc606753.js.map": "/portfolio/static/js/main.fc606753.js.map"
+    "main.e36ebcc5.js.map": "/portfolio/static/js/main.e36ebcc5.js.map"
   },
   "entrypoints": [
     "static/css/main.94c44b30.css",
-    "static/js/main.fc606753.js"
+    "static/js/main.e36ebcc5.js"
   ]
 }
